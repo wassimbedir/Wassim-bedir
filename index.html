@@ -14,8 +14,6 @@
 
 <body>
 
-<button id="themeBtn">🌙</button>
-
 <nav>
 <a href="index.html">الرئيسية</a>
 <a href="about.html">من أنا</a>
@@ -224,33 +222,6 @@ transform:translate(-50%,-50%) scale(1.15);
 }
 
 
-const themeBtn = document.getElementById("themeBtn");
-
-let dark = true;
-
-themeBtn.onclick = function(){
-
-if(dark){
-
-document.body.style.background =
-"linear-gradient(180deg,#f8f8f8,#ffffff)";
-
-document.body.style.color = "#111";
-
-themeBtn.innerHTML = "☀️";
-
-dark = false;
-
-}else{
-
-document.body.style.background =
-"radial-gradient(circle at top,#3d2b09 0%,transparent 35%),linear-gradient(180deg,#050505,#0d1117,#171717)";
-
-document.body.style.color = "white";
-
-themeBtn.innerHTML = "🌙";
-
-dark = true;
   </style>
 }
 
