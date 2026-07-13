@@ -7,242 +7,155 @@
 
 <title>ليتنا بين زحام العابرين نلتقي | بدير وسيم</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet"
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
- body{
-   font-family:'Amiri',serif;
-background:linear-gradient(180deg,#070707,#111,#1a1a1a);
-color:#f5f5f5;
-overflow-x:hidden;
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Amiri',serif;
+background:
+radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
+linear-gradient(180deg,#050505,#0d1117,#171717);
+color:white;
+line-height:2;
+overflow-x:hidden;
 }
 
 body::before{
-
 content:"";
 position:fixed;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:
-radial-gradient(circle at top,#d4af3720,transparent 45%);
-z-index:-2;
-
-}
-
-body::after{
-
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:
-radial-gradient(white 1px,transparent 1px);
-background-size:80px 80px;
+background-image:radial-gradient(white 1px,transparent 1px);
+background-size:100px 100px;
 opacity:.08;
+pointer-events:none;
 z-index:-1;
-
 }
 
 header{
-
-height:45vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-animation:fade 2s;
-
+padding:80px 20px 50px;
 }
 
 header h1{
-
-font-size:60px;
+font-size:56px;
 color:#d4af37;
 margin-bottom:15px;
-    }
+text-shadow:0 0 18px rgba(212,175,55,.35);
+}
 
 header p{
-
-font-size:22px;
+font-size:24px;
 color:#ddd;
-
 }
 
 .poem{
-
-width:90%;
 max-width:900px;
-margin:auto;
-margin-bottom:80px;
-background:#111;
+margin:40px auto;
 padding:40px;
-border-radius:18px;
-border:1px solid rgba(212,175,55,.35);
-box-shadow:0 0 30px rgba(212,175,55,.12);
-
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,175,55,.25);
+border-radius:25px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(212,175,55,.08);
 }
 
-verse{
-
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
+.verse{
 padding:22px 0;
-border-bottom:1px solid rgba(255,255,255,.08);
-
+border-bottom:1px solid rgba(212,175,55,.12);
+text-align:center;
 }
 
-sadr{
-
-text-align:right;
-font-size:28px;
-line-height:2;
-
+.verse:last-child{
+border-bottom:none;
 }
 
-ajz{
+.sadr{
+font-size:34px;
+color:#ffffff;
+margin-bottom:10px;
+}
 
-text-align:left;
-font-size:28px;
-line-height:2;
+.ajz{
+font-size:30px;
+color:#d4af37;
 }
 
 footer{
-
 text-align:center;
 padding:50px 20px;
-
 }
 
-author{
-
+.author{
 font-size:24px;
+color:#ddd;
+margin-bottom:12px;
+}
+
+.signature{
+font-size:32px;
 color:#d4af37;
-margin-bottom:10px;
-
+margin-bottom:30px;
+letter-spacing:2px;
 }
 
-signature{
-
-font-size:34px;
-color:white;
-
-}
-
-back{
-
+.back{
 display:inline-block;
-margin-top:30px;
-padding:12px 30px;
+padding:14px 28px;
 background:#d4af37;
-color:black;
+color:#111;
 text-decoration:none;
+font-size:20px;
 font-weight:bold;
-border-radius:30px;
+border-radius:50px;
 transition:.3s;
-
 }
 
-back:hover{
-
-transform:scale(1.05);
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
+.back:hover{
+transform:translateY(-4px);
+background:#e6c85d;
+box-shadow:0 0 25px rgba(212,175,55,.5);
 }
 
 @media(max-width:768px){
 
 header h1{
-
 font-size:40px;
-
 }
 
-verse{
-
-grid-template-columns:1fr;
-
-  
-  line-height:2;
-}
-
-footer{
-text-align:center;
-padding:50px 20px;
-}
-
-author{
+.sadr,
+.ajz{
 font-size:24px;
-color:#d4af37;
-margin-bottom:10px;
 }
 
-signature{
-font-size:34px;
-color:white;
 }
 
-back{
-display:inline-block;
-margin-top:30px;
-padding:12px 30px;
-background:#d4af37;
-color:black;
-text-decoration:none;
-font-weight:bold;
-border-radius:30px;
-}
-
-@keyframes fade{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-@media(max-width:768px){
-header h1{font-size:40px;}
-verse{grid-template-columns:1fr;}
-sadr,
-ajz{text-align:center;font-size:24px;
-}
-}
-  
 </style>
+
+</head>
+
 <body>
 
 <header>
 
 <h1>ليتنا بين زحام العابرين نلتقي</h1>
 
-<p>بقلم الشاعر بدير وسيم</p>
+<p>بقلم الشاعر والكاتب الجزائري بدير وسيم</p>
 
 </header>
 
 <section class="poem">
-  <div class="verse">
+
+<div class="verse">
 <div class="sadr">ليتنا بينَ زِحامِ العابرينَ نلتقي</div>
 <div class="ajz">وننسى ما كانَ من أحزانِ</div>
 </div>
@@ -291,12 +204,13 @@ ajz{text-align:center;font-size:24px;
 <div class="sadr">ليتنا… وليتَ الليالي تُنصِفُنا</div>
 <div class="ajz">ونحيا بلا خوفٍ ولا أحزانِ</div>
 </div>
+
 </section>
 
 <footer>
 
 <div class="author">
-الكاتب : بدير وسيم
+الكاتب: بدير وسيم
 </div>
 
 <div class="signature">
@@ -312,4 +226,3 @@ ajz{text-align:center;font-size:24px;
 </body>
 
 </html>
-  
