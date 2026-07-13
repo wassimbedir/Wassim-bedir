@@ -1,50 +1,104 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>من أنا - بدير وسيم</title>
-</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-  body{
+
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:#111;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Amiri',serif;
+background:
+radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
+linear-gradient(180deg,#050505,#0d1117,#171717);
 color:white;
-text-align:center;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:radial-gradient(white 1px,transparent 1px);
+background-size:100px 100px;
+opacity:.08;
+pointer-events:none;
+z-index:-1;
 }
 
 nav{
-background:#000;
-padding:20px;
+display:flex;
+justify-content:center;
+gap:20px;
+padding:18px;
+background:rgba(20,20,20,.55);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(212,175,55,.2);
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:15px;
 font-weight:bold;
+padding:10px 18px;
+border-radius:30px;
+transition:.3s;
 }
 
-container{
-max-width:800px;
-margin:80px auto;
-padding:20px;
+nav a:hover{
+background:#d4af37;
+color:#111;
+}
+
+.container{
+max-width:900px;
+margin:100px auto;
+padding:40px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,175,55,.25);
+border-radius:25px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(212,175,55,.08);
 }
 
 h1{
-font-size:45px;
-color:gold;
+font-family:'Cinzel',serif;
+font-size:52px;
+color:#d4af37;
+margin-bottom:35px;
+text-shadow:0 0 18px rgba(212,175,55,.35);
 }
 
 p{
-font-size:20px;
-line-height:2;
-color:#ddd;
+font-size:24px;
+line-height:2.3;
+color:#e5e5e5;
+text-align:center;
 }
 
-  </style>
+strong{
+color:#d4af37;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
 <body>
 
 <nav>
@@ -54,11 +108,19 @@ color:#ddd;
 </nav>
 
 <div class="container">
+
 <h1>من أنا</h1>
 
 <p>
-أنا بدير وسيم، كاتب وشاعر جزائري، أؤمن بأن الكلمة ليست مجرد حروف، بل أثر يبقى بعد رحيل صاحبها.
-أسعى إلى كتابة أعمال تلامس القارئ وتترك داخله سؤالًا أو شعورًا لا ينسى.
+
+لستُ أكتب لأملأ الصفحات، بل لأترك أثرًا فيمن يقرؤها.<br><br>
+
+أنا <strong>بدير وسيم</strong>، كاتبٌ وشاعرٌ جزائري، أؤمن بأن الكلمة الصادقة تعيش أكثر من أصحابها، وأن الأدب ليس مجرد حكاية تُروى، بل تجربة تُلامس القلب والعقل معًا.
+
+أكتب الرواية، والشعر، والتأملات الإنسانية، وأسعى إلى أن يحمل كل نص أقدمه فكرةً تستحق البقاء، وشعورًا يرافق القارئ حتى بعد أن يطوي الصفحة الأخيرة.
+
+أطمح إلى صناعة أدبٍ يحمل هويتي الخاصة، ويجعل اسمي يُذكر كلما ذُكرت الكلمات التي لا يطويها الزمن.
+
 </p>
 
 </div>
