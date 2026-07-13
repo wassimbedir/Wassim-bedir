@@ -5,78 +5,144 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ورب السماء إني لأعشقها | بدير وسيم</title>
+<title>وربُّ السماءِ إنّي لأعشقُها | بدير وسيم</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-  
-</head>
 
-  <style>
-    body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#111;
-color:white;
-}
-
-nav{
-background:#000;
-padding:20px;
-text-align:center;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
-}
-
-container{
-max-width:900px;
-margin:50px auto;
-padding:20px;
-}
-
-h1{
-text-align:center;
-color:gold;
-margin-bottom:40px;
-}
-
-book{
-background:#1d1d1d;
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
-}
-
-book h2{
-margin-top:0;
-color:white;
-}
-
+<style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
-    
-  </style>
+
+body{
+font-family:'Amiri',serif;
+background:
+radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
+linear-gradient(180deg,#050505,#0d1117,#171717);
+color:white;
+line-height:2;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:radial-gradient(white 1px,transparent 1px);
+background-size:100px 100px;
+opacity:.08;
+pointer-events:none;
+z-index:-1;
+}
+
+header{
+text-align:center;
+padding:80px 20px 50px;
+}
+
+header h1{
+font-size:58px;
+color:#d4af37;
+margin-bottom:15px;
+text-shadow:0 0 18px rgba(212,175,55,.4);
+}
+
+header p{
+font-size:24px;
+color:#ddd;
+}
+
+.poem{
+max-width:900px;
+margin:40px auto;
+padding:45px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,175,55,.25);
+border-radius:25px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(212,175,55,.08);
+}
+
+.verse{
+padding:25px 0;
+border-bottom:1px solid rgba(212,175,55,.12);
+text-align:center;
+}
+
+.verse:last-child{
+border-bottom:none;
+}
+
+.sadr{
+font-size:34px;
+color:#ffffff;
+margin-bottom:10px;
+}
+
+.ajz{
+font-size:31px;
+color:#d4af37;
+}
+
+footer{
+text-align:center;
+padding:60px 20px;
+}
+
+.author{
+font-size:24px;
+color:#ddd;
+margin-bottom:10px;
+}
+
+.signature{
+font-size:34px;
+color:#d4af37;
+margin-bottom:35px;
+letter-spacing:2px;
+}
+
+.back{
+display:inline-block;
+padding:14px 28px;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+border-radius:50px;
+transition:.3s;
+}
+
+.back:hover{
+transform:translateY(-5px);
+background:#e5c65b;
+box-shadow:0 0 25px rgba(212,175,55,.6);
+}
+
+</style>
+
+</head>
+
 <body>
 
 <header>
 
 <h1>وربُّ السماءِ إنّي لأعشقُها</h1>
 
-<p>بقلم الشاعر بدير وسيم</p>
+<p>بقلم الشاعر والكاتب الجزائري بدير وسيم</p>
 
 </header>
 
 <section class="poem">
 
-  <div class="verse">
+<div class="verse">
 <div class="sadr">وربُّ السماءِ إنّي لأعشقُها...</div>
 <div class="ajz">وأنّي من نبذةِ العاشقينَ</div>
 </div>
@@ -141,7 +207,7 @@ box-sizing:border-box;
 <footer>
 
 <div class="author">
-الكاتب : بدير وسيم
+الكاتب: بدير وسيم
 </div>
 
 <div class="signature">
@@ -155,5 +221,4 @@ box-sizing:border-box;
 </footer>
 
 </body>
-
-</html>  
+</html>
