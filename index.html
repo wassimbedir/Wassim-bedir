@@ -15,7 +15,14 @@ box-sizing:border-box;
 
 body{
 font-family:'Amiri',serif;
-    body::before{
+background:
+radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
+linear-gradient(180deg,#050505,#0d1117,#171717);
+color:#fff;
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+body::before{
 content:"";
 position:fixed;
 top:0;
@@ -28,15 +35,7 @@ background-size:100px 100px;
 opacity:0.08;
 pointer-events:none;
 z-index:-1;
-    }
-background:
-radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
-linear-gradient(180deg,#050505,#0d1117,#171717);
-color:#fff;
-scroll-behavior:smooth;
-overflow-x:hidden;
 }
-
 nav{
 display:flex;
 justify-content:center;
