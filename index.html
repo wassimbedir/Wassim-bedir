@@ -1,23 +1,69 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>بدير وسيم</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"
- </head>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
-<style>
-    body{
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<button id="themeBtn">🌙</button>
+
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="about.html">من أنا</a>
+<a href="poems.html">قصائدي</a>
+<a href="novels.html">رواياتي</a>
+<a href="contact.html">تواصل معي</a>
+</nav>
+
+<header class="header" id="home">
+
+<h1>بدير وسيم</h1>
+
+<p>
+كاتبٌ وشاعرٌ جزائري،
+أؤمن أن الكلمة الصادقة تبقى حين يرحل أصحابها.
+</p>
+
+<div class="hero-buttons">
+<a href="poems.html" class="btn">📜 قصائدي</a>
+<a href="novels.html" class="btn">📚 رواياتي</a>
+</div>
+
+<p class="quote">
+"الكلمات لا تموت، بل تبحث دائمًا عن قارئ جديد."
+</p>
+
+</header>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
 font-family:'Amiri',serif;
 background:
 radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
 linear-gradient(180deg,#050505,#0d1117,#171717);
-color:#fff;
+color:white;
 scroll-behavior:smooth;
 overflow-x:hidden;
 }
+
 body::before{
 content:"";
 position:fixed;
@@ -25,13 +71,13 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background-image:
-radial-gradient(white 1px, transparent 1px);
+background-image:radial-gradient(white 1px,transparent 1px);
 background-size:100px 100px;
-opacity:0.08;
+opacity:.08;
 pointer-events:none;
 z-index:-1;
 }
+
 nav{
 position:fixed;
 top:15px;
@@ -42,55 +88,24 @@ gap:15px;
 padding:12px 24px;
 background:rgba(20,20,20,.55);
 backdrop-filter:blur(12px);
--webkit-backdrop-filter:blur(12px);
 border:1px solid rgba(212,175,55,.25);
 border-radius:50px;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
 z-index:1000;
 }
+
 nav a{
-color:white;
 text-decoration:none;
-font-size:16px;
+color:white;
 font-weight:bold;
 padding:10px 16px;
 border-radius:30px;
 transition:.3s;
 }
+
 nav a:hover{
 background:#d4af37;
 color:#111;
-}
-
-.header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-position:relative;
-overflow:hidden;
-}
-
-header::before{
-content:"";
-position:absolute;
-width:450px;
-height:450px;
-background:radial-gradient(circle, rgba(212,175,55,.25) 0%, rgba(212,175,55,0) 70%);
-    top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:-1;
-}
-
-.header h1{
-font-family:'Cinzel',serif;
-font-size:72px;
-color:#d4af37;
-margin-bottom:20px;
-letter-spacing:3px;
-text-shadow:0 0 18px rgba(212,175,55,.45);
 }
 
 #themeBtn{
@@ -107,38 +122,59 @@ cursor:pointer;
 z-index:1000;
 }
 
-header p{
+.header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.header::before{
+content:"";
+position:absolute;
+width:450px;
+height:450px;
+background:radial-gradient(circle,rgba(212,175,55,.25)0%,rgba(212,175,55,0)70%);
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+animation:glow 6s ease-in-out infinite alternate;
+z-index:-1;
+}
+
+.header h1{
+font-family:'Cinzel',serif;
+font-size:80px;
+color:#d4af37;
+letter-spacing:3px;
+margin-bottom:20px;
+text-shadow:
+0 0 10px rgba(212,175,55,.7),
+0 0 30px rgba(212,175,55,.5),
+0 0 60px rgba(212,175,55,.3);
+animation:fadeUp 1.2s ease;
+}
+
+.header p{
 font-size:28px;
 color:#ddd;
 line-height:1.8;
 max-width:700px;
 padding:0 20px;
-}
-
-section{
-padding:80px 20px;
-max-width:900px;
-margin:auto;
-}
-
-h2{
-color:gold;
-margin-bottom:20px;
-}
-
-.card{
-background:#1b1b1b;
-padding:20px;
-border-radius:15px;
-margin-top:20px;
+animation:fadeUp 1.8s ease;
 }
 
 .hero-buttons{
 margin-top:35px;
 display:flex;
-justify-content:center;
 gap:20px;
 flex-wrap:wrap;
+justify-content:center;
+animation:fadeUp 2.4s ease;
 }
 
 .btn{
@@ -147,29 +183,31 @@ padding:14px 30px;
 background:#d4af37;
 color:#111;
 text-decoration:none;
-border-radius:50px;
 font-size:20px;
 font-weight:bold;
-transition:0.3s;
-box-shadow:0 0 15px rgba(212,175,55,.3);
+border-radius:50px;
+transition:.35s;
+box-shadow:0 0 20px rgba(212,175,55,.35);
 }
 
-btn:hover{
-transform:translateY(-5px);
-box-shadow:0 0 25px rgba(212,175,55,.6);
+.btn:hover{
+transform:translateY(-6px) scale(1.05);
+background:#e5c65b;
+box-shadow:0 0 35px rgba(212,175,55,.6);
 }
-quote{
+
+.quote{
 margin-top:40px;
 font-size:24px;
 font-style:italic;
-color:#d6d6d6;
+color:#ddd;
 max-width:700px;
 line-height:1.8;
-text-align:center;
 padding:0 20px;
+animation:fadeUp 3s ease;
 }
 
-    @keyframes fadeUp{
+@keyframes fadeUp{
 from{
 opacity:0;
 transform:translateY(40px);
@@ -180,47 +218,43 @@ transform:translateY(0);
 }
 }
 
-.header h1{
-animation:fadeUp 1.2s ease;
+@keyframes glow{
+from{
+transform:translate(-50%,-50%) scale(1);
+}
+to{
+transform:translate(-50%,-50%) scale(1.15);
+}
 }
 
-header p{
-animation:fadeUp 1.8s ease;
+const themeBtn = document.getElementById("themeBtn");
+
+let dark = true;
+
+themeBtn.onclick = function(){
+
+if(dark){
+
+document.body.style.background =
+"linear-gradient(180deg,#f8f8f8,#ffffff)";
+
+document.body.style.color = "#111";
+
+themeBtn.innerHTML = "☀️";
+
+dark = false;
+
+}else{
+
+document.body.style.background =
+"radial-gradient(circle at top,#3d2b09 0%,transparent 35%),linear-gradient(180deg,#050505,#0d1117,#171717)";
+
+document.body.style.color = "white";
+
+themeBtn.innerHTML = "🌙";
+
+dark = true;
+
 }
 
-.hero-buttons{
-animation:fadeUp 2.4s ease;
-}
-
-quote{
-animation:fadeUp 3s ease;
-}
-</style>   
-
-    <body>
-    
-
-<nav>
-<a href="index.html">الرئيسية</a>
-<a href="about.html">من أنا</a>
-<a href="contact.html"> تواصل معي</a>
-</nav>
-
-<header id="home">
-<h1>بدير وسيم</h1>
-<p>كاتبٌ وشاعرٌ جزائري، أؤمن أن الكلمة الصادقة تبقى حين يرحل أصحابها.</p>
-
-    <div class="hero-buttons">
-    <a href="poems.html" class="btn">📜 قصائدي</a>
-    <a href="novels.html" class="btn">📚 رواياتي</a>
-</div>
-
-<p class="quote">
-"الكلمات لا تموت، بل تبحث دائمًا عن قارئ جديد."
-</p>
-</header>
-    
-
-</script>
-</body>
-</html>
+};
