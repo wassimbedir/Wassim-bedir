@@ -67,7 +67,7 @@ margin:60px auto;
 padding:20px;
 }
 
-.card{
+card{
 background:#1b1b1b;
 padding:30px;
 border-radius:15px;
@@ -80,7 +80,7 @@ color:gold;
 margin-bottom:30px;
 }
 
-.info{
+info{
 font-size:20px;
 margin:20px 0;
 }
@@ -306,7 +306,7 @@ margin:15px;
 font-weight:bold;
 }
 
-.container{
+container{
 max-width:900px;
 margin:50px auto;
 padding:20px;
@@ -318,14 +318,14 @@ color:gold;
 margin-bottom:40px;
 }
 
-.book{
+book{
 background:#1d1d1d;
 padding:20px;
 border-radius:12px;
 margin-bottom:20px;
 }
 
-.book h2{
+book h2{
 margin-top:0;
 color:white;
 }
@@ -416,7 +416,7 @@ box-shadow:0 0 30px rgba(212,175,55,.12);
 
 }
 
-.verse{
+verse{
 
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -426,7 +426,7 @@ border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
-.sadr{
+sadr{
 
 text-align:right;
 font-size:28px;
@@ -434,7 +434,7 @@ line-height:2;
 
 }
 
-.ajz{
+ajz{
 
 text-align:left;
 font-size:28px;
@@ -448,7 +448,7 @@ padding:50px 20px;
 
 }
 
-.author{
+author{
 
 font-size:24px;
 color:#d4af37;
@@ -456,14 +456,14 @@ margin-bottom:10px;
 
 }
 
-.signature{
+signature{
 
 font-size:34px;
 color:white;
 
 }
 
-.back{
+back{
 
 display:inline-block;
 margin-top:30px;
@@ -477,7 +477,7 @@ transition:.3s;
 
 }
 
-.back:hover{
+back:hover{
 
 transform:scale(1.05);
 
@@ -509,14 +509,14 @@ font-size:40px;
 
 }
 
-.verse{
+verse{
 
 grid-template-columns:1fr;
 
 }
 
-.sadr,
-.ajz{
+sadr,
+ajz{
 
 text-align:center;
 font-size:24px;
@@ -583,7 +583,7 @@ font-size:22px;
 color:#ddd;
 }
 
-.poem{
+poem{
 width:90%;
 max-width:900px;
 margin:auto;
@@ -595,7 +595,7 @@ border:1px solid rgba(212,175,55,.35);
 box-shadow:0 0 30px rgba(212,175,55,.12);
 }
 
-.verse{
+verse{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:30px;
@@ -603,13 +603,13 @@ padding:22px 0;
 border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-.sadr{
+sadr{
 text-align:right;
 font-size:28px;
 line-height:2;
 }
 
-.ajz{
+ajz{
 text-align:left;
 font-size:28px;
 line-height:2;
@@ -620,18 +620,18 @@ text-align:center;
 padding:50px 20px;
 }
 
-.author{
+author{
 font-size:24px;
 color:#d4af37;
 margin-bottom:10px;
 }
 
-.signature{
+signature{
 font-size:34px;
 color:white;
 }
 
-.back{
+back{
 display:inline-block;
 margin-top:30px;
 padding:12px 30px;
@@ -649,8 +649,9 @@ to{opacity:1;transform:translateY(0);}
 
 @media(max-width:768px){
 header h1{font-size:40px;}
-.verse{grid-template-columns:1fr;}
-.sadr,.ajz{text-align:center;font-size:24px;
+verse{grid-template-columns:1fr;}
+sadr,
+ajz{text-align:center;font-size:24px;
 }
 }
 
@@ -675,7 +676,7 @@ margin:15px;
 font-weight:bold;
 }
 
-.container{
+container{
 max-width:900px;
 margin:50px auto;
 padding:20px;
@@ -688,7 +689,7 @@ font-size:48px;
 margin-bottom:40px;
 }
 
-.poem{
+poem{
 background:#181818;
 border:1px solid rgba(212,175,55,.3);
 box-shadow:0 0 20px rgba(212,175,55,.15);
@@ -698,12 +699,12 @@ border-radius:12px;
 transition:.3s;
 }
 
-.poem:hover{
+poem:hover{
 transform:translateY(-8px);
 box-shadow:0 0 30px rgba(212,175,55,.35);
 }
 
-.poem h2{
+poem h2{
 color:#d4af37;
 font-size:30px;
 }
