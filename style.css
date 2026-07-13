@@ -655,4 +655,57 @@ header h1{font-size:40px;}
 }
 
 
+body{
+margin:0;
+font-family:'Amiri',serif;
+background:linear-gradient(180deg,#0b0b0b,#141414,#1d1d1d);
+color:white;
+}
+
+nav{
+background:#000;
+padding:20px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
+.container{
+max-width:900px;
+margin:50px auto;
+padding:20px;
+}
+
+h1{
+text-align:center;
+color:#d4af37;
+font-size:48px;
+margin-bottom:40px;
+}
+
+.poem{
+background:#181818;
+border:1px solid rgba(212,175,55,.3);
+box-shadow:0 0 20px rgba(212,175,55,.15);
+padding:20px;
+margin-bottom:20px;
+border-radius:12px;
+transition:.3s;
+}
+
+.poem:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(212,175,55,.35);
+}
+
+.poem h2{
+color:#d4af37;
+font-size:30px;
+}
+
 
