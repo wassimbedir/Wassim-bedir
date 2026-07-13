@@ -181,7 +181,7 @@ letter-spacing:3px;
 text-shadow:0 0 18px rgba(212,175,55,.45);
 }
 
-#themeBtn{
+themeBtn{
 position:fixed;
 top:20px;
 left:20px;
@@ -277,11 +277,11 @@ header p{
 animation:fadeUp 1.8s ease;
 }
 
-.hero-buttons{
+hero-buttons{
 animation:fadeUp 2.4s ease;
 }
 
-.quote{
+quote{
 animation:fadeUp 3s ease;
 }
 
