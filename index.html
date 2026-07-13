@@ -37,26 +37,32 @@ pointer-events:none;
 z-index:-1;
 }
 nav{
+position:fixed;
+top:15px;
+left:50%;
+transform:translateX(-50%);
 display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-background:#000;
-padding:15px 20px;
-overflow-x:auto;
+gap:15px;
+padding:12px 24px;
+background:rgba(20,20,20,.55);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+border:1px solid rgba(212,175,55,.25);
+border-radius:50px;
+z-index:1000;
 }
 nav a{
 color:white;
 text-decoration:none;
-margin:6px;
-font-size:15px;
+font-size:16px;
 font-weight:bold;
-padding:8px 12px;
-white-space:nowrap;
+padding:10px 16px;
+border-radius:30px;
+transition:.3s;
 }
-
 nav a:hover{
-color:gold;
+background:#d4af37;
+color:#111;
 }
 
 header{
