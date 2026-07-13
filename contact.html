@@ -7,7 +7,7 @@
 
 <title>تواصل معي | بدير وسيم</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -43,7 +43,7 @@ z-index:-1;
 nav{
 display:flex;
 justify-content:center;
-gap:20px;
+gap:15px;
 padding:18px;
 background:rgba(20,20,20,.55);
 backdrop-filter:blur(12px);
@@ -65,57 +65,75 @@ color:#111;
 }
 
 .container{
-max-width:850px;
-margin:90px auto;
-padding:25px;
+max-width:900px;
+margin:70px auto;
+padding:20px;
 }
 
 .card{
 background:rgba(255,255,255,.04);
 border:1px solid rgba(212,175,55,.25);
 border-radius:25px;
-padding:45px;
-backdrop-filter:blur(10px);
-box-shadow:0 0 30px rgba(212,175,55,.08);
+padding:50px 30px;
 text-align:center;
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(212,175,55,.1);
 }
 
 h1{
 font-family:'Cinzel',serif;
-font-size:48px;
+font-size:55px;
 color:#d4af37;
-margin-bottom:35px;
-text-shadow:0 0 15px rgba(212,175,55,.35);
+margin-bottom:50px;
+text-shadow:0 0 15px rgba(212,175,55,.4);
 }
 
 .info{
-font-size:24px;
-margin:30px 0;
-line-height:2;
-color:#ececec;
+margin:45px 0;
 }
 
-.info strong{
-color:#d4af37;
-font-size:26px;
+.icon{
+font-size:40px;
+margin-bottom:15px;
 }
 
-.info a{
+.contact-link{
+display:block;
+font-size:28px;
+font-weight:bold;
 color:#d4af37;
 text-decoration:none;
+text-align:center;
+word-break:break-word;
 transition:.3s;
 }
 
-.info a:hover{
+.contact-link:hover{
 color:white;
+text-shadow:0 0 12px rgba(212,175,55,.5);
 }
 
 .footer{
-margin-top:40px;
-font-size:21px;
+margin-top:50px;
+font-size:24px;
 line-height:2;
-color:#d6d6d6;
-font-style:italic;
+color:#ddd;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:42px;
+}
+
+.contact-link{
+font-size:22px;
+}
+
+.footer{
+font-size:20px;
+}
+
 }
 
 </style>
@@ -137,23 +155,23 @@ font-style:italic;
 <h1>تواصل معي</h1>
 
 <div class="info">
-📧<br><br>
-<strong>
-<a href="mailto:wassimbedir60@gmail.com">
+<div class="icon">📧</div>
+
+<a href="mailto:wassimbedir60@gmail.com" class="contact-link">
 wassimbedir60@gmail.com
 </a>
-</strong>
 </div>
 
 <div class="info">
-💻<br><br>
-<a href="https://github.com/wassimbedir" target="_blank">
+<div class="icon">💻</div>
+
+<a href="https://github.com/wassimbedir" target="_blank" class="contact-link">
 github.com/wassimbedir
 </a>
 </div>
 
 <div class="footer">
-إذا كان لديك استفسار، أو ترغب في مناقشة الأدب، الشعر، الروايات، أو التعاون في مشروعٍ إبداعي، فسيسعدني أن أتلقى رسالتك، وأتطلع إلى تواصلٍ يثمر فكرةً جديدة أو يفتح بابًا لإبداعٍ مشترك.
+إذا كان لديك استفسار، أو ترغب في مناقشة الأدب، الشعر، الروايات، أو التعاون في مشروعٍ إبداعي، فسيسعدني تواصلك.
 </div>
 
 </div>
@@ -161,4 +179,5 @@ github.com/wassimbedir
 </div>
 
 </body>
+
 </html>
