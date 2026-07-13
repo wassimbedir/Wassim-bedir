@@ -1,1 +1,40 @@
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#111;
+color:white;
+text-align:center;
+}
+
+nav{
+background:#000;
+padding:20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
+.container{
+max-width:800px;
+margin:80px auto;
+padding:20px;
+}
+
+h1{
+font-size:45px;
+color:gold;
+}
+
+p{
+font-size:20px;
+line-height:2;
+color:#ddd;
+}
+</style>
+
 
