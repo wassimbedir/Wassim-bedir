@@ -1,64 +1,120 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>رواياتي - بدير وسيم</title>
-</head>
 
-  <style>
-    body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#111;
-color:white;
-}
+<title>رواياتي | بدير وسيم</title>
 
-nav{
-background:#000;
-padding:20px;
-text-align:center;
-}
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
-nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
-}
-
-container{
-max-width:900px;
-margin:50px auto;
-padding:20px;
-}
-
-h1{
-text-align:center;
-color:gold;
-margin-bottom:40px;
-}
-
-book{
-background:#1d1d1d;
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
-}
-
-book h2{
-margin-top:0;
-color:white;
-}
-
+<style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
-    
-  </style>
+
+body{
+font-family:'Amiri',serif;
+background:
+radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
+linear-gradient(180deg,#050505,#0d1117,#171717);
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:radial-gradient(white 1px,transparent 1px);
+background-size:100px 100px;
+opacity:.08;
+pointer-events:none;
+z-index:-1;
+}
+
+nav{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:18px;
+background:rgba(20,20,20,.55);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(212,175,55,.2);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+padding:10px 18px;
+border-radius:30px;
+transition:.3s;
+}
+
+nav a:hover{
+background:#d4af37;
+color:#111;
+}
+
+.container{
+max-width:900px;
+margin:90px auto;
+padding:20px;
+}
+
+h1{
+font-family:'Cinzel',serif;
+text-align:center;
+font-size:50px;
+color:#d4af37;
+margin-bottom:40px;
+text-shadow:0 0 15px rgba(212,175,55,.35);
+}
+
+.book{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,175,55,.25);
+border-radius:20px;
+padding:35px;
+text-align:center;
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(212,175,55,.08);
+}
+
+.book h2{
+color:#d4af37;
+margin-bottom:20px;
+font-size:32px;
+}
+
+.book p{
+font-size:22px;
+line-height:2;
+color:#e5e5e5;
+}
+
+.status{
+margin-top:30px;
+padding:18px;
+border:1px dashed rgba(212,175,55,.4);
+border-radius:15px;
+font-size:22px;
+color:#d4af37;
+background:rgba(212,175,55,.05);
+}
+
+</style>
+
+</head>
+
 <body>
 
 <nav>
@@ -72,13 +128,18 @@ box-sizing:border-box;
 <h1>رواياتي</h1>
 
 <div class="book">
-<h2>رماد الورد</h2>
-<p>رواية تتناول الحب والخيانة والانتقام والصراع النفسي.</p>
+
+<h2>📚 المكتبة الأدبية</h2>
+
+<p>
+أعمل حاليًا على تطوير مجموعة من الروايات والمشاريع الأدبية، وأحرص على أن يرى كل عمل النور بأفضل صورة ممكنة.
+</p>
+
+<div class="status">
+🚧 غير متاح حاليًا.<br><br>
+سيتم إضافة الروايات والكتب هنا مستقبلًا بعد اكتمال إعدادها ونشرها.
 </div>
 
-<div class="book">
-<h2>رواية جديدة</h2>
-<p>ستُضاف هنا أعمالي القادمة.</p>
 </div>
 
 </div>
