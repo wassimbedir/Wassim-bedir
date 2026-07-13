@@ -15,6 +15,20 @@ box-sizing:border-box;
 
 body{
 font-family:'Amiri',serif;
+    body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:100px 100px;
+opacity:0.08;
+pointer-events:none;
+z-index:-1;
+    }
 background:
 radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
 linear-gradient(180deg,#050505,#0d1117,#171717);
@@ -139,6 +153,33 @@ max-width:700px;
 line-height:1.8;
 text-align:center;
 padding:0 20px;
+}
+
+    @keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+header h1{
+animation:fadeUp 1.2s ease;
+}
+
+header p{
+animation:fadeUp 1.8s ease;
+}
+
+.hero-buttons{
+animation:fadeUp 2.4s ease;
+}
+
+.quote{
+animation:fadeUp 3s ease;
 }
 </style>
     
