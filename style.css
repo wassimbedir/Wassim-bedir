@@ -18,7 +18,7 @@ margin:15px;
 font-weight:bold;
 }
 
-.container{
+container{
 max-width:800px;
 margin:80px auto;
 padding:20px;
@@ -61,7 +61,7 @@ nav a:hover{
 color:gold;
 }
 
-.container{
+container{
 max-width:800px;
 margin:60px auto;
 padding:20px;
