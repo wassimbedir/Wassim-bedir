@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>بدير وسيم</title>
 
-<style>
+
+  <style>
 *{
 margin:0;
 padding:0;
@@ -53,6 +54,37 @@ font-size:55px;
 margin-bottom:15px;
 }
 
+    #themeBtn{
+position:fixed;
+top:20px;
+left:20px;
+padding:10px 15px;
+border:none;
+border-radius:50px;
+background:#d4af37;
+color:black;
+font-size:20px;
+cursor:pointer;
+z-index:1000;
+}
+
+.light-mode{
+background:white;
+color:black;
+}
+
+.light-mode nav{
+background:#f5f5f5;
+}
+
+.light-mode nav a{
+color:black;
+}
+
+.light-mode .card{
+background:#ececec;
+color:black;
+}
 header p{
 font-size:20px;
 color:#ccc;
@@ -121,5 +153,27 @@ margin-top:20px;
 </div>
 </section>
 
+<button id="themeBtn" onclick="toggleTheme()">🌙</button>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("light-mode");
+
+  let btn = document.getElementById("themeBtn");
+
+  if (document.body.classList.contains("light-mode")) {
+    btn.innerHTML = "☀️";
+    localStorage.setItem("theme", "light");
+  } else {
+    btn.innerHTML = "🌙";
+    localStorage.setItem("theme", "dark");
+  }
+}
+
+if (localStorage.getItem("theme") == "light") {
+  document.body.classList.add("light-mode");
+  document.getElementById("themeBtn").innerHTML = "☀️";
+}
+</script>
 </body>
 </html>
