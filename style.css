@@ -160,7 +160,7 @@ position:relative;
 overflow:hidden;
 }
 
-header::before{
+header:before{
 content:"";
 position:absolute;
 width:450px;
