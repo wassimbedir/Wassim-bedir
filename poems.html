@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>قصائدي - بدير وسيم</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-</head>
 
-  <style>
-    }
-sadr,
-ajz{
-text-align:center;
-font-size:24px;
+<title>قصائدي | بدير وسيم</title>
 
-}
-}
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
 *{
 margin:0;
 padding:0;
@@ -24,8 +19,10 @@ box-sizing:border-box;
 
 body{
 font-family:'Amiri',serif;
-background:linear-gradient(180deg,#070707,#111,#1a1a1a);
-color:#f5f5f5;
+background:
+radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
+linear-gradient(180deg,#050505,#0d1117,#171717);
+color:white;
 overflow-x:hidden;
 }
 
@@ -36,128 +33,113 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:radial-gradient(circle at top,#d4af3720,transparent 45%);
-z-index:-2;
-}
-
-body::after{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
 background-image:radial-gradient(white 1px,transparent 1px);
-background-size:80px 80px;
+background-size:100px 100px;
 opacity:.08;
+pointer-events:none;
 z-index:-1;
 }
 
-header{
-height:45vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-animation:fade 2s;
-}
-
-header h1{
-font-size:60px;
-color:#d4af37;
-margin-bottom:15px;
-}
-
-header p{
-font-size:22px;
-color:#ddd;
-}
-
-poem{
-width:90%;
-max-width:900px;
-margin:auto;
-margin-bottom:80px;
-background:#111;
-padding:40px;
-border-radius:18px;
-border:1px solid rgba(212,175,55,.35);
-box-shadow:0 0 30px rgba(212,175,55,.12);
-}
-
-verse{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-padding:22px 0;
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-sadr{
-text-align:right;
-font-size:28px;
-line-height:2;
-}
-
-ajz{
-text-align:left;
-font-size:28px;
-
-
-body{
-margin:0;
-font-family:'Amiri',serif;
-background:linear-gradient(180deg,#0b0b0b,#141414,#1d1d1d);
-color:white;
-}
-
 nav{
-background:#000;
-padding:20px;
-text-align:center;
+display:flex;
+justify-content:center;
+gap:20px;
+padding:18px;
+background:rgba(20,20,20,.55);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(212,175,55,.2);
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:15px;
 font-weight:bold;
-}
-
-container{
-max-width:900px;
-margin:50px auto;
-padding:20px;
-}
-
-h1{
-text-align:center;
-color:#d4af37;
-font-size:48px;
-margin-bottom:40px;
-}
-
-poem{
-background:#181818;
-border:1px solid rgba(212,175,55,.3);
-box-shadow:0 0 20px rgba(212,175,55,.15);
-padding:20px;
-margin-bottom:20px;
-border-radius:12px;
+padding:10px 18px;
+border-radius:30px;
 transition:.3s;
 }
 
-poem:hover{
-transform:translateY(-8px);
-box-shadow:0 0 30px rgba(212,175,55,.35);
+nav a:hover{
+background:#d4af37;
+color:#111;
 }
 
-poem h2{
-color:#d4af37;
-font-size:30px;
+.header{
+text-align:center;
+padding:70px 20px 40px;
 }
-  </style>
+
+.header h1{
+font-family:'Cinzel',serif;
+font-size:55px;
+color:#d4af37;
+margin-bottom:15px;
+text-shadow:0 0 15px rgba(212,175,55,.35);
+}
+
+.header p{
+font-size:23px;
+color:#ddd;
+line-height:2;
+max-width:700px;
+margin:auto;
+}
+
+.poem{
+max-width:900px;
+margin:35px auto;
+padding:35px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,175,55,.25);
+border-radius:20px;
+backdrop-filter:blur(10px);
+transition:.35s;
+}
+
+.poem:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(212,175,55,.25);
+}
+
+.poem h2{
+font-size:34px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.poem p{
+font-size:22px;
+line-height:2;
+color:#e5e5e5;
+margin-bottom:25px;
+}
+
+.read-btn{
+display:inline-block;
+padding:14px 28px;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.3s;
+}
+
+.read-btn:hover{
+background:#e5c65b;
+transform:translateY(-3px);
+}
+
+footer{
+text-align:center;
+padding:50px;
+color:#888;
+}
+
+</style>
+
+</head>
+
 <body>
 
 <nav>
@@ -165,54 +147,47 @@ font-size:30px;
 <a href="about.html">من أنا</a>
 <a href="contact.html">تواصل معي</a>
 </nav>
-  <h1>قصائدي</h1>
+
+<section class="header">
+
+<h1>قصائدي</h1>
+
+<p>
+هنا تجد مجموعةً من قصائدي، كتبتها في محطاتٍ مختلفة من حياتي، ولكل قصيدةٍ قصة، ولكل بيتٍ نبض.
+</p>
+
+</section>
 
 <div class="poem">
 
-<h2>وربُّ السماءِ إنّي لأعشقُها</h2>
+<h2>📜 وربُّ السماءِ إنّي لأعشقُها</h2>
 
 <p>
-  من أشهر قصائدي، تتحدث عن حبٍ عميقٍ يلامس الروح، بأسلوبٍ فصيح وراقٍ.
+قصيدة وجدانية تعبّر عن حبٍ عميق يلامس الروح، كتبتها بأسلوبٍ فصيح يجمع بين العاطفة والصورة الشعرية.
 </p>
 
-<a href="poem1.html" style="
-display:inline-block;
-margin-top:15px;
-padding:10px 20px;
-background:gold;
-color:black;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-">
-📖 اقرأ القصيدة
-</a>
-  <div class="poem">
+<a href="poem1.html" class="read-btn">📖 اقرأ القصيدة</a>
 
-<h2>ليتنا بين زحام العابرين نلتقي</h2>
+</div>
+
+<div class="poem">
+
+<h2>📜 ليتنا بين زحام العابرين نلتقي</h2>
 
 <p>
 قصيدة تتحدث عن لقاءٍ يتمناه القلب بعد طول الفراق، حيث يمتزج الحنين بالأمل في بداية جديدة.
 </p>
 
-<a href="poem2.html" style="
-display:inline-block;
-margin-top:15px;
-padding:10px 20px;
-background:gold;
-color:black;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-">
-📖 اقرأ القصيدة
-</a>
-
-  </div>
+<a href="poem2.html" class="read-btn">📖 اقرأ القصيدة</a>
 
 </div>
 
-</div>
+<footer>
+
+© جميع الحقوق محفوظة • بدير وسيم
+
+</footer>
 
 </body>
+
 </html>
