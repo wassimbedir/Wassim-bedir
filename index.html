@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>بدير وسيم</title>
 
-
-  <style>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
 *{
 margin:0;
 padding:0;
@@ -14,10 +14,13 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#111;
+font-family:'Amiri',serif;
+background:
+radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
+linear-gradient(180deg,#050505,#0d1117,#171717);
 color:#fff;
 scroll-behavior:smooth;
+overflow-x:hidden;
 }
 
 nav{
@@ -52,8 +55,12 @@ text-align:center;
 }
 
 header h1{
-font-size:55px;
-margin-bottom:15px;
+font-family:'Cinzel',serif;
+font-size:72px;
+color:#d4af37;
+margin-bottom:20px;
+letter-spacing:3px;
+text-shadow:0 0 18px rgba(212,175,55,.45);
 }
 
     #themeBtn{
@@ -88,8 +95,11 @@ background:#ececec;
 color:black;
 }
 header p{
-font-size:20px;
-color:#ccc;
+font-size:28px;
+color:#ddd;
+line-height:1.8;
+max-width:700px;
+padding:0 20px;
 }
 
 section{
@@ -124,7 +134,7 @@ margin-top:20px;
 
 <header id="home">
 <h1>بدير وسيم</h1>
-<p>كاتب وشاعر جزائري</p>
+<p>كاتبٌ وشاعرٌ جزائري، أؤمن أن الكلمة الصادقة تبقى حين يرحل أصحابها.</p>
 </header>
 
 <button id="themeBtn" onclick="toggleTheme()">🌙</button>
