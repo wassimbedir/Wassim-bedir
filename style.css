@@ -761,3 +761,11 @@ background:#e5c65b;
 transform:translateY(-5px);
 box-shadow:0 0 25px rgba(212,175,55,.6);
    }
+
+footer p{
+color:#aaa !important;
+}
+
+footer h3{
+color:#d4af37 !important;
+}
