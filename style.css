@@ -769,3 +769,124 @@ color:#aaa !important;
 footer h3{
 color:#d4af37 !important;
 }
+
+/* ظهور العناصر عند فتح الصفحة */
+
+.header,
+.about-preview,
+.latest,
+.quote-section,
+footer{
+animation:fadeUp 1.2s ease forwards;
+}
+
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+
+/* حركة البطاقات */
+
+.card{
+
+transition:.4s ease;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 25px rgba(212,175,55,.35);
+
+}
+
+
+
+/* لمعان خفيف للعناوين الذهبية */
+
+h1,h2{
+
+animation:goldGlow 3s infinite alternate;
+
+}
+
+
+@keyframes goldGlow{
+
+from{
+
+text-shadow:0 0 10px rgba(212,175,55,.3);
+
+}
+
+to{
+
+text-shadow:0 0 25px rgba(212,175,55,.8);
+
+}
+
+}
+
+
+
+/* حركة الأزرار */
+
+.btn,
+.back,
+.card a{
+
+transition:.3s ease;
+
+}
+
+
+.btn:hover,
+.back:hover,
+.card a:hover{
+
+transform:scale(1.08);
+
+}
+
+
+
+/* ظهور القصائد */
+
+.verse{
+
+animation:verseShow 1s ease forwards;
+
+}
+
+
+@keyframes verseShow{
+
+from{
+
+opacity:0;
+transform:translateX(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateX(0);
+
+}
+
+}
