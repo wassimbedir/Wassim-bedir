@@ -890,3 +890,125 @@ transform:translateX(0);
 }
 
 }
+
+/* تحسين عرض الهاتف */
+
+@media (max-width:768px){
+
+body{
+overflow-x:hidden;
+}
+
+
+/* القائمة */
+
+nav{
+flex-wrap:wrap;
+gap:8px;
+padding:10px;
+}
+
+nav a{
+font-size:16px;
+padding:8px 12px;
+}
+
+
+
+/* العنوان الرئيسي */
+
+.header h1,
+header h1{
+font-size:42px;
+}
+
+
+.header p,
+header p{
+font-size:20px;
+}
+
+
+/* الأزرار */
+
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+gap:15px;
+}
+
+
+.btn{
+width:80%;
+text-align:center;
+}
+
+
+
+/* الأقسام */
+
+.about-preview,
+.latest,
+.quote-section{
+padding:25px 15px;
+}
+
+
+
+/* البطاقات */
+
+.cards{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+
+.card{
+
+width:90%;
+
+max-width:350px;
+
+}
+
+
+
+/* القصائد */
+
+.poem{
+
+width:92%;
+
+padding:25px;
+
+}
+
+
+.sadr{
+
+font-size:27px;
+
+}
+
+
+.ajz{
+
+font-size:25px;
+
+}
+
+
+
+/* العناوين */
+
+h2{
+
+font-size:34px;
+
+}
+
+
+}
