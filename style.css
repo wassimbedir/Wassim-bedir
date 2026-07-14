@@ -560,3 +560,65 @@ background:#e5c65b;
 /* ===========================
    نهاية الملف
 =========================== */
+
+/* =======================
+   Contact Page
+======================= */
+
+.contact-box{
+
+max-width:650px;
+margin:40px auto;
+padding:35px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(212,175,55,.25);
+
+border-radius:18px;
+
+text-align:center;
+
+transition:.35s;
+
+box-shadow:0 0 20px rgba(212,175,55,.08);
+
+}
+
+.contact-box:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 0 35px rgba(212,175,55,.25);
+
+}
+
+.contact-box h3{
+
+font-size:30px;
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+}
+
+.contact-box a{
+
+font-size:24px;
+
+color:white;
+
+text-decoration:none;
+
+word-break:break-word;
+
+transition:.3s;
+
+}
+
+.contact-box a:hover{
+
+color:#d4af37;
+
+}
