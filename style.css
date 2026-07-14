@@ -561,6 +561,7 @@ background:#e5c65b;
    نهاية الملف
 =========================== */
 
+
 /* =======================
    Contact Page
 ======================= */
@@ -702,3 +703,61 @@ color:#ddd;
 font-style:italic;
 box-shadow:0 0 20px rgba(212,175,55,.08);
 }
+
+.latest{
+max-width:1000px;
+margin:100px auto;
+padding:20px;
+text-align:center;
+}
+
+.latest h2{
+font-size:45px;
+color:#d4af37;
+margin-bottom:40px;
+}
+
+.latest-card{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,175,55,.25);
+border-radius:25px;
+padding:40px;
+box-shadow:0 0 30px rgba(212,175,55,.08);
+transition:.35s;
+}
+
+.latest-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 35px rgba(212,175,55,.25);
+}
+
+.latest-card h3{
+font-size:34px;
+color:#d4af37;
+margin-bottom:20px;
+}
+
+.latest-card p{
+font-size:24px;
+line-height:2;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.latest-btn{
+display:inline-block;
+padding:14px 28px;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+border-radius:50px;
+transition:.3s;
+}
+
+.latest-btn:hover{
+background:#e5c65b;
+transform:translateY(-5px);
+box-shadow:0 0 25px rgba(212,175,55,.6);
+   }
