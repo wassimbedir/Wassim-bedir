@@ -1,25 +1,20 @@
-}
-
-sadr,
-ajz{
-
-text-align:center;
-font-size:24px;
-
-}
-
-}
+/* ===========================
+   إعدادات عامة
+=========================== */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
 font-family:'Amiri',serif;
-background:linear-gradient(180deg,#070707,#111,#1a1a1a);
-color:#f5f5f5;
+background:
+radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
+linear-gradient(180deg,#050505,#0d1117,#171717);
+color:#fff;
 overflow-x:hidden;
 }
 
@@ -30,126 +25,538 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:radial-gradient(circle at top,#d4af3720,transparent 45%);
-z-index:-2;
-}
-
-body::after{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:radial-gradient(white 1px,transparent 1px);
-background-size:80px 80px;
+background-image:
+radial-gradient(white 1px,transparent 1px);
+background-size:100px 100px;
 opacity:.08;
+pointer-events:none;
 z-index:-1;
 }
 
-header{
-height:45vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-animation:fade 2s;
+/* ===========================
+   شريط التقدم
+=========================== */
+
+#progressBar{
+position:fixed;
+top:0;
+left:0;
+width:0%;
+height:4px;
+background:#d4af37;
+z-index:9999;
+box-shadow:0 0 12px #d4af37;
 }
 
-header h1{
-font-size:60px;
-color:#d4af37;
-margin-bottom:15px;
-}
-
-header p{
-font-size:22px;
-color:#ddd;
-}
-
-poem{
-width:90%;
-max-width:900px;
-margin:auto;
-margin-bottom:80px;
-background:#111;
-padding:40px;
-border-radius:18px;
-border:1px solid rgba(212,175,55,.35);
-box-shadow:0 0 30px rgba(212,175,55,.12);
-}
-
-verse{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-padding:22px 0;
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-sadr{
-text-align:right;
-font-size:28px;
-line-height:2;
-}
-
-ajz{
-text-align:left;
-font-size:28px;
-
-
-body{
-margin:0;
-font-family:'Amiri',serif;
-background:linear-gradient(180deg,#0b0b0b,#141414,#1d1d1d);
-color:white;
-}
+/* ===========================
+   القائمة
+=========================== */
 
 nav{
-background:#000;
-padding:20px;
-text-align:center;
+position:fixed;
+top:15px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+padding:12px 24px;
+background:rgba(20,20,20,.55);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+border:1px solid rgba(212,175,55,.25);
+border-radius:50px;
+box-shadow:0 8px 25px rgba(0,0,0,.35);
+z-index:999;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:15px;
+font-size:16px;
 font-weight:bold;
+padding:10px 18px;
+border-radius:30px;
+transition:.35s;
 }
 
-container{
-max-width:900px;
-margin:50px auto;
-padding:20px;
+nav a:hover,
+nav a.active{
+background:#d4af37;
+color:#111;
+box-shadow:0 0 18px rgba(212,175,55,.45);
 }
 
-h1{
+/* ===========================
+   الواجهة الرئيسية
+=========================== */
+
+.header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-color:#d4af37;
-font-size:48px;
-margin-bottom:40px;
+padding:20px;
+position:relative;
+overflow:hidden;
 }
 
-poem{
-background:#181818;
-border:1px solid rgba(212,175,55,.3);
-box-shadow:0 0 20px rgba(212,175,55,.15);
+.header::before{
+content:"";
+position:absolute;
+width:450px;
+height:450px;
+border-radius:50%;
+background:radial-gradient(circle,
+rgba(212,175,55,.25),
+transparent 70%);
+animation:glow 6s infinite alternate;
+z-index:-1;
+}
+
+.header h1{
+font-family:'Cinzel',serif;
+font-size:82px;
+color:#d4af37;
+letter-spacing:3px;
+text-shadow:
+0 0 12px rgba(212,175,55,.7),
+0 0 35px rgba(212,175,55,.45);
+animation:fadeUp 1s;
+}
+
+.header p{
+font-size:28px;
+line-height:1.9;
+max-width:760px;
+margin-top:25px;
+color:#ddd;
+animation:fadeUp 1.5s;
+}
+
+/* ===========================
+   الأزرار الرئيسية
+=========================== */
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:40px;
+animation:fadeUp 2s;
+}
+
+.btn{
+display:inline-block;
+padding:15px 32px;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+font-size:20px;
+font-weight:bold;
+border-radius:50px;
+transition:.35s;
+box-shadow:0 0 18px rgba(212,175,55,.35);
+}
+
+.btn:hover{
+transform:translateY(-6px) scale(1.05);
+background:#e4c45d;
+box-shadow:0 0 30px rgba(212,175,55,.65);
+}
+
+/* ===========================
+   الاقتباس
+=========================== */
+
+.quote{
+margin-top:45px;
+font-size:25px;
+font-style:italic;
+color:#d9d9d9;
+max-width:700px;
+line-height:1.9;
+padding:0 20px;
+animation:fadeUp 2.5s;
+}
+/* ===========================
+   قسم النبذة
+=========================== */
+
+.about-preview{
+max-width:900px;
+margin:100px auto;
+padding:45px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,175,55,.25);
+border-radius:22px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 25px rgba(212,175,55,.10);
+text-align:center;
+transition:.35s;
+}
+
+.about-preview:hover{
+transform:translateY(-8px);
+box-shadow:0 0 35px rgba(212,175,55,.25);
+}
+
+.about-preview h2{
+font-size:42px;
+color:#d4af37;
+margin-bottom:25px;
+font-family:'Cinzel',serif;
+}
+
+.about-preview p{
+font-size:24px;
+line-height:2;
+color:#ddd;
+}
+
+/* ===========================
+   آخر الأعمال
+=========================== */
+
+.latest{
+max-width:1200px;
+margin:100px auto;
 padding:20px;
+text-align:center;
+}
+
+.latest h2{
+font-size:46px;
+color:#d4af37;
+margin-bottom:45px;
+font-family:'Cinzel',serif;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,175,55,.25);
+border-radius:20px;
+padding:35px 25px;
+backdrop-filter:blur(10px);
+transition:.35s;
+box-shadow:0 0 20px rgba(212,175,55,.08);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(212,175,55,.30);
+}
+
+.card h3{
+font-size:30px;
+color:#d4af37;
 margin-bottom:20px;
-border-radius:12px;
+}
+
+.card p{
+font-size:22px;
+line-height:1.9;
+color:#e5e5e5;
+margin-bottom:25px;
+}
+
+.card a{
+display:inline-block;
+padding:12px 28px;
+background:#d4af37;
+color:#111;
+text-decoration:none;
+font-weight:bold;
+border-radius:35px;
 transition:.3s;
 }
 
-poem:hover{
-transform:translateY(-8px);
-box-shadow:0 0 30px rgba(212,175,55,.35);
+.card a:hover{
+background:#e7c95e;
+transform:scale(1.05);
 }
 
-poem h2{
-color:#d4af37;
+/* ===========================
+   صندوق الاقتباس
+=========================== */
+
+.quote-section{
+max-width:900px;
+margin:90px auto;
+padding:45px;
+text-align:center;
+}
+
+.quote-section p{
 font-size:30px;
+font-style:italic;
+color:#d4af37;
+line-height:2;
+text-shadow:0 0 12px rgba(212,175,55,.25);
 }
 
+/* ===========================
+   Footer
+=========================== */
 
+footer{
+margin-top:100px;
+padding:60px 20px;
+text-align:center;
+background:rgba(255,255,255,.03);
+border-top:1px solid rgba(212,175,55,.25);
+}
+
+.footer-line{
+width:120px;
+height:3px;
+background:#d4af37;
+margin:0 auto 30px;
+border-radius:30px;
+}
+
+footer h3{
+font-family:'Cinzel',serif;
+font-size:34px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+footer p{
+font-size:20px;
+color:#ccc;
+margin:10px 0;
+}
+
+/* ===========================
+   الهاتف
+=========================== */
+
+@media(max-width:768px){
+
+nav{
+width:92%;
+gap:6px;
+padding:12px;
+}
+
+nav a{
+font-size:14px;
+padding:8px 12px;
+}
+
+.header h1{
+font-size:52px;
+}
+
+.header p{
+font-size:22px;
+}
+
+.quote{
+font-size:20px;
+}
+
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.btn{
+width:220px;
+text-align:center;
+}
+
+.about-preview h2,
+.latest h2{
+font-size:34px;
+}
+
+.about-preview p,
+.card p{
+font-size:20px;
+}
+
+.quote-section p{
+font-size:22px;
+}
+
+footer h3{
+font-size:28px;
+}
+
+footer p{
+font-size:18px;
+}
+
+  }
+/* ===========================
+   شاشة التحميل
+=========================== */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#050505;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:99999;
+transition:opacity .8s,visibility .8s;
+}
+
+#loader.hide{
+opacity:0;
+visibility:hidden;
+}
+
+#loader h1{
+font-family:'Cinzel',serif;
+font-size:60px;
+color:#d4af37;
+letter-spacing:3px;
+margin-bottom:15px;
+text-shadow:0 0 20px rgba(212,175,55,.5);
+}
+
+#loader p{
+font-size:22px;
+color:#ccc;
+}
+
+/* ===========================
+   زر العودة للأعلى
+=========================== */
+
+#topBtn{
+position:fixed;
+bottom:25px;
+left:25px;
+width:55px;
+height:55px;
+border:none;
+border-radius:50%;
+background:#d4af37;
+color:#111;
+font-size:24px;
+font-weight:bold;
+cursor:pointer;
+display:none;
+transition:.3s;
+box-shadow:0 0 18px rgba(212,175,55,.35);
+z-index:9999;
+}
+
+#topBtn:hover{
+transform:translateY(-5px) scale(1.08);
+box-shadow:0 0 28px rgba(212,175,55,.6);
+}
+
+/* ===========================
+   الحركات
+=========================== */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes glow{
+
+from{
+transform:translate(-50%,-50%) scale(1);
+opacity:.7;
+}
+
+to{
+transform:translate(-50%,-50%) scale(1.15);
+opacity:1;
+}
+
+}
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 15px rgba(212,175,55,.25);
+}
+
+50%{
+box-shadow:0 0 35px rgba(212,175,55,.55);
+}
+
+100%{
+box-shadow:0 0 15px rgba(212,175,55,.25);
+}
+
+}
+
+/* ===========================
+   ظهور العناصر
+=========================== */
+
+.header,
+.about-preview,
+.latest,
+.quote-section,
+.card,
+footer{
+animation:fadeUp 1s ease;
+}
+
+/* ===========================
+   تحديد النص
+=========================== */
+
+::selection{
+background:#d4af37;
+color:#111;
+}
+
+/* ===========================
+   شريط التمرير
+=========================== */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+background:#d4af37;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#e5c65b;
+}
+
+/* ===========================
+   نهاية الملف
+=========================== */
