@@ -2,230 +2,221 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>بدير وسيم</title>
+<title>بدير وسيم | الموقع الرسمي</title>
+
+<meta name="description" content="الموقع الرسمي للكاتب والشاعر الجزائري بدير وسيم">
 
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<!-- شاشة التحميل -->
+
+<div id="loader">
+<h1>بدير وسيم</h1>
+<p>Writer • Poet</p>
+</div>
+
+<!-- شريط التقدم -->
+
+<div id="progressBar"></div>
+
+<!-- زر العودة للأعلى -->
+
+<button id="topBtn">↑</button>
+
+<!-- القائمة -->
+
 <nav>
-<a href="index.html">الرئيسية</a>
+
+<a class="active" href="index.html">الرئيسية</a>
+
 <a href="about.html">من أنا</a>
+
 <a href="contact.html">تواصل معي</a>
+
 </nav>
 
-<header class="header" id="home">
+<!-- الواجهة الرئيسية -->
+
+<header class="header">
 
 <h1>بدير وسيم</h1>
 
 <p>
+
 كاتبٌ وشاعرٌ جزائري،
+<br>
 أؤمن أن الكلمة الصادقة تبقى حين يرحل أصحابها.
+
 </p>
 
 <div class="hero-buttons">
-<a href="poems.html" class="btn">📜 قصائدي</a>
-<a href="novels.html" class="btn">📚 رواياتي</a>
+
+<a href="poems.html" class="btn">
+
+📜 قصائدي
+
+</a>
+
+<a href="novels.html" class="btn">
+
+📚 رواياتي
+
+</a>
+
 </div>
 
 <p class="quote">
+
 "الكلمات لا تموت، بل تبحث دائمًا عن قارئ جديد."
+
 </p>
 
 </header>
 
+<!-- نبذة -->
+
+<section class="about-preview">
+
+<h2>
+
+نبذة
+
+</h2>
+
+<p>
+
+مرحبًا بك في عالمي الأدبي...
+
+هنا تجد قصائدي، ورواياتي، وكل ما خرج من القلب ليصل إلى القلوب.
+
+</p>
+
+</section>
+
+<!-- آخر الإضافات -->
+
+<section class="latest">
+
+<h2>
+
+آخر الإضافات
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>📜 قصيدة</h3>
+
+<p>
+
+وربُّ السماءِ إنّي لأعشقُها
+
+</p>
+
+<a href="poem1.html">
+
+قراءة
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📜 قصيدة</h3>
+
+<p>
+
+ليتنا بين زحام العابرين نلتقي
+
+</p>
+
+<a href="poem2.html">
+
+قراءة
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📚 رواية</h3>
+
+<p>
+
+رماد الورد
+
+<br>
+
+قريبًا...
+
+</p>
+
+<a href="novels.html">
+
+عرض
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- اقتباس -->
+
+<section class="quote-section">
+
+<p>
+
+"الأدب لا يغير العالم، لكنه يغير الإنسان الذي سيغير العالم."
+
+</p>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<div class="footer-line"></div>
+
+<h3>
+
+بدير وسيم
+
+</h3>
+
+<p>
+
+كاتب وشاعر جزائري
+
+</p>
+
+<p>
+
+© 2026 جميع الحقوق محفوظة
+
+</p>
+
+</footer>
+
 <script src="script.js"></script>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Amiri',serif;
-background:
-radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
-linear-gradient(180deg,#050505,#0d1117,#171717);
-color:white;
-scroll-behavior:smooth;
-overflow-x:hidden;
-}
-
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:radial-gradient(white 1px,transparent 1px);
-background-size:100px 100px;
-opacity:.08;
-pointer-events:none;
-z-index:-1;
-}
-
-nav{
-position:fixed;
-top:15px;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-gap:15px;
-padding:12px 24px;
-background:rgba(20,20,20,.55);
-backdrop-filter:blur(12px);
-border:1px solid rgba(212,175,55,.25);
-border-radius:50px;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
-z-index:1000;
-}
-
-nav a{
-text-decoration:none;
-color:white;
-font-weight:bold;
-padding:10px 16px;
-border-radius:30px;
-transition:.3s;
-}
-
-nav a:hover{
-background:#d4af37;
-color:#111;
-}
-
-#themeBtn{
-position:fixed;
-top:20px;
-left:20px;
-padding:10px 15px;
-border:none;
-border-radius:50px;
-background:#d4af37;
-color:black;
-font-size:20px;
-cursor:pointer;
-z-index:1000;
-}
-
-.header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-position:relative;
-overflow:hidden;
-}
-
-.header::before{
-content:"";
-position:absolute;
-width:450px;
-height:450px;
-background:radial-gradient(circle,rgba(212,175,55,.25)0%,rgba(212,175,55,0)70%);
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-animation:glow 6s ease-in-out infinite alternate;
-z-index:-1;
-}
-
-.header h1{
-font-family:'Cinzel',serif;
-font-size:80px;
-color:#d4af37;
-letter-spacing:3px;
-margin-bottom:20px;
-text-shadow:
-0 0 10px rgba(212,175,55,.7),
-0 0 30px rgba(212,175,55,.5),
-0 0 60px rgba(212,175,55,.3);
-animation:fadeUp 1.2s ease;
-}
-
-.header p{
-font-size:28px;
-color:#ddd;
-line-height:1.8;
-max-width:700px;
-padding:0 20px;
-animation:fadeUp 1.8s ease;
-}
-
-.hero-buttons{
-margin-top:35px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
-animation:fadeUp 2.4s ease;
-}
-
-.btn{
-display:inline-block;
-padding:14px 30px;
-background:#d4af37;
-color:#111;
-text-decoration:none;
-font-size:20px;
-font-weight:bold;
-border-radius:50px;
-transition:.35s;
-box-shadow:0 0 20px rgba(212,175,55,.35);
-}
-
-.btn:hover{
-transform:translateY(-6px) scale(1.05);
-background:#e5c65b;
-box-shadow:0 0 35px rgba(212,175,55,.6);
-}
-
-.quote{
-margin-top:40px;
-font-size:24px;
-font-style:italic;
-color:#ddd;
-max-width:700px;
-line-height:1.8;
-padding:0 20px;
-animation:fadeUp 3s ease;
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-@keyframes glow{
-from{
-transform:translate(-50%,-50%) scale(1);
-}
-to{
-transform:translate(-50%,-50%) scale(1.15);
-}
-
-
-  </style>
-}
-
 </body>
-</html>
 
-};
+</html>
