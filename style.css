@@ -687,3 +687,18 @@ background:#d4af37;
 box-shadow:0 0 25px rgba(212,175,55,.5);
 
 }
+
+.intro{
+max-width:850px;
+margin:40px auto;
+padding:25px 30px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(212,175,55,.25);
+border-radius:18px;
+text-align:center;
+font-size:24px;
+line-height:2;
+color:#ddd;
+font-style:italic;
+box-shadow:0 0 20px rgba(212,175,55,.08);
+}
