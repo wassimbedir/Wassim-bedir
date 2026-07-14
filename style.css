@@ -622,3 +622,68 @@ transition:.3s;
 color:#d4af37;
 
 }
+.contact-note{
+
+max-width:800px;
+margin:50px auto;
+text-align:center;
+
+font-size:22px;
+line-height:2.2;
+
+color:#d7d7d7;
+
+padding:0 20px;
+
+}
+
+.contact-note span{
+
+color:#d4af37;
+font-weight:bold;
+
+}
+
+.socials{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+
+margin-top:45px;
+
+}
+
+.social{
+
+width:70px;
+height:70px;
+
+border-radius:50%;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:32px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(212,175,55,.25);
+
+transition:.35s;
+
+text-decoration:none;
+
+}
+
+.social:hover{
+
+transform:translateY(-8px);
+
+background:#d4af37;
+
+box-shadow:0 0 25px rgba(212,175,55,.5);
+
+}
