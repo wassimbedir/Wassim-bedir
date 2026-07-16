@@ -111,3 +111,23 @@ const randomIndex = Math.floor(Math.random() * poems.length);
 window.location.href = poems[randomIndex];
 
 }
+
+function filterPoems(category){
+
+const poems = document.querySelectorAll(".poem");
+
+poems.forEach(function(poem){
+
+if(category === "all" || poem.dataset.category === category){
+
+poem.style.display = "block";
+
+}else{
+
+poem.style.display = "none";
+
+}
+
+});
+
+}
