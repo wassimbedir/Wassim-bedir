@@ -1,113 +1,362 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>تواصل معي | بدير وسيم</title><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><style>
 
-<head>
+.contact-hero{
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+min-height:58vh;
 
-<title>تواصل معي | بدير وسيم</title>
+display:flex;
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+flex-direction:column;
 
-<link rel="stylesheet" href="style.css">
+justify-content:center;
 
-</head>
+align-items:center;
 
-<body>
+text-align:center;
 
-<div id="loader">
-<h1>بدير وسيم</h1>
-<p>Writer • Poet</p>
-</div>
+padding:80px 20px 60px;
 
-<div id="progressBar"></div>
+}
 
-<button id="topBtn">↑</button>
+.contact-hero h1{
 
-<nav>
+font-family:'Cinzel',serif;
 
-<a href="index.html">الرئيسية</a>
+font-size:clamp(42px,7vw,72px);
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+text-shadow:0 0 20px rgba(212,175,55,.4);
+
+}
+
+.contact-hero p{
+
+font-size:clamp(20px,3vw,28px);
+
+color:#ddd;
+
+line-height:2;
+
+max-width:800px;
+
+}
+
+.contact-container{
+
+max-width:1000px;
+
+margin:auto;
+
+padding:0 20px 70px;
+
+}
+
+.contact-intro{
+
+text-align:center;
+
+padding:45px 30px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(212,175,55,.25);
+
+border-radius:28px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 30px rgba(212,175,55,.08);
+
+margin-bottom:35px;
+
+}
+
+.contact-intro h2{
+
+font-size:34px;
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+}
+
+.contact-intro p{
+
+font-size:22px;
+
+line-height:2.1;
+
+color:#ddd;
+
+}
+
+.contact-methods{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:25px;
+
+margin-bottom:35px;
+
+}
+
+.contact-card{
+
+text-align:center;
+
+padding:35px 25px;
+
+background:rgba(255,255,255,.035);
+
+border:1px solid rgba(212,175,55,.2);
+
+border-radius:25px;
+
+transition:.35s;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 30px rgba(212,175,55,.2);
+
+}
+
+.contact-icon{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+.contact-card h3{
+
+font-size:28px;
+
+color:#d4af37;
+
+margin-bottom:12px;
+
+}
+
+.contact-card p{
+
+font-size:19px;
+
+color:#bbb;
+
+margin-bottom:20px;
+
+}
+
+.contact-link{
+
+display:inline-block;
+
+padding:12px 24px;
+
+border:1px solid rgba(212,175,55,.4);
+
+border-radius:40px;
+
+color:#ddd;
+
+text-decoration:none;
+
+font-size:19px;
+
+transition:.3s;
+
+}
+
+.contact-link:hover{
+
+background:#d4af37;
+
+color:#111;
+
+transform:translateY(-3px);
+
+}
+
+.contact-note{
+
+text-align:center;
+
+padding:35px 25px;
+
+border-top:1px solid rgba(212,175,55,.2);
+
+border-bottom:1px solid rgba(212,175,55,.2);
+
+margin-bottom:35px;
+
+}
+
+.contact-note p{
+
+font-size:21px;
+
+line-height:2;
+
+color:#ccc;
+
+}
+
+.contact-note span{
+
+color:#d4af37;
+
+}
+
+.contact-social{
+
+text-align:center;
+
+}
+
+.contact-social h2{
+
+font-size:30px;
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+}
+
+.instagram-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:14px 30px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:21px;
+
+font-weight:bold;
+
+color:#111;
+
+background:linear-gradient(135deg,#d4af37,#f1d477,#b8860b);
+
+box-shadow:0 0 20px rgba(212,175,55,.25);
+
+transition:.35s;
+
+}
+
+.instagram-btn:hover{
+
+transform:translateY(-5px) scale(1.03);
+
+box-shadow:0 0 30px rgba(212,175,55,.6);
+
+}
+
+@media(max-width:768px){
+
+.contact-hero{
+
+min-height:48vh;
+
+}
+
+.contact-intro{
+
+padding:30px 20px;
+
+}
+
+.contact-intro h2{
+
+font-size:29px;
+
+}
+
+.contact-intro p{
+
+font-size:19px;
+
+}
+
+.contact-methods{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-card h3{
+
+font-size:25px;
+
+}
+
+.contact-card p{
+
+font-size:18px;
+
+}
+
+.contact-note p{
+
+font-size:19px;
+
+}
+
+.instagram-btn{
+
+font-size:19px;
+
+padding:13px 25px;
+
+}
+
+}
+
+</style></head><body><div id="loader"><h1>بدير وسيم</h1><p>Writer • Poet</p></div><div id="progressBar"></div><button id="topBtn">↑</button>
+
+<nav><a href="index.html">الرئيسية</a>
 
 <a href="about.html">من أنا</a>
 
 <a class="active" href="contact.html">تواصل معي</a>
 
-</nav>
-
-<header class="header" style="height:55vh;">
-
-<h1>تواصل معي</h1>
-
-<p>
+</nav><header class="contact-hero"><h1>تواصل معي</h1><p>
 يسعدني استقبال رسائلك، وآرائك، وكل ما يتعلق بالأدب والشعر والرواية.
-</p>
+</p></header><main class="contact-container"><section class="contact-intro"><h2>لنبدأ حوارًا جميلًا</h2><p>إذا رغبت في مناقشة عمل أدبي، أو مشاركة رأيك في إحدى قصائدي، أو تقديم اقتراح، أو التواصل بخصوص أي مشروع، فأنا سعيد دائمًا بقراءة رسائلك.
 
-</header>
+</p></section><section class="contact-methods"><div class="contact-card"><div class="contact-icon">📧</div><h3>البريد الإلكتروني</h3><p>للاقتراحات، الآراء، والمراسلات الأدبية.
 
-<section class="about-preview">
+</p><a class="contact-link" href="mailto:wassimbedir60@gmail.com">راسلني عبر البريد
 
-<h2>وسائل التواصل</h2>
+</a></div><div class="contact-card"><div class="contact-icon">📸</div><h3>إنستغرام</h3><p>تابعني وتواصل معي عبر حسابي على إنستغرام.
 
-<p style="margin-bottom:35px;">
+</p><a class="contact-link" href="https://www.instagram.com/jaaan_sou?igsh=aDVyYmUzb29hYmk3" target="_blank">زيارة الحساب
 
-إذا رغبت في مناقشة عمل أدبي، أو تقديم اقتراح، أو التواصل بخصوص أي مشروع، يمكنك مراسلتي عبر البريد الإلكتروني.
-
-</p>
-
-<div class="contact-box">
-
-<h3>📧 البريد الإلكتروني</h3>
-
-<a href="mailto:wassimbedir60@gmail.com">
-
-wassimbedir60@gmail.com
-
-</a>
-
-</div>
-  <div class="contact-note">
-
-أسعد دائمًا بقراءة رسائلك، سواء كانت رأيًا في قصيدة، أو انطباعًا عن رواية، أو اقتراحًا يساهم في تطوير هذا الموقع.
+</a></div></section><section class="contact-note"><p>أسعد دائمًا بقراءة رسائلك، سواء كانت رأيًا في قصيدة، أو انطباعًا عن رواية، أو اقتراحًا يساهم في تطوير هذا الموقع.
 
 <br><br>
 
-<span>ردّي سيكون بكل تقدير واحترام.</span>
+<span>كل رسالة صادقة هي بداية حوار جميل.</span>
 
-</div>
+</p></section><section class="contact-social"><h2>تابع رحلتي الأدبية</h2><a class="instagram-btn" href="https://www.instagram.com/jaaan_sou?igsh=aDVyYmUzb29hYmk3" target="_blank">📸 تابعني على إنستغرام
 
-<div class="socials">
-
-<a class="social" href="mailto:wassimbedir60@gmail.com">📧</a>
-
-</div>
-
-</section>
-
-<section class="quote-section">
-
-<p>
-
-"كل رسالة صادقة هي بداية حوار جميل."
-
-</p>
-
-</section>
-
-<footer>
-
-<div class="footer-line"></div>
-
-<h3>بدير وسيم</h3>
-
-<p>كاتب وشاعر جزائري</p>
-
-<p>© 2026 جميع الحقوق محفوظة</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+</a></section></main><footer><div class="footer-line"></div><h3>بدير وسيم</h3><p>كاتب وشاعر جزائري</p><p>© 2026 جميع الحقوق محفوظة</p></footer><script src="script.js"></script></body></html>
