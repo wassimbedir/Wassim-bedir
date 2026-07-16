@@ -1,242 +1,490 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>بدير وسيم | الموقع الرسمي</title><meta name="description" content="الموقع الرسمي للكاتب والشاعر الجزائري بدير وسيم"><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><style>
 
-<head>
+/* =========================
+   الواجهة الرئيسية
+========================= */
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+.home-hero{
 
-<title>بدير وسيم | الموقع الرسمي</title>
+min-height:78vh;
 
-<meta name="description" content="الموقع الرسمي للكاتب والشاعر الجزائري بدير وسيم">
+display:flex;
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+flex-direction:column;
 
-<link rel="stylesheet" href="style.css">
+justify-content:center;
 
-</head>
+align-items:center;
 
+text-align:center;
 
-<body>
+padding:90px 20px 70px;
 
+}
 
-<div id="loader">
+.home-hero h1{
 
-<h1>بدير وسيم</h1>
+font-family:'Cinzel',serif;
 
-<p>Writer • Poet</p>
+font-size:clamp(48px,9vw,90px);
 
-</div>
+color:#d4af37;
 
+letter-spacing:2px;
 
+margin-bottom:20px;
 
-<div id="progressBar"></div>
+text-shadow:0 0 25px rgba(212,175,55,.45);
 
+}
 
+.home-hero .subtitle{
 
-<button id="topBtn">↑</button>
+font-size:clamp(21px,3vw,30px);
 
+line-height:2;
 
+color:#ddd;
 
+max-width:800px;
 
+}
 
-<nav>
+.hero-buttons{
 
-<a class="active" href="index.html">الرئيسية</a>
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
+
+margin:35px 0;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+padding:15px 32px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:21px;
+
+font-weight:bold;
+
+transition:.35s;
+
+}
+
+.hero-btn.primary{
+
+background:#d4af37;
+
+color:#111;
+
+box-shadow:0 0 20px rgba(212,175,55,.25);
+
+}
+
+.hero-btn.secondary{
+
+border:1px solid rgba(212,175,55,.5);
+
+color:#d4af37;
+
+background:rgba(255,255,255,.03);
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 30px rgba(212,175,55,.45);
+
+}
+
+.hero-quote{
+
+margin-top:25px;
+
+font-size:clamp(20px,3vw,28px);
+
+font-style:italic;
+
+color:#aaa;
+
+}
+
+/* =========================
+   النبذة
+========================= */
+
+.home-section{
+
+max-width:1050px;
+
+margin:auto;
+
+padding:70px 20px;
+
+}
+
+.section-title{
+
+text-align:center;
+
+font-size:36px;
+
+color:#d4af37;
+
+margin-bottom:25px;
+
+}
+
+.intro-card{
+
+text-align:center;
+
+padding:45px 30px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(212,175,55,.25);
+
+border-radius:28px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 30px rgba(212,175,55,.08);
+
+}
+
+.intro-card p{
+
+font-size:22px;
+
+line-height:2.2;
+
+color:#ddd;
+
+}
+
+/* =========================
+   آخر الأعمال
+========================= */
+
+.work-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:25px;
+
+}
+
+.work-card{
+
+padding:35px 25px;
+
+text-align:center;
+
+background:rgba(255,255,255,.035);
+
+border:1px solid rgba(212,175,55,.2);
+
+border-radius:25px;
+
+transition:.35s;
+
+}
+
+.work-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 30px rgba(212,175,55,.2);
+
+}
+
+.work-icon{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+.work-card h3{
+
+font-size:29px;
+
+color:#d4af37;
+
+margin-bottom:15px;
+
+}
+
+.work-card p{
+
+font-size:21px;
+
+line-height:1.9;
+
+color:#ddd;
+
+margin-bottom:20px;
+
+}
+
+.work-card a{
+
+display:inline-block;
+
+padding:11px 25px;
+
+border:1px solid rgba(212,175,55,.45);
+
+border-radius:40px;
+
+color:#ddd;
+
+text-decoration:none;
+
+font-size:19px;
+
+transition:.3s;
+
+}
+
+.work-card a:hover{
+
+background:#d4af37;
+
+color:#111;
+
+}
+
+/* =========================
+   قسم الرواية
+========================= */
+
+.novel-preview{
+
+text-align:center;
+
+padding:55px 25px;
+
+border-top:1px solid rgba(212,175,55,.2);
+
+border-bottom:1px solid rgba(212,175,55,.2);
+
+}
+
+.novel-preview h2{
+
+font-size:36px;
+
+color:#d4af37;
+
+margin-bottom:15px;
+
+}
+
+.novel-preview p{
+
+font-size:22px;
+
+line-height:2;
+
+color:#ccc;
+
+}
+
+.coming-soon{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:12px 28px;
+
+border:1px solid rgba(212,175,55,.4);
+
+border-radius:40px;
+
+color:#d4af37;
+
+font-size:20px;
+
+}
+
+/* =========================
+   الاقتباس
+========================= */
+
+.home-quote{
+
+max-width:900px;
+
+margin:30px auto 70px;
+
+padding:50px 25px;
+
+text-align:center;
+
+}
+
+.home-quote p{
+
+font-size:clamp(25px,4vw,38px);
+
+line-height:2;
+
+color:#d4af37;
+
+font-style:italic;
+
+}
+
+/* =========================
+   الهاتف
+========================= */
+
+@media(max-width:768px){
+
+.home-hero{
+
+min-height:70vh;
+
+padding-top:70px;
+
+}
+
+.home-hero h1{
+
+font-size:48px;
+
+}
+
+.home-hero .subtitle{
+
+font-size:20px;
+
+}
+
+.hero-btn{
+
+font-size:19px;
+
+padding:13px 25px;
+
+}
+
+.home-section{
+
+padding:50px 20px;
+
+}
+
+.section-title{
+
+font-size:30px;
+
+}
+
+.intro-card{
+
+padding:30px 20px;
+
+}
+
+.intro-card p{
+
+font-size:19px;
+
+}
+
+.work-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.work-card h3{
+
+font-size:26px;
+
+}
+
+.work-card p{
+
+font-size:19px;
+
+}
+
+.novel-preview h2{
+
+font-size:30px;
+
+}
+
+.novel-preview p{
+
+font-size:19px;
+
+}
+
+}
+
+</style></head><body><div id="loader"><h1>بدير وسيم</h1><p>Writer • Poet</p></div><div id="progressBar"></div><button id="topBtn">↑</button>
+
+<nav><a class="active" href="index.html">الرئيسية</a>
 
 <a href="about.html">من أنا</a>
 
 <a href="contact.html">تواصل معي</a>
 
-</nav>
+</nav><main><header class="home-hero"><h1>بدير وسيم</h1><p class="subtitle">كاتبٌ وشاعرٌ جزائري،
 
+<br>أؤمن أن الكلمة الصادقة تبقى حين يرحل أصحابها.
 
+</p><div class="hero-buttons"><a href="poems.html" class="hero-btn primary">📜 اكتشف قصائدي
 
+</a><a href="about.html" class="hero-btn secondary">✍️ تعرّف إليّ
 
+</a></div><p class="hero-quote">"الكلمات لا تموت، بل تبحث دائمًا عن قارئ جديد."
 
+</p></header><section class="home-section"><div class="intro-card"><h2 class="section-title">مرحبًا بك في عالمي الأدبي</h2><p>هنا لا تجد كلماتٍ مرصوفةً على صفحاتٍ فحسب، بل تجد شيئًا من الرحلة، وشيئًا من الشعور، وأفكارًا ولدت من لحظاتٍ لم تجد طريقها إلا إلى الكتابة.
 
-<header class="header">
+هذا هو عالمي الأدبي؛ حيث تتحول المشاعر إلى قصائد، والأفكار إلى حكايات.
 
+</p></div></section><section class="home-section"><h2 class="section-title">آخر الأعمال</h2><div class="work-grid"><div class="work-card"><div class="work-icon">📜</div><h3>آخر قصيدة</h3><p>ألا يا سائلي عن ذاكَ مَن هُجِيَا
 
-<h1>
-بدير وسيم
-</h1>
+<br>قصيدة هجائية بأسلوب فصيح وحاد.
 
+</p><a href="poem5.html">اقرأ القصيدة
 
-<p>
-كاتبٌ وشاعرٌ جزائري،
-<br>
-أؤمن أن الكلمة الصادقة تبقى حين يرحل أصحابها.
-</p>
+</a></div><div class="work-card"><div class="work-icon">📚</div><h3>رواية قادمة</h3><p>رماد الورد
 
+<br>حكاية عن الحب، الألم، والنجاة.
 
+</p><a href="novels.html">اكتشف الرواية
 
-<div class="hero-buttons">
+</a></div></div></section><section class="novel-preview"><h2>📖 من عالم الرواية</h2><p>بعض الحكايات لا تنتهي حين تُغلق صفحاتها...
 
+بل تبدأ حين يبدأ القارئ في التفكير فيها.
 
-<a href="poems.html" class="btn">
-📜 قصائدي
-</a>
+</p><span class="coming-soon">✨ رواية «رماد الورد» قريبًا
 
+</span></section><section class="home-quote"><p>"الأدب لا يغير العالم، لكنه يغير الإنسان الذي سيغير العالم."
 
-<a href="novels.html" class="btn">
-📚 رواياتي
-</a>
-
-
-</div>
-
-
-
-
-<p class="quote">
-
-"الكلمات لا تموت، بل تبحث دائمًا عن قارئ جديد."
-
-</p>
-
-
-
-</header>
-
-
-
-
-
-
-
-
-<section class="about-preview">
-
-
-<h2>
-نبذة
-</h2>
-
-
-<p>
-
-مرحبًا بك في عالمي الأدبي...
-
-هنا تجد قصائدي، ورواياتي، وكل ما خرج من القلب ليصل إلى القلوب.
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="latest">
-
-
-<h2>
-آخر الإضافات
-</h2>
-
-
-
-<div class="cards">
-
-<div class="card">
-
-<h3>📜 قصيدة</h3>
-
-<p>
-ألا يا سائلي عن ذاكَ مَن هُجِيَا
-</p>
-
-<a href="poem5.html">
-قراءة
-</a>
-
-</div>
-
-
-<div class="card">
-
-<h3>📚 رواية</h3>
-
-<p>
-رماد الورد
-<br>
-قريبًا...
-</p>
-
-<a href="novels.html">
-عرض
-</a>
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<section class="quote-section">
-
-
-<p>
-
-"الأدب لا يغير العالم، لكنه يغير الإنسان الذي سيغير العالم."
-
-</p>
-
-
-</section>
-
-
-
-
-
-
-
-<footer>
-
-
-<div class="footer-line"></div>
-
-
-<h3>
-بدير وسيم
-</h3>
-
-
-<p>
-كاتب وشاعر جزائري
-</p>
-
-
-<p>
-© 2026 جميع الحقوق محفوظة
-</p>
-
-
-</footer>
-
-
-
-
-
-
-<script src="script.js"></script>
-
-
-</body>
-
-</html>
+</p></section></main><footer><div class="footer-line"></div><h3>بدير وسيم</h3><p>كاتب وشاعر جزائري</p><p>© 2026 جميع الحقوق محفوظة</p></footer><script src="script.js"></script></body></html>
