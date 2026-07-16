@@ -1,92 +1,378 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>من أنا | بدير وسيم</title><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><style>
 
-<head>
+.about-hero{
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+min-height:58vh;
 
-<title>من أنا | بدير وسيم</title>
+display:flex;
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+flex-direction:column;
 
-<link rel="stylesheet" href="style.css">
+justify-content:center;
 
-</head>
+align-items:center;
 
-<body>
+text-align:center;
 
-<div id="loader">
-<h1>بدير وسيم</h1>
-<p>Writer • Poet</p>
-</div>
+padding:80px 20px 60px;
 
-<div id="progressBar"></div>
+}
 
-<button id="topBtn">↑</button>
+.about-hero h1{
 
-<nav>
+font-family:'Cinzel',serif;
 
-<a href="index.html">الرئيسية</a>
+font-size:clamp(42px,7vw,72px);
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+text-shadow:0 0 20px rgba(212,175,55,.4);
+
+}
+
+.about-hero p{
+
+font-size:clamp(20px,3vw,28px);
+
+color:#ddd;
+
+line-height:2;
+
+}
+
+.about-container{
+
+max-width:1050px;
+
+margin:auto;
+
+padding:0 20px 70px;
+
+}
+
+.about-card{
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(212,175,55,.25);
+
+border-radius:28px;
+
+padding:45px;
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 30px rgba(212,175,55,.08);
+
+margin-bottom:35px;
+
+}
+
+.about-card h2{
+
+font-size:34px;
+
+color:#d4af37;
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.about-card p{
+
+font-size:22px;
+
+line-height:2.2;
+
+color:#ddd;
+
+text-align:center;
+
+}
+
+.identity{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
+margin-bottom:35px;
+
+}
+
+.identity-card{
+
+text-align:center;
+
+padding:28px 20px;
+
+background:rgba(255,255,255,.035);
+
+border:1px solid rgba(212,175,55,.2);
+
+border-radius:22px;
+
+transition:.35s;
+
+}
+
+.identity-card:hover{
+
+transform:translateY(-7px);
+
+box-shadow:0 0 25px rgba(212,175,55,.2);
+
+}
+
+.identity-card .icon{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+}
+
+.identity-card h3{
+
+font-size:23px;
+
+color:#d4af37;
+
+margin-bottom:8px;
+
+}
+
+.identity-card p{
+
+font-size:19px;
+
+color:#ccc;
+
+}
+
+.journey{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:25px;
+
+margin-bottom:35px;
+
+}
+
+.journey-card{
+
+padding:35px;
+
+background:rgba(255,255,255,.035);
+
+border-right:3px solid #d4af37;
+
+border-radius:20px;
+
+}
+
+.journey-card h2{
+
+font-size:30px;
+
+color:#d4af37;
+
+margin-bottom:15px;
+
+}
+
+.journey-card p{
+
+font-size:21px;
+
+line-height:2.1;
+
+color:#ddd;
+
+}
+
+.writing-fields{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:15px;
+
+margin-top:25px;
+
+}
+
+.writing-fields span{
+
+padding:12px 25px;
+
+border:1px solid rgba(212,175,55,.35);
+
+border-radius:40px;
+
+color:#ddd;
+
+font-size:20px;
+
+background:rgba(255,255,255,.03);
+
+transition:.3s;
+
+}
+
+.writing-fields span:hover{
+
+background:#d4af37;
+
+color:#111;
+
+transform:translateY(-3px);
+
+}
+
+.about-quote{
+
+max-width:900px;
+
+margin:0 auto 70px;
+
+padding:45px 30px;
+
+text-align:center;
+
+border-top:1px solid rgba(212,175,55,.25);
+
+border-bottom:1px solid rgba(212,175,55,.25);
+
+}
+
+.about-quote p{
+
+font-size:clamp(24px,4vw,36px);
+
+line-height:2;
+
+color:#d4af37;
+
+font-style:italic;
+
+}
+
+@media(max-width:768px){
+
+.about-hero{
+
+min-height:48vh;
+
+padding-top:70px;
+
+}
+
+.about-card{
+
+padding:28px 20px;
+
+}
+
+.about-card h2{
+
+font-size:29px;
+
+}
+
+.about-card p{
+
+font-size:19px;
+
+line-height:2;
+
+}
+
+.identity{
+
+grid-template-columns:1fr;
+
+}
+
+.journey{
+
+grid-template-columns:1fr;
+
+}
+
+.journey-card{
+
+padding:25px 20px;
+
+}
+
+.journey-card h2{
+
+font-size:27px;
+
+}
+
+.journey-card p{
+
+font-size:19px;
+
+}
+
+.writing-fields span{
+
+font-size:18px;
+
+}
+
+}
+
+</style></head><body><div id="loader"><h1>بدير وسيم</h1><p>Writer • Poet</p></div><div id="progressBar"></div><button id="topBtn">↑</button>
+
+<nav><a href="index.html">الرئيسية</a>
 
 <a class="active" href="about.html">من أنا</a>
 
 <a href="contact.html">تواصل معي</a>
 
-</nav>
-
-<header class="header" style="height:55vh;">
-
-<h1>من أنا</h1>
-
-<p>
+</nav><header class="about-hero"><h1>من أنا</h1><p>
 رحلةٌ مع الكلمة... بدأت بشغف، وما زالت مستمرة.
-</p>
+</p></header><main class="about-container"><section class="about-card"><h2>أنا بدير وسيم</h2><p>كاتب وشاعر جزائري، أجد في الكتابة مساحةً أستطيع فيها أن أقول ما تعجز الحياة أحيانًا عن قوله.
 
-</header>
+أؤمن أن الأدب ليس مجرد كلمات تُكتب، بل أثرٌ يبقى في النفس، وفكرةٌ قد تغيّر شيئًا، وشعورٌ قد يجد فيه القارئ جزءًا من نفسه.
 
-<section class="about-preview">
+أكتب الشعر لأنه الأقرب إلى نبض القلب، وأكتب الرواية لأنها تمنح الخيال عالمًا كاملًا يعيش فيه الإنسان، بكل ما يحمله من حب، وخوف، وأمل، وانكسار.
 
-<h2>بدير وسيم</h2>
+</p></section><section class="identity"><div class="identity-card"><div class="icon">✍️</div><h3>الصفة</h3><p>كاتب وشاعر</p></div><div class="identity-card"><div class="icon">🇩🇿</div><h3>الهوية</h3><p>كاتب جزائري</p></div><div class="identity-card"><div class="icon">📚</div><h3>المجال</h3><p>الأدب والشعر والرواية</p></div></section><section class="journey"><div class="journey-card"><h2>رحلتي مع الكتابة</h2><p>لم تكن الكتابة بالنسبة إليّ قرارًا مفاجئًا، بل كانت شيئًا ينمو بهدوء، حتى أصبحت الكلمات الطريقة التي أعبّر بها عن الأشياء التي لا أستطيع قولها كما هي.
 
-<p>
+كل نص أكتبه يحمل شيئًا مني؛ فكرةً عشتها، أو شعورًا مررت به، أو سؤالًا ظلّ يبحث عن إجابة.
 
-أنا بدير وسيم، كاتب وشاعر جزائري، أؤمن بأن الأدب ليس ترفًا، بل أثرٌ يبقى حين يغيب صاحبه.
+</p></div><div class="journey-card"><h2>لماذا أكتب؟</h2><p>أكتب لأن بعض المشاعر لا تجد طريقها إلا إلى الورق.
 
-أسعى إلى كتابة أعمال تلامس الوجدان، وتترك في القارئ فكرةً أو شعورًا يرافقه طويلًا بعد أن يطوي الصفحة الأخيرة.
+وأكتب لأنني أؤمن أن الكاتب لا يكتب لنفسه وحدها، بل يترك شيئًا من روحه في مكان قد يصل إليه قارئ لم يلتقِ به يومًا.
 
-أكتب الشعر لأنه لغة القلب، وأكتب الرواية لأنها مساحة تتسع لكل ما تعجز الكلمات القصيرة عن احتوائه.
+</p></div></section><section class="about-card"><h2>ما أكتب</h2><p>أتنقل بين الشعر والرواية، وبين النصوص التي تولد من لحظة شعور، وتلك التي تحتاج إلى وقت طويل حتى تجد شكلها النهائي.
 
-هذا الموقع هو نافذتي إلى القارئ، أشارك من خلاله قصائدي، ورواياتي، وكل ما أراه جديرًا بأن يُكتب.
+</p><div class="writing-fields"><span>📜 الشعر</span>
 
-</p>
+<span>📚 الرواية</span>
 
-</section>
+<span>🖋️ الأدب</span>
 
-<section class="quote-section">
+<span>🌙 الخواطر</span>
 
-<p>
+</div></section></main><section class="about-quote"><p>"ليست غايتي أن أكتب كثيرًا... بل أن أكتب شيئًا يستحق أن يُتذكر."
 
-"ليست غايتي أن أكتب كثيرًا... بل أن أكتب شيئًا يستحق أن يُتذكر."
-
-</p>
-
-</section>
-
-<footer>
-
-<div class="footer-line"></div>
-
-<h3>بدير وسيم</h3>
-
-<p>كاتب وشاعر جزائري</p>
-
-<p>© 2026 جميع الحقوق محفوظة</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+</p></section><footer><div class="footer-line"></div><h3>بدير وسيم</h3><p>كاتب وشاعر جزائري</p><p>© 2026 جميع الحقوق محفوظة</p></footer><script src="script.js"></script></body></html>
