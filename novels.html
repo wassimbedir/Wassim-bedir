@@ -1,245 +1,436 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>رواياتي | بدير وسيم</title><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><style>
 
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =========================
+   صفحة الروايات
+========================= */
 
-<title>رواياتي | بدير وسيم</title>
+.novels-page{
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+max-width:1100px;
 
-<style>
+margin:auto;
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+padding:80px 20px;
+
 }
 
-body{
-font-family:'Amiri',serif;
-background:
-radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
-linear-gradient(180deg,#050505,#0d1117,#171717);
-color:white;
-overflow-x:hidden;
-}
+/* العنوان */
 
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:radial-gradient(white 1px,transparent 1px);
-background-size:100px 100px;
-opacity:.08;
-pointer-events:none;
-z-index:-1;
-}
+.novels-title{
 
-nav{
-display:flex;
-justify-content:center;
-gap:15px;
-padding:18px;
-background:rgba(20,20,20,.55);
-backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(212,175,55,.25);
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-padding:10px 18px;
-border-radius:30px;
-transition:.3s;
-}
-
-nav a:hover{
-background:#d4af37;
-color:#111;
-}
-
-.container{
-max-width:900px;
-margin:60px auto;
-padding:20px;
-}
-
-h1{
 text-align:center;
-font-size:55px;
+
 font-family:'Cinzel',serif;
+
+font-size:clamp(45px,7vw,70px);
+
 color:#d4af37;
-margin-bottom:45px;
-text-shadow:0 0 15px rgba(212,175,55,.4);
+
+margin-bottom:15px;
+
+text-shadow:0 0 20px rgba(212,175,55,.4);
+
 }
 
-.book{
-background:rgba(255,255,255,.04);
-border:1px solid rgba(212,175,55,.25);
-border-radius:20px;
-padding:40px;
+.novels-intro{
+
 text-align:center;
-backdrop-filter:blur(10px);
-box-shadow:0 0 30px rgba(212,175,55,.15);
+
+font-size:23px;
+
+color:#bbb;
+
+margin-bottom:60px;
+
+}
+
+/* بطاقة الرواية */
+
+.novel-card{
+
+display:grid;
+
+grid-template-columns:350px 1fr;
+
+gap:55px;
+
+align-items:center;
+
+padding:45px;
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(212,175,55,.25);
+
+border-radius:30px;
+
+backdrop-filter:blur(12px);
+
+box-shadow:0 0 40px rgba(212,175,55,.1);
+
+}
+
+/* الغلاف */
+
+.cover-wrapper{
+
+text-align:center;
+
 }
 
 .cover{
-width:300px;
-max-width:100%;
+
+width:100%;
+
+max-width:330px;
+
 border-radius:18px;
-border:2px solid #d4af37;
-box-shadow:0 0 25px rgba(212,175,55,.35);
-margin-bottom:30px;
-transition:.4s;
+
+border:2px solid rgba(212,175,55,.75);
+
+box-shadow:
+
+0 0 20px rgba(212,175,55,.25),
+
+0 0 60px rgba(212,175,55,.08);
+
+transition:.5s;
+
 }
 
 .cover:hover{
-transform:scale(1.03);
+
+transform:scale(1.04) rotate(-1deg);
+
+box-shadow:
+
+0 0 30px rgba(212,175,55,.5),
+
+0 0 80px rgba(212,175,55,.15);
+
 }
 
-.book h2{
+/* محتوى الرواية */
+
+.novel-content h2{
+
+font-size:42px;
+
 color:#d4af37;
-font-size:38px;
-margin-bottom:20px;
+
+margin-bottom:22px;
+
 }
 
-.book p{
-font-size:24px;
-line-height:2;
+.novel-content p{
+
+font-size:22px;
+
+line-height:2.2;
+
 color:#ddd;
+
 }
 
-.quote{
-margin:35px 0;
-font-size:28px;
-color:#d4af37;
-font-style:italic;
+.novel-description{
+
+margin-bottom:25px;
+
 }
+
+/* الحالة */
+
+.status{
+
+display:inline-block;
+
+padding:8px 20px;
+
+border:1px solid rgba(212,175,55,.5);
+
+border-radius:30px;
+
+color:#d4af37;
+
+font-size:18px;
+
+margin-bottom:25px;
+
+}
+
+/* الاقتباس */
+
+.novel-quote{
+
+margin:30px 0;
+
+padding-right:20px;
+
+border-right:3px solid #d4af37;
+
+font-size:26px;
+
+color:#d4af37;
+
+font-style:italic;
+
+line-height:1.8;
+
+}
+
+/* معلومات الرواية */
+
+.book-info{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+margin-top:25px;
+
+}
+
+.info-item{
+
+padding:9px 18px;
+
+border-radius:30px;
+
+background:rgba(212,175,55,.08);
+
+border:1px solid rgba(212,175,55,.2);
+
+color:#ccc;
+
+font-size:17px;
+
+}
+
+/* زر الكشف */
 
 .secretBtn{
-margin-top:15px;
-padding:15px 35px;
-background:#d4af37;
+
+margin-top:30px;
+
+padding:15px 32px;
+
+background:linear-gradient(135deg,#d4af37,#b8941f);
+
 color:#111;
+
 border:none;
-border-radius:40px;
+
+border-radius:50px;
+
 font-family:'Amiri',serif;
-font-size:22px;
+
+font-size:21px;
+
 font-weight:bold;
+
 cursor:pointer;
-transition:.3s;
-box-shadow:0 0 20px rgba(212,175,55,.35);
+
+transition:.35s;
+
+box-shadow:0 0 20px rgba(212,175,55,.25);
+
 }
 
 .secretBtn:hover{
+
 transform:translateY(-5px);
-box-shadow:0 0 30px rgba(212,175,55,.6);
+
+box-shadow:0 0 35px rgba(212,175,55,.55);
+
 }
+
+/* الرسالة السرية */
 
 #message{
+
 display:none;
-margin-top:35px;
-font-size:24px;
-line-height:2;
-color:#f0f0f0;
-animation:fade .8s;
-}
 
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(20px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+margin-top:30px;
 
-@media(max-width:768px){
-
-h1{
-font-size:42px;
-}
-
-.book{
 padding:25px;
+
+background:rgba(212,175,55,.06);
+
+border:1px solid rgba(212,175,55,.2);
+
+border-radius:18px;
+
+font-size:21px;
+
+line-height:2;
+
+color:#eee;
+
+animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* جملة ختامية */
+
+.final-line{
+
+text-align:center;
+
+margin:75px auto 20px;
+
+font-size:28px;
+
+color:#d4af37;
+
+font-style:italic;
+
+line-height:2;
+
+max-width:800px;
+
+}
+
+/* الهاتف */
+
+@media(max-width:800px){
+
+.novel-card{
+
+grid-template-columns:1fr;
+
+padding:30px 22px;
+
+text-align:center;
+
 }
 
 .cover{
-width:220px;
+
+max-width:270px;
+
 }
 
-.book h2{
-font-size:30px;
+.novel-content h2{
+
+font-size:34px;
+
 }
 
-.book p,
-.quote,
-#message{
+.novel-content p{
+
 font-size:20px;
+
+}
+
+.novel-quote{
+
+border-right:none;
+
+border-top:1px solid rgba(212,175,55,.4);
+
+padding:20px 0 0;
+
+}
+
+.book-info{
+
+justify-content:center;
+
+}
+
+.secretBtn{
+
+font-size:19px;
+
 }
 
 }
 
-</style>
+</style></head><body><nav><a href="index.html">الرئيسية</a>
 
-</head>
-
-<body>
-
-<nav>
-<a href="index.html">الرئيسية</a>
 <a href="about.html">من أنا</a>
+
 <a href="poems.html">قصائدي</a>
+
+<a class="active" href="novels.html">رواياتي</a>
+
 <a href="contact.html">تواصل معي</a>
-</nav>
 
-<div class="container">
+</nav><main class="novels-page"><h1 class="novels-title">رواياتي
 
-<h1>رواياتي</h1>
+</h1><p class="novels-intro">حكاياتٌ لم تُكتب لتُقرأ فقط... بل لتُعاش.
 
-<div class="book">
+</p><section class="novel-card"><div class="cover-wrapper"><img src="file_0000000013a471f490378d43a254433d.jpg" class="cover" alt="غلاف رواية رماد الورد"></div><div class="novel-content"><span class="status">✨ عمل روائي قادم
 
-<img src="file_0000000013a471f490378d43a254433d.jpg" class="cover">
+</span><h2>رماد الورد
 
-<h2>هناك قصةٌ تستعد للخروج إلى النور...</h2>
+</h2><p class="novel-description">ليست مجرد رواية، بل رحلةٌ بين الحب والألم، بين الخيانة والنجاة، وبين الماضي الذي يرفض أن يموت والمستقبل الذي يحاول أن يولد من بين الرماد.
 
-<p>
-ليست مجرد رواية، بل رحلةٌ كُتبت بشغفٍ وصبر، تحمل بين صفحاتها حبًا، وخيانةً، وصراعًا نفسيًا، وأحداثًا ستبقى في ذاكرة كل قارئ.
-</p>
+روايةٌ عن مشاعر معقدة، وقرارات قاسية، وأشخاصٍ لا يخرجون من الحكاية كما دخلوها.
 
-<div class="quote">
-«حبٌّ يولد من الرماد... لا من الخلاص.»
-</div>
+</p><div class="novel-quote">«حبٌّ يولد من الرماد... لا من الخلاص.»
 
-<button class="secretBtn" onclick="showMessage()">
-🔒 لم يُكشف عنها بعد
-</button>
+</div><div class="book-info"><span class="info-item">📖 رواية</span>
 
-<p id="message">
-لكلِّ قصةٍ موعد... وموعد <strong>رماد الورد</strong> لم يحن بعد.<br><br>
+<span class="info-item">✍️ بدير وسيم</span>
+
+<span class="info-item">⏳ قريبًا</span>
+
+</div><button class="secretBtn" onclick="showMessage()">🔒 اكتشف الرسالة السرية
+
+</button><p id="message">لكلِّ قصةٍ موعد...
+
+<br><br>
+
+وموعد <strong>رماد الورد</strong> لم يحن بعد.
+
+<br><br>
+
 حين يحين الوقت، ستُفتح الصفحات، ويبدأ فصلٌ لن يُنسى.
-</p>
 
-</div>
+</p></div></section><p class="final-line">«بعض الحكايات لا تنتهي حين تُغلق صفحاتها...<br>
 
-</div>
+بل تبدأ حين يبدأ القارئ في التفكير فيها.»
 
-<script>
+</p></main><footer><div class="footer-line"></div><h3>بدير وسيم</h3><p>كاتب وشاعر جزائري</p><p>© 2026 جميع الحقوق محفوظة</p></footer><script>
 
 function showMessage(){
-document.getElementById("message").style.display="block";
+
+const message = document.getElementById("message");
+
+if(message.style.display === "block"){
+
+message.style.display = "none";
+
+}else{
+
+message.style.display = "block";
+
 }
 
-</script>
+}
 
-</body>
-
-</html>
+</script></body></html>
