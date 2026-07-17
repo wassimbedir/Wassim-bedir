@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,138 +19,204 @@ box-sizing:border-box;
 }
 
 body{
+
 font-family:'Amiri',serif;
+
 background:
 radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
 linear-gradient(180deg,#050505,#0d1117,#171717);
+
 color:white;
+
 overflow-x:hidden;
+
 }
+
+/* النجوم */
 
 body::before{
+
 content:"";
+
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
 height:100%;
+
 background-image:radial-gradient(white 1px,transparent 1px);
+
 background-size:100px 100px;
+
 opacity:.08;
+
 pointer-events:none;
+
 z-index:-1;
+
 }
 
+/* NAV */
+
 nav{
+
 display:flex;
+
 justify-content:center;
+
 gap:20px;
+
 padding:18px;
+
 background:rgba(20,20,20,.55);
+
 backdrop-filter:blur(12px);
+
 border-bottom:1px solid rgba(212,175,55,.2);
+
 }
 
 nav a{
+
 color:white;
+
 text-decoration:none;
+
 font-weight:bold;
+
 padding:10px 18px;
+
 border-radius:30px;
+
 transition:.3s;
+
 }
 
 nav a:hover{
+
 background:#d4af37;
+
 color:#111;
+
 }
 
+/* HEADER */
+
 .header{
+
 text-align:center;
-padding:70px 20px 40px;
+
+padding:75px 20px 30px;
+
 }
 
 .header h1{
+
 font-family:'Cinzel',serif;
-font-size:55px;
+
+font-size:clamp(45px,7vw,65px);
+
 color:#d4af37;
+
 margin-bottom:15px;
-text-shadow:0 0 15px rgba(212,175,55,.35);
+
+text-shadow:0 0 20px rgba(212,175,55,.4);
+
 }
 
 .header p{
+
 font-size:23px;
+
 color:#ddd;
+
 line-height:2;
+
 max-width:700px;
+
 margin:auto;
+
 }
 
-.poem{
-max-width:900px;
+/* احصائيات */
+
+.stats{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
 margin:35px auto;
-padding:35px;
+
+}
+
+.stat{
+
+min-width:150px;
+
+padding:15px 25px;
+
 background:rgba(255,255,255,.04);
-border:1px solid rgba(212,175,55,.25);
+
+border:1px solid rgba(212,175,55,.2);
+
 border-radius:20px;
+
 backdrop-filter:blur(10px);
-transition:.35s;
+
 }
 
-.poem:hover{
-transform:translateY(-8px);
-box-shadow:0 0 30px rgba(212,175,55,.25);
-}
+.stat strong{
 
-.poem h2{
-font-size:34px;
+display:block;
+
+font-size:30px;
+
 color:#d4af37;
-margin-bottom:15px;
+
 }
 
-.poem p{
-font-size:22px;
-line-height:2;
-color:#e5e5e5;
-margin-bottom:25px;
+.stat span{
+
+color:#bbb;
+
+font-size:17px;
+
 }
 
-.read-btn{
-display:inline-block;
-padding:14px 28px;
-background:#d4af37;
-color:#111;
-text-decoration:none;
-border-radius:40px;
-font-weight:bold;
-transition:.3s;
-}
+/* قصيدة عشوائية */
 
-.read-btn:hover{
-background:#e5c65b;
-transform:translateY(-3px);
-}
-
-footer{
-text-align:center;
-padding:50px;
-color:#888;
-}
 .random-poem{
 
-margin:35px auto 0;
+max-width:650px;
 
-padding:25px;
+margin:35px auto 45px;
 
-max-width:600px;
+padding:28px;
 
-background:rgba(255,255,255,.04);
+background:
 
-border:1px solid rgba(212,175,55,.3);
+linear-gradient(
+
+135deg,
+
+rgba(212,175,55,.12),
+
+rgba(255,255,255,.03)
+
+);
+
+border:1px solid rgba(212,175,55,.4);
 
 border-radius:25px;
 
-box-shadow:0 0 25px rgba(212,175,55,.08);
+box-shadow:0 0 35px rgba(212,175,55,.1);
 
 }
 
@@ -159,7 +226,7 @@ font-size:30px;
 
 color:#d4af37;
 
-margin-bottom:5px;
+margin-bottom:8px;
 
 }
 
@@ -169,7 +236,7 @@ font-size:20px;
 
 color:#bbb;
 
-margin-bottom:18px;
+margin-bottom:20px;
 
 }
 
@@ -195,7 +262,7 @@ border-radius:50px;
 
 cursor:pointer;
 
-box-shadow:0 0 15px rgba(212,175,55,.35);
+box-shadow:0 0 20px rgba(212,175,55,.35);
 
 transition:.35s;
 
@@ -203,47 +270,16 @@ overflow:hidden;
 
 }
 
-.random-poem button::before{
-
-content:"";
-
-position:absolute;
-
-top:0;
-
-left:-100%;
-
-width:100%;
-
-height:100%;
-
-background:rgba(255,255,255,.3);
-
-transform:skewX(-25deg);
-
-transition:.5s;
-
-}
-
 .random-poem button:hover{
 
 transform:translateY(-5px) scale(1.04);
 
-box-shadow:0 0 30px rgba(212,175,55,.65);
+box-shadow:0 0 35px rgba(212,175,55,.65);
 
 }
 
-.random-poem button:hover::before{
+/* التصنيفات */
 
-left:100%;
-
-}
-
-.random-poem button:active{
-
-transform:scale(.96);
-
-  }
 .categories{
 
 display:flex;
@@ -254,7 +290,9 @@ gap:12px;
 
 flex-wrap:wrap;
 
-margin:20px auto 40px;
+margin:20px auto 50px;
+
+padding:0 20px;
 
 }
 
@@ -280,7 +318,9 @@ transition:.3s;
 
 }
 
-.categories button:hover{
+.categories button:hover,
+
+.categories button.active{
 
 background:#d4af37;
 
@@ -290,13 +330,216 @@ transform:translateY(-3px);
 
 }
 
-.categories button.active{
+/* شبكة القصائد */
 
-background:#d4af37;
+.poems-grid{
+
+max-width:1150px;
+
+margin:auto;
+
+padding:0 20px 60px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+}
+
+/* البطاقة */
+
+.poem{
+
+position:relative;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+min-height:330px;
+
+padding:30px;
+
+background:rgba(255,255,255,.045);
+
+border:1px solid rgba(212,175,55,.22);
+
+border-radius:25px;
+
+backdrop-filter:blur(12px);
+
+transition:.4s;
+
+overflow:hidden;
+
+}
+
+.poem::before{
+
+content:"";
+
+position:absolute;
+
+top:-80px;
+
+left:-80px;
+
+width:170px;
+
+height:170px;
+
+background:rgba(212,175,55,.08);
+
+border-radius:50%;
+
+transition:.5s;
+
+}
+
+.poem:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(212,175,55,.65);
+
+box-shadow:0 15px 40px rgba(212,175,55,.15);
+
+}
+
+.poem:hover::before{
+
+transform:scale(2);
+
+}
+
+.poem h2{
+
+position:relative;
+
+font-size:29px;
+
+color:#d4af37;
+
+line-height:1.6;
+
+margin-bottom:18px;
+
+}
+
+.poem p{
+
+position:relative;
+
+font-size:20px;
+
+line-height:2;
+
+color:#ddd;
+
+margin-bottom:25px;
+
+}
+
+/* زر القراءة */
+
+.read-btn{
+
+position:relative;
+
+display:inline-block;
+
+align-self:flex-start;
+
+padding:12px 25px;
+
+background:linear-gradient(135deg,#d4af37,#b8941f);
 
 color:#111;
 
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:bold;
+
+font-size:18px;
+
+transition:.3s;
+
 }
+
+.read-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 0 25px rgba(212,175,55,.5);
+
+}
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+
+padding:55px 20px;
+
+color:#888;
+
+border-top:1px solid rgba(212,175,55,.1);
+
+}
+
+/* الهاتف */
+
+@media(max-width:600px){
+
+nav{
+
+gap:5px;
+
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+padding:8px 12px;
+
+font-size:15px;
+
+}
+
+.header{
+
+padding-top:55px;
+
+}
+
+.header p{
+
+font-size:20px;
+
+}
+
+.poems-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.poem h2{
+
+font-size:27px;
+
+}
+
+}
+
 </style>
 
 </head>
@@ -304,102 +547,269 @@ color:#111;
 <body>
 
 <nav>
+
 <a href="index.html">الرئيسية</a>
+
 <a href="about.html">من أنا</a>
+
 <a href="contact.html">تواصل معي</a>
+
 </nav>
 
 <section class="header">
 
 <h1>قصائدي</h1>
 
-  <p>
+<p>
+
 هنا تجد مجموعةً من قصائدي، كتبتها في محطاتٍ مختلفة من حياتي، ولكل قصيدةٍ قصة، ولكل بيتٍ نبض.
+
 </p>
+
+<div class="stats">
+
+<div class="stat">
+
+<strong>05</strong>
+
+<span>قصائد</span>
+
+</div>
+
+<div class="stat">
+
+<strong>03</strong>
+
+<span>تصنيفات</span>
+
+</div>
+
+<div class="stat">
+
+<strong>∞</strong>
+
+<span>نبضات</span>
+
+</div>
+
+</div>
+
 <div class="random-poem">
 
-    <h2>🎲 لا تعرف ماذا تقرأ؟</h2>
+<h2>🎲 لا تعرف ماذا تقرأ؟</h2>
 
-    <p>دع الموقع يختار لك قصيدة.</p>
+<p>دع الموقع يختار لك قصيدة.</p>
 
-    <button onclick="randomPoem()">
-        اقرأ قصيدة عشوائية
-    </button>
+<button onclick="randomPoem()">
+
+اقرأ قصيدة عشوائية
+
+</button>
 
 </div>
+
 </section>
+
 <div class="categories">
 
-<button onclick="filterPoems('all')">الكل</button>
+<button class="active" onclick="filterPoems('all',this)">
 
-<button onclick="filterPoems('love')">❤️ حب وعشق</button>
+الكل
 
-<button onclick="filterPoems('longing')">💔 حنين وفراق</button>
+</button>
 
-<button onclick="filterPoems('satire')">⚔️ هجاء</button>
+<button onclick="filterPoems('love',this)">
+
+❤️ حب وعشق
+
+</button>
+
+<button onclick="filterPoems('longing',this)">
+
+💔 حنين وفراق
+
+</button>
+
+<button onclick="filterPoems('satire',this)">
+
+⚔️ هجاء
+
+</button>
 
 </div>
+
+<section class="poems-grid">
+
 <div class="poem" data-category="love">
+
+<div>
 
 <h2>📜 وربُّ السماءِ إنّي لأعشقُها</h2>
 
 <p>
+
 قصيدة وجدانية تعبّر عن حبٍ عميق يلامس الروح، كتبتها بأسلوبٍ فصيح يجمع بين العاطفة والصورة الشعرية.
+
 </p>
 
-<a href="poem1.html" class="read-btn">📖 اقرأ القصيدة</a>
+</div>
+
+<a href="poem1.html" class="read-btn">
+
+📖 اقرأ القصيدة
+
+</a>
 
 </div>
 
 <div class="poem" data-category="longing">
 
+<div>
+
 <h2>📜 ليتنا بين زحام العابرين نلتقي</h2>
 
 <p>
+
 قصيدة تتحدث عن لقاءٍ يتمناه القلب بعد طول الفراق، حيث يمتزج الحنين بالأمل في بداية جديدة.
+
 </p>
 
-<a href="poem2.html" class="read-btn">📖 اقرأ القصيدة</a>
 </div>
+
+<a href="poem2.html" class="read-btn">
+
+📖 اقرأ القصيدة
+
+</a>
+
+</div>
+
 <div class="poem" data-category="love">
 
-<h2>حبٌّ بلا اعتراف</h2>
+<div>
+
+<h2>📜 حبٌّ بلا اعتراف</h2>
 
 <p>
-ليست كل قصص الحب تبدأ باعتراف، فبعضها يولد في نظرة، ويكبر في صمت، ويشيخ دون أن ينطق صاحبه بكلمة. هذه القصيدة تحكي عن قلبين جمعهما الشعور، وفرّق بينهما الخجل.
+
+ليست كل قصص الحب تبدأ باعتراف، فبعضها يولد في نظرة، ويكبر في صمت، ويشيخ دون أن ينطق صاحبه بكلمة.
+
 </p>
 
-<a href="poem3.html" class="read-btn">📖 اقرأ القصيدة</a>
+</div>
+
+<a href="poem3.html" class="read-btn">
+
+📖 اقرأ القصيدة
+
+</a>
 
 </div>
+
 <div class="poem" data-category="love">
 
-<h2>أنتِ القصيدة</h2>                     
+<div>
+
+<h2>📜 أنتِ القصيدة</h2>
 
 <p>
+
 قصيدة عن عودة الإلهام للشاعر بعد غياب، حيث تصبح محبوبته مصدر الحروف وولادة قصائده.
+
 </p>
 
-<a href="poem4.html" class="read-btn">📖 اقرأ القصيدة</a>
+</div>
 
-  </div>
+<a href="poem4.html" class="read-btn">
+
+📖 اقرأ القصيدة
+
+</a>
+
+</div>
+
 <div class="poem" data-category="satire">
 
-<h2>ألا يا سائلي عن ذاكَ مَن هُجِيَا</h2>
+<div>
+
+<h2>📜 ألا يا سائلي عن ذاكَ مَن هُجِيَا</h2>
 
 <p>
-  قصيدة هجائية تصف زيف الغرور وضعف الشخصية، وتؤكد أن الحب لا يُنال بالادعاء، بل بالأخلاق والاحترام.
+
+قصيدة هجائية تصف زيف الغرور وضعف الشخصية، وتؤكد أن الحب لا يُنال بالادعاء، بل بالأخلاق والاحترام.
+
 </p>
 
-<a href="poem5.html" class="read-btn">📖 اقرأ القصيدة</a>
-   
-  </div>
+</div>
+
+<a href="poem5.html" class="read-btn">
+
+📖 اقرأ القصيدة
+
+</a>
+
+</div>
+
+</section>
+
 <footer>
 
 © جميع الحقوق محفوظة • بدير وسيم
 
 </footer>
-<script src="script.js"></script>
+
+<script>
+
+function filterPoems(category,button){
+
+const poems = document.querySelectorAll('.poem');
+
+const buttons = document.querySelectorAll('.categories button');
+
+buttons.forEach(btn => btn.classList.remove('active'));
+
+button.classList.add('active');
+
+poems.forEach(poem => {
+
+if(category === 'all' || poem.dataset.category === category){
+
+poem.style.display = 'flex';
+
+}else{
+
+poem.style.display = 'none';
+
+}
+
+});
+
+}
+
+function randomPoem(){
+
+const poems = [
+
+"poem1.html",
+
+"poem2.html",
+
+"poem3.html",
+
+"poem4.html",
+
+"poem5.html"
+
+];
+
+const random = poems[Math.floor(Math.random() * poems.length)];
+
+window.location.href = random;
+
+}
+
+</script>
+
 </body>
 
 </html>
