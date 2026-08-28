@@ -544,7 +544,9 @@ font-size:27px;
 
 </head>
 
+
 <body>
+
 
 <nav>
 
@@ -556,6 +558,7 @@ font-size:27px;
 
 </nav>
 
+
 <section class="header">
 
 <h1>قصائدي</h1>
@@ -566,15 +569,17 @@ font-size:27px;
 
 </p>
 
+
 <div class="stats">
 
 <div class="stat">
 
-<strong>06</strong>
+<strong>07</strong>
 
 <span>قصائد</span>
 
 </div>
+
 
 <div class="stat">
 
@@ -583,6 +588,7 @@ font-size:27px;
 <span>تصنيفات</span>
 
 </div>
+
 
 <div class="stat">
 
@@ -593,6 +599,7 @@ font-size:27px;
 </div>
 
 </div>
+
 
 <div class="random-poem">
 
@@ -610,21 +617,36 @@ font-size:27px;
 
 </section>
 
+
 <div class="categories">
 
-<button onclick="filterPoems('all')">الكل</button>
+<button onclick="filterPoems('all')">
+الكل
+</button>
 
-<button onclick="filterPoems('love')">❤️ حب وعشق</button>
+<button onclick="filterPoems('love')">
+❤️ حب وعشق
+</button>
 
-<button onclick="filterPoems('longing')">💔 حنين وفراق</button>
+<button onclick="filterPoems('longing')">
+💔 حنين وفراق
+</button>
 
-<button onclick="filterPoems('satire')">⚔️ هجاء</button>
+<button onclick="filterPoems('satire')">
+⚔️ هجاء
+</button>
 
-<button onclick="filterPoems('pride')">👑 فخر</button>
+<button onclick="filterPoems('pride')">
+👑 فخر
+</button>
 
 </div>
 
+
 <section class="poems-grid">
+
+
+<!-- القصيدة الأولى -->
 
 <div class="poem" data-category="love">
 
@@ -648,6 +670,9 @@ font-size:27px;
 
 </div>
 
+
+<!-- القصيدة الثانية -->
+
 <div class="poem" data-category="longing">
 
 <div>
@@ -669,6 +694,9 @@ font-size:27px;
 </a>
 
 </div>
+
+
+<!-- القصيدة الثالثة -->
 
 <div class="poem" data-category="love">
 
@@ -692,6 +720,9 @@ font-size:27px;
 
 </div>
 
+
+<!-- القصيدة الرابعة -->
+
 <div class="poem" data-category="love">
 
 <div>
@@ -714,6 +745,9 @@ font-size:27px;
 
 </div>
 
+
+<!-- القصيدة الخامسة -->
+
 <div class="poem" data-category="satire">
 
 <div>
@@ -735,24 +769,67 @@ font-size:27px;
 </a>
 
 </div>
+
+
+<!-- القصيدة السادسة -->
+
 <div class="poem" data-category="pride">
+
+<div>
 
 <h2>📜 البيدُ تعرفني</h2>
 
 <p>
+
 قصيدة في الفخر والرحلة، تستحضر عالم البيداء والخيل والليل، وتعيد تشكيل روح القصيدة العربية القديمة بأسلوبٍ حديث.
+
 </p>
 
-<a href="poem6.html" class="read-btn">📖 اقرأ القصيدة</a>
+</div>
+
+<a href="poem6.html" class="read-btn">
+
+📖 اقرأ القصيدة
+
+</a>
 
 </div>
+
+
+<!-- القصيدة السابعة -->
+
+<div class="poem" data-category="longing">
+
+<div>
+
+<h2>📜 ذاكرة القلب</h2>
+
+<p>
+
+قصيدة عن أثر الأحبة في الذاكرة، وكيف يبقى الود والحنين حاضرًا رغم الغياب وتباعد الطرق.
+
+</p>
+
+</div>
+
+<a href="poem7.html" class="read-btn">
+
+📖 اقرأ القصيدة
+
+</a>
+
+</div>
+
+
 </section>
+
 
 <footer>
 
 © جميع الحقوق محفوظة • بدير وسيم
 
 </footer>
+
 
 <script>
 
@@ -782,11 +859,18 @@ function randomPoem(){
 const poems = [
 
 "poem1.html",
+
 "poem2.html",
+
 "poem3.html",
+
 "poem4.html",
+
 "poem5.html",
-"poem6.html"
+
+"poem6.html",
+
+"poem7.html"
 
 ];
 
@@ -795,8 +879,10 @@ const random = poems[Math.floor(Math.random() * poems.length)];
 window.location.href = random;
 
 }
+
 </script>
+
 
 </body>
 
-</html>
+  </html>
