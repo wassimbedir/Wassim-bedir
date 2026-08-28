@@ -1277,7 +1277,20 @@ footer {
         min-height: 48px;
 
         z-index: 9999;
+  
+       .footer-links{
+    position:relative;
+    z-index:100;
+}
+
+.footer-links a{
+    display:inline-block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+}
+    
     }
+
 
 
     .home-hero {
