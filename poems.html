@@ -8,14 +8,22 @@
 
 <title>قصائدي | بدير وسيم</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
+
+/* =========================
+   الإعدادات العامة
+========================= */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -32,6 +40,7 @@ overflow-x:hidden;
 
 }
 
+
 /* النجوم */
 
 body::before{
@@ -46,7 +55,8 @@ left:0;
 width:100%;
 height:100%;
 
-background-image:radial-gradient(white 1px,transparent 1px);
+background-image:
+radial-gradient(white 1px,transparent 1px);
 
 background-size:100px 100px;
 
@@ -58,7 +68,10 @@ z-index:-1;
 
 }
 
-/* NAV */
+
+/* =========================
+   NAV
+========================= */
 
 nav{
 
@@ -74,7 +87,13 @@ background:rgba(20,20,20,.55);
 
 backdrop-filter:blur(12px);
 
+-webkit-backdrop-filter:blur(12px);
+
 border-bottom:1px solid rgba(212,175,55,.2);
+
+position:relative;
+
+z-index:10;
 
 }
 
@@ -94,7 +113,8 @@ transition:.3s;
 
 }
 
-nav a:hover{
+nav a:hover,
+nav a.active{
 
 background:#d4af37;
 
@@ -102,7 +122,10 @@ color:#111;
 
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 .header{
 
@@ -140,7 +163,10 @@ margin:auto;
 
 }
 
-/* احصائيات */
+
+/* =========================
+   الإحصائيات
+========================= */
 
 .stats{
 
@@ -190,7 +216,168 @@ font-size:17px;
 
 }
 
-/* قصيدة عشوائية */
+
+/* =========================
+   البحث الاحترافي
+========================= */
+
+.search-box{
+
+max-width:720px;
+
+margin:35px auto 25px;
+
+padding:0 20px;
+
+position:relative;
+
+}
+
+.search-wrapper{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+background:
+
+linear-gradient(
+135deg,
+rgba(255,255,255,.07),
+rgba(255,255,255,.025)
+);
+
+border:1px solid rgba(212,175,55,.35);
+
+border-radius:50px;
+
+backdrop-filter:blur(14px);
+
+-webkit-backdrop-filter:blur(14px);
+
+box-shadow:
+0 0 25px rgba(212,175,55,.08),
+inset 0 0 15px rgba(255,255,255,.02);
+
+transition:.35s;
+
+}
+
+.search-wrapper:focus-within{
+
+border-color:rgba(212,175,55,.8);
+
+box-shadow:
+0 0 30px rgba(212,175,55,.18),
+0 0 60px rgba(212,175,55,.06);
+
+transform:translateY(-2px);
+
+}
+
+.search-icon{
+
+font-size:23px;
+
+margin-right:20px;
+
+color:#d4af37;
+
+pointer-events:none;
+
+}
+
+#searchInput{
+
+width:100%;
+
+padding:17px 15px;
+
+border:none;
+
+outline:none;
+
+background:transparent;
+
+color:white;
+
+font-family:'Amiri',serif;
+
+font-size:20px;
+
+}
+
+#searchInput::placeholder{
+
+color:#999;
+
+}
+
+.clear-search{
+
+width:38px;
+
+height:38px;
+
+margin-left:8px;
+
+margin-right:5px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(212,175,55,.12);
+
+color:#d4af37;
+
+font-size:21px;
+
+cursor:pointer;
+
+display:none;
+
+transition:.3s;
+
+flex-shrink:0;
+
+}
+
+.clear-search:hover{
+
+background:#d4af37;
+
+color:#111;
+
+transform:rotate(90deg);
+
+}
+
+
+/* نتيجة البحث */
+
+.search-result{
+
+text-align:center;
+
+min-height:28px;
+
+margin-top:12px;
+
+font-size:17px;
+
+color:#999;
+
+transition:.3s;
+
+}
+
+
+/* =========================
+   قصيدة عشوائية
+========================= */
 
 .random-poem{
 
@@ -254,7 +441,14 @@ font-weight:bold;
 
 color:#111;
 
-background:linear-gradient(135deg,#d4af37,#f1d477,#b8860b);
+background:
+
+linear-gradient(
+135deg,
+#d4af37,
+#f1d477,
+#b8860b
+);
 
 border:none;
 
@@ -278,7 +472,10 @@ box-shadow:0 0 35px rgba(212,175,55,.65);
 
 }
 
-/* التصنيفات */
+
+/* =========================
+   التصنيفات
+========================= */
 
 .categories{
 
@@ -319,7 +516,6 @@ transition:.3s;
 }
 
 .categories button:hover,
-
 .categories button.active{
 
 background:#d4af37;
@@ -330,7 +526,10 @@ transform:translateY(-3px);
 
 }
 
-/* شبكة القصائد */
+
+/* =========================
+   شبكة القصائد
+========================= */
 
 .poems-grid{
 
@@ -342,13 +541,17 @@ padding:0 20px 60px;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
 
 gap:25px;
 
 }
 
-/* البطاقة */
+
+/* =========================
+   بطاقة القصيدة
+========================= */
 
 .poem{
 
@@ -372,9 +575,13 @@ border-radius:25px;
 
 backdrop-filter:blur(12px);
 
+-webkit-backdrop-filter:blur(12px);
+
 transition:.4s;
 
 overflow:hidden;
+
+animation:poemShow .5s ease;
 
 }
 
@@ -406,7 +613,8 @@ transform:translateY(-10px);
 
 border-color:rgba(212,175,55,.65);
 
-box-shadow:0 15px 40px rgba(212,175,55,.15);
+box-shadow:
+0 15px 40px rgba(212,175,55,.15);
 
 }
 
@@ -444,7 +652,10 @@ margin-bottom:25px;
 
 }
 
-/* زر القراءة */
+
+/* =========================
+   زر القراءة
+========================= */
 
 .read-btn{
 
@@ -456,7 +667,13 @@ align-self:flex-start;
 
 padding:12px 25px;
 
-background:linear-gradient(135deg,#d4af37,#b8941f);
+background:
+
+linear-gradient(
+135deg,
+#d4af37,
+#b8941f
+);
 
 color:#111;
 
@@ -476,11 +693,66 @@ transition:.3s;
 
 transform:translateY(-4px);
 
-box-shadow:0 0 25px rgba(212,175,55,.5);
+box-shadow:
+0 0 25px rgba(212,175,55,.5);
 
 }
 
-/* FOOTER */
+
+/* =========================
+   لا توجد نتائج
+========================= */
+
+.no-results{
+
+display:none;
+
+grid-column:1 / -1;
+
+text-align:center;
+
+padding:60px 20px;
+
+background:rgba(255,255,255,.025);
+
+border:1px solid rgba(212,175,55,.15);
+
+border-radius:25px;
+
+color:#aaa;
+
+}
+
+.no-results .icon{
+
+font-size:45px;
+
+display:block;
+
+margin-bottom:10px;
+
+}
+
+.no-results h2{
+
+color:#d4af37;
+
+font-size:30px;
+
+margin-bottom:8px;
+
+}
+
+.no-results p{
+
+font-size:19px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 
@@ -494,7 +766,35 @@ border-top:1px solid rgba(212,175,55,.1);
 
 }
 
-/* الهاتف */
+
+/* =========================
+   الحركات
+========================= */
+
+@keyframes poemShow{
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* =========================
+   الهاتف
+========================= */
 
 @media(max-width:600px){
 
@@ -503,6 +803,8 @@ nav{
 gap:5px;
 
 flex-wrap:wrap;
+
+padding:12px 8px;
 
 }
 
@@ -526,9 +828,55 @@ font-size:20px;
 
 }
 
+.search-box{
+
+padding:0 15px;
+
+margin-top:28px;
+
+}
+
+.search-icon{
+
+font-size:20px;
+
+margin-right:16px;
+
+}
+
+#searchInput{
+
+font-size:18px;
+
+padding:15px 10px;
+
+}
+
+.clear-search{
+
+width:34px;
+
+height:34px;
+
+font-size:19px;
+
+}
+
+.search-result{
+
+font-size:15px;
+
+}
+
 .poems-grid{
 
 grid-template-columns:1fr;
+
+}
+
+.poem{
+
+min-height:310px;
 
 }
 
@@ -538,7 +886,40 @@ font-size:27px;
 
 }
 
+.poem p{
+
+font-size:19px;
+
 }
+
+.categories{
+
+margin-bottom:40px;
+
+}
+
+.categories button{
+
+font-size:17px;
+
+padding:10px 17px;
+
+}
+
+.random-poem{
+
+margin-left:15px;
+
+margin-right:15px;
+
+}
+
+}
+
+
+/* =========================
+   نهاية CSS
+========================= */
 
 </style>
 
@@ -548,16 +929,26 @@ font-size:27px;
 <body>
 
 
+<!-- =========================
+     القائمة
+========================= -->
+
 <nav>
 
 <a href="index.html">الرئيسية</a>
 
 <a href="about.html">من أنا</a>
 
+<a class="active" href="poems.html">قصائدي</a>
+
 <a href="contact.html">تواصل معي</a>
 
 </nav>
 
+
+<!-- =========================
+     الرأس
+========================= -->
 
 <section class="header">
 
@@ -570,6 +961,8 @@ font-size:27px;
 </p>
 
 
+<!-- الإحصائيات -->
+
 <div class="stats">
 
 <div class="stat">
@@ -580,7 +973,6 @@ font-size:27px;
 
 </div>
 
-
 <div class="stat">
 
 <strong>04</strong>
@@ -588,7 +980,6 @@ font-size:27px;
 <span>تصنيفات</span>
 
 </div>
-
 
 <div class="stat">
 
@@ -600,6 +991,42 @@ font-size:27px;
 
 </div>
 
+
+<!-- =========================
+     البحث
+========================= -->
+
+<div class="search-box">
+
+<div class="search-wrapper">
+
+<span class="search-icon">⌕</span>
+
+<input
+type="search"
+id="searchInput"
+placeholder="ابحث في قصائدي..."
+autocomplete="off"
+>
+
+<button
+class="clear-search"
+id="clearSearch"
+aria-label="مسح البحث"
+>
+×
+</button>
+
+</div>
+
+<div class="search-result" id="searchResult"></div>
+
+</div>
+
+
+<!-- =========================
+     قصيدة عشوائية
+========================= -->
 
 <div class="random-poem">
 
@@ -618,35 +1045,54 @@ font-size:27px;
 </section>
 
 
+<!-- =========================
+     التصنيفات
+========================= -->
+
 <div class="categories">
 
-<button onclick="filterPoems('all')">
+<button
+class="active"
+onclick="filterPoems('all',this)"
+>
 الكل
 </button>
 
-<button onclick="filterPoems('love')">
+<button
+onclick="filterPoems('love',this)"
+>
 ❤️ حب وعشق
 </button>
 
-<button onclick="filterPoems('longing')">
+<button
+onclick="filterPoems('longing',this)"
+>
 💔 حنين وفراق
 </button>
 
-<button onclick="filterPoems('satire')">
+<button
+onclick="filterPoems('satire',this)"
+>
 ⚔️ هجاء
 </button>
 
-<button onclick="filterPoems('pride')">
+<button
+onclick="filterPoems('pride',this)"
+>
 👑 فخر
 </button>
 
 </div>
 
 
-<section class="poems-grid">
+<!-- =========================
+     القصائد
+========================= -->
+
+<section class="poems-grid" id="poemsGrid">
 
 
-<!-- القصيدة الأولى -->
+<!-- القصيدة 1 -->
 
 <div class="poem" data-category="love">
 
@@ -671,7 +1117,7 @@ font-size:27px;
 </div>
 
 
-<!-- القصيدة الثانية -->
+<!-- القصيدة 2 -->
 
 <div class="poem" data-category="longing">
 
@@ -696,7 +1142,7 @@ font-size:27px;
 </div>
 
 
-<!-- القصيدة الثالثة -->
+<!-- القصيدة 3 -->
 
 <div class="poem" data-category="love">
 
@@ -721,7 +1167,7 @@ font-size:27px;
 </div>
 
 
-<!-- القصيدة الرابعة -->
+<!-- القصيدة 4 -->
 
 <div class="poem" data-category="love">
 
@@ -746,7 +1192,7 @@ font-size:27px;
 </div>
 
 
-<!-- القصيدة الخامسة -->
+<!-- القصيدة 5 -->
 
 <div class="poem" data-category="satire">
 
@@ -771,7 +1217,7 @@ font-size:27px;
 </div>
 
 
-<!-- القصيدة السادسة -->
+<!-- القصيدة 6 -->
 
 <div class="poem" data-category="pride">
 
@@ -796,7 +1242,7 @@ font-size:27px;
 </div>
 
 
-<!-- القصيدة السابعة -->
+<!-- القصيدة 7 -->
 
 <div class="poem" data-category="longing">
 
@@ -806,7 +1252,7 @@ font-size:27px;
 
 <p>
 
-قصيدة عن أثر الأحبة في الذاكرة، وكيف يبقى الود والحنين حاضرًا رغم الغياب وتباعد الطرق.
+قصيدة وجدانية عن أثر الأحبة في القلب، وكيف يبقى الود والحنين رغم مرور الزمن وتباعد الطرق.
 
 </p>
 
@@ -819,6 +1265,9 @@ font-size:27px;
 </a>
 
 </div>
+
+
+<!-- القصيدة 8 -->
 
 <div class="poem" data-category="longing">
 
@@ -842,8 +1291,28 @@ font-size:27px;
 
 </div>
 
+
+<!-- لا توجد نتائج -->
+
+<div class="no-results" id="noResults">
+
+<span class="icon">🔍</span>
+
+<h2>لم نجد ما تبحث عنه</h2>
+
+<p>
+جرّب البحث بكلمة أخرى أو اختر تصنيفًا مختلفًا.
+</p>
+
+</div>
+
+
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -854,52 +1323,214 @@ font-size:27px;
 
 <script>
 
-function filterPoems(category){
+/* =========================
+   المتغيرات
+========================= */
 
-const poems = document.querySelectorAll('.poem');
+const searchInput =
+document.getElementById("searchInput");
+
+const clearSearch =
+document.getElementById("clearSearch");
+
+const searchResult =
+document.getElementById("searchResult");
+
+const noResults =
+document.getElementById("noResults");
+
+const poems =
+Array.from(document.querySelectorAll(".poem"));
+
+const categoryButtons =
+Array.from(document.querySelectorAll(".categories button"));
+
+let currentCategory = "all";
+
+
+/* =========================
+   تطبيع النص العربي
+========================= */
+
+function normalizeArabic(text){
+
+return text
+
+.toLowerCase()
+
+.replace(/[ًٌٍَُِّْـ]/g,"")
+
+.replace(/[أإآ]/g,"ا")
+
+.replace(/ة/g,"ه")
+
+.replace(/ى/g,"ي")
+
+.trim();
+
+}
+
+
+/* =========================
+   البحث
+========================= */
+
+function searchPoems(){
+
+const query =
+normalizeArabic(searchInput.value);
+
+let visibleCount = 0;
 
 poems.forEach(poem => {
 
-if(category === 'all' || poem.dataset.category === category){
+const category =
+poem.dataset.category;
 
-poem.style.display = 'flex';
+const text =
+normalizeArabic(poem.innerText);
+
+const matchesSearch =
+query === "" || text.includes(query);
+
+const matchesCategory =
+currentCategory === "all" ||
+category === currentCategory;
+
+if(matchesSearch && matchesCategory){
+
+poem.style.display = "flex";
+
+visibleCount++;
 
 }else{
 
-poem.style.display = 'none';
+poem.style.display = "none";
 
 }
 
 });
 
+
+/* نتيجة البحث */
+
+if(query !== ""){
+
+searchResult.textContent =
+visibleCount === 0
+? "لم نجد قصيدة تطابق بحثك."
+: `تم العثور على ${visibleCount} ${visibleCount === 1 ? "قصيدة" : "قصائد"}.`;
+
+}else{
+
+searchResult.textContent = "";
+
 }
 
 
+/* زر المسح */
+
+clearSearch.style.display =
+query !== "" ? "block" : "none";
+
+
+/* لا توجد نتائج */
+
+noResults.style.display =
+visibleCount === 0 ? "block" : "none";
+
+}
+
+
+/* =========================
+   الأحداث
+========================= */
+
+searchInput.addEventListener(
+"input",
+searchPoems
+);
+
+
+clearSearch.addEventListener(
+"click",
+function(){
+
+searchInput.value="";
+
+searchInput.focus();
+
+searchPoems();
+
+}
+);
+
+
+/* =========================
+   التصنيفات
+========================= */
+
+function filterPoems(category,button){
+
+currentCategory = category;
+
+
+/* الزر النشط */
+
+categoryButtons.forEach(btn => {
+
+btn.classList.remove("active");
+
+});
+
+if(button){
+
+button.classList.add("active");
+
+}
+
+
+/* إعادة البحث مع التصنيف */
+
+searchPoems();
+
+}
+
+
+/* =========================
+   القصيدة العشوائية
+========================= */
+
 function randomPoem(){
 
-const poems = [
+const visiblePoems =
+poems.filter(poem => {
 
-"poem1.html",
+return poem.style.display !== "none";
 
-"poem2.html",
+});
 
-"poem3.html",
 
-"poem4.html",
+/* إذا كان هناك نتائج للبحث */
 
-"poem5.html",
+const list =
+visiblePoems.length > 0
+? visiblePoems
+: poems;
 
-"poem6.html",
 
-"poem7.html",
+const random =
+list[Math.floor(Math.random() * list.length)];
 
-"poem8.html"
+const link =
+random.querySelector(".read-btn");
 
-];
+if(link){
 
-const random = poems[Math.floor(Math.random() * poems.length)];
+window.location.href =
+link.href;
 
-window.location.href = random;
+}
 
 }
 
@@ -908,4 +1539,4 @@ window.location.href = random;
 
 </body>
 
-  </html>
+</html>
