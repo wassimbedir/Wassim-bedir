@@ -1,634 +1,883 @@
-<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>بدير وسيم | الموقع الرسمي</title><meta name="description" content="الموقع الرسمي للكاتب والشاعر الجزائري بدير وسيم"><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><style>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
-/* =========================
-   الواجهة الرئيسية
-========================= */
+<head>
+    <meta charset="UTF-8">
 
-.home-hero{
-.home-hero{
-min-height:78vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:150px 20px 80px;
-}
-.home-hero h1{
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-font-family:'Cinzel',serif;
+    <title>بدير وسيم | الموقع الرسمي</title>
 
-font-size:clamp(45px,8vw,78px);
+    <meta name="description"
+        content="الموقع الرسمي للكاتب والشاعر الجزائري بدير وسيم">
 
-color:#d4af37;
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
-letter-spacing:2px;
+    <link rel="stylesheet" href="style.css">
 
-margin-bottom:15px;
+    <style>
 
-text-shadow:0 0 22px rgba(212,175,55,.4);
+        /* ========================================
+           الواجهة الرئيسية
+        ======================================== */
 
-}
+        .home-hero {
+            min-height: 78vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
 
-.home-hero .subtitle{
+            padding: 150px 20px 80px;
 
-font-size:clamp(20px,3vw,27px);
+            box-sizing: border-box;
+        }
 
-line-height:1.9;
 
-color:#ddd;
+        .home-hero h1 {
+            font-family: 'Cinzel', serif;
 
-max-width:750px;
+            font-size: clamp(45px, 8vw, 78px);
 
-}
+            color: #d4af37;
 
-.hero-buttons{
+            letter-spacing: 2px;
 
-display:flex;
+            margin: 0 0 15px;
 
-justify-content:center;
+            text-shadow:
+                0 0 22px rgba(212, 175, 55, 0.4);
+        }
 
-flex-wrap:wrap;
 
-gap:15px;
+        .home-hero .subtitle {
+            font-size: clamp(20px, 3vw, 27px);
 
-margin:28px 0;
+            line-height: 1.9;
 
-}
+            color: #ddd;
 
-.hero-btn{
+            max-width: 750px;
 
-display:inline-block;
+            margin: 0 auto;
+        }
 
-padding:13px 28px;
 
-border-radius:50px;
+        /* ========================================
+           أزرار الواجهة
+        ======================================== */
 
-text-decoration:none;
+        .hero-buttons {
+            display: flex;
 
-font-size:20px;
+            justify-content: center;
 
-font-weight:bold;
+            align-items: center;
 
-transition:.3s;
+            flex-wrap: wrap;
 
-}
+            gap: 15px;
 
-.hero-btn.primary{
+            margin: 28px 0;
+        }
 
-background:#d4af37;
 
-color:#111;
+        .hero-btn {
+            display: inline-block;
 
-box-shadow:0 0 18px rgba(212,175,55,.22);
+            padding: 13px 28px;
 
-}
+            border-radius: 50px;
 
-.hero-btn.secondary{
+            text-decoration: none;
 
-border:1px solid rgba(212,175,55,.5);
+            font-size: 20px;
 
-color:#d4af37;
+            font-weight: bold;
 
-background:rgba(255,255,255,.03);
+            transition: 0.3s ease;
 
-}
+            box-sizing: border-box;
+        }
 
-.hero-btn:hover{
 
-transform:translateY(-4px);
+        .hero-btn.primary {
+            background: #d4af37;
 
-box-shadow:0 0 25px rgba(212,175,55,.4);
+            color: #111;
 
-}
+            box-shadow:
+                0 0 18px rgba(212, 175, 55, 0.22);
+        }
 
-.hero-quote{
 
-margin-top:18px;
+        .hero-btn.secondary {
+            border: 1px solid rgba(212, 175, 55, 0.5);
 
-font-size:clamp(19px,3vw,26px);
+            color: #d4af37;
 
-font-style:italic;
+            background: rgba(255, 255, 255, 0.03);
+        }
 
-color:#aaa;
 
-}
+        .hero-btn:hover {
+            transform: translateY(-4px);
 
-/* =========================
-   النبذة
-========================= */
+            box-shadow:
+                0 0 25px rgba(212, 175, 55, 0.4);
+        }
 
-.home-section{
 
-max-width:1050px;
+        .hero-quote {
+            margin: 18px 0 0;
 
-margin:auto;
+            font-size: clamp(19px, 3vw, 26px);
 
-padding:55px 20px;
+            font-style: italic;
 
-}
+            color: #aaa;
+        }
 
-.section-title{
 
-text-align:center;
+        /* ========================================
+           الأقسام العامة
+        ======================================== */
 
-font-size:34px;
+        .home-section {
+            max-width: 1050px;
 
-color:#d4af37;
+            margin: 0 auto;
 
-margin-bottom:22px;
+            padding: 55px 20px;
 
-}
+            box-sizing: border-box;
+        }
 
-.intro-card{
 
-text-align:center;
+        .section-title {
+            text-align: center;
 
-padding:35px 28px;
+            font-size: 34px;
 
-background:rgba(255,255,255,.04);
+            color: #d4af37;
 
-border:1px solid rgba(212,175,55,.25);
+            margin: 0 0 22px;
+        }
 
-border-radius:25px;
 
-backdrop-filter:blur(10px);
+        /* ========================================
+           النبذة
+        ======================================== */
 
-box-shadow:0 0 25px rgba(212,175,55,.07);
+        .intro-card {
+            text-align: center;
 
-}
+            padding: 35px 28px;
 
-.intro-card p{
+            background: rgba(255, 255, 255, 0.04);
 
-font-size:21px;
+            border: 1px solid rgba(212, 175, 55, 0.25);
 
-line-height:2.1;
+            border-radius: 25px;
 
-color:#ddd;
+            backdrop-filter: blur(10px);
 
-}
+            -webkit-backdrop-filter: blur(10px);
 
-/* =========================
-   آخر الأعمال
-========================= */
+            box-shadow:
+                0 0 25px rgba(212, 175, 55, 0.07);
 
-.work-grid{
+            box-sizing: border-box;
+        }
 
-display:grid;
 
-grid-template-columns:repeat(2,1fr);
+        .intro-card p {
+            font-size: 21px;
 
-gap:22px;
+            line-height: 2.1;
 
-}
+            color: #ddd;
 
-.work-card{
+            margin: 0;
+        }
 
-padding:30px 23px;
 
-text-align:center;
+        /* ========================================
+           آخر الأعمال
+        ======================================== */
 
-background:rgba(255,255,255,.035);
+        .work-grid {
+            display: grid;
 
-border:1px solid rgba(212,175,55,.2);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
 
-border-radius:23px;
+            gap: 22px;
+        }
 
-transition:.3s;
 
-}
+        .work-card {
+            padding: 30px 23px;
 
-.work-card:hover{
+            text-align: center;
 
-transform:translateY(-6px);
+            background: rgba(255, 255, 255, 0.035);
 
-box-shadow:0 0 25px rgba(212,175,55,.18);
+            border: 1px solid rgba(212, 175, 55, 0.2);
 
-}
+            border-radius: 23px;
 
-.work-icon{
+            transition: 0.3s ease;
 
-font-size:38px;
+            box-sizing: border-box;
+        }
 
-margin-bottom:12px;
 
-}
+        .work-card:hover {
+            transform: translateY(-6px);
 
-.work-card h3{
+            box-shadow:
+                0 0 25px rgba(212, 175, 55, 0.18);
+        }
 
-font-size:27px;
 
-color:#d4af37;
+        .work-icon {
+            font-size: 38px;
 
-margin-bottom:12px;
+            margin-bottom: 12px;
+        }
 
-}
 
-.work-card p{
+        .work-card h3 {
+            font-size: 27px;
 
-font-size:20px;
+            color: #d4af37;
 
-line-height:1.9;
+            margin: 0 0 12px;
+        }
 
-color:#ddd;
 
-margin-bottom:18px;
+        .work-card p {
+            font-size: 20px;
 
-}
+            line-height: 1.9;
 
-.work-card a{
+            color: #ddd;
 
-display:inline-block;
+            margin: 0 0 18px;
+        }
 
-padding:10px 23px;
 
-border:1px solid rgba(212,175,55,.45);
+        .work-card a {
+            display: inline-block;
 
-border-radius:40px;
+            padding: 10px 23px;
 
-color:#ddd;
+            border: 1px solid rgba(212, 175, 55, 0.45);
 
-text-decoration:none;
+            border-radius: 40px;
 
-font-size:18px;
+            color: #ddd;
 
-transition:.3s;
+            text-decoration: none;
 
-}
+            font-size: 18px;
 
-.work-card a:hover{
+            transition: 0.3s ease;
+        }
 
-background:#d4af37;
 
-color:#111;
+        .work-card a:hover {
+            background: #d4af37;
 
-}
+            color: #111;
+        }
 
-/* =========================
-   قسم الرواية
-========================= */
 
-.novel-preview{
+        /* ========================================
+           قسم الرواية
+        ======================================== */
 
-text-align:center;
+        .novel-preview {
+            text-align: center;
 
-padding:45px 25px;
+            padding: 45px 25px;
 
-border-top:1px solid rgba(212,175,55,.2);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
 
-border-bottom:1px solid rgba(212,175,55,.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 
-}
+            box-sizing: border-box;
+        }
 
-.novel-preview h2{
 
-font-size:34px;
+        .novel-preview h2 {
+            font-size: 34px;
 
-color:#d4af37;
+            color: #d4af37;
 
-margin-bottom:12px;
+            margin: 0 0 12px;
+        }
 
-}
 
-.novel-preview p{
+        .novel-preview p {
+            font-size: 21px;
 
-font-size:21px;
+            line-height: 1.9;
 
-line-height:1.9;
+            color: #ccc;
 
-color:#ccc;
+            margin: 0;
+        }
 
-}
 
-.coming-soon{
+        .coming-soon {
+            display: inline-block;
 
-display:inline-block;
+            margin-top: 17px;
 
-margin-top:17px;
+            padding: 10px 25px;
 
-padding:10px 25px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
 
-border:1px solid rgba(212,175,55,.4);
+            border-radius: 40px;
 
-border-radius:40px;
+            color: #d4af37;
 
-color:#d4af37;
+            font-size: 19px;
+        }
 
-font-size:19px;
 
-}
+        /* ========================================
+           الاقتباس
+        ======================================== */
 
-/* =========================
-   الاقتباس
-========================= */
+        .home-quote {
+            max-width: 850px;
 
-.home-quote{
+            margin: 20px auto 55px;
 
-max-width:850px;
+            padding: 40px 20px;
 
-margin:20px auto 55px;
+            text-align: center;
 
-padding:40px 20px;
+            box-sizing: border-box;
+        }
 
-text-align:center;
 
-}
+        .home-quote p {
+            font-size: clamp(24px, 4vw, 35px);
 
-.home-quote p{
+            line-height: 1.9;
 
-font-size:clamp(24px,4vw,35px);
+            color: #d4af37;
 
-line-height:1.9;
+            font-style: italic;
 
-color:#d4af37;
+            margin: 0;
+        }
 
-font-style:italic;
 
-}
+        /* ========================================
+           الهاتف
+        ======================================== */
 
-/* =========================
-   تحسين الهاتف
-========================= */
+        @media (max-width: 768px) {
 
-@media(max-width:768px){
+            .home-hero {
+                min-height: 58vh;
 
-.home-hero{
+                padding: 55px 18px 35px;
+            }
 
-min-height:58vh;
 
-.home-hero{
-min-height:58vh;
-padding:55px 18px 35px;
+            .home-hero h1 {
+                font-size: 46px;
 
-}
+                margin-bottom: 12px;
+            }
 
-.home-hero h1{
 
-font-size:46px;
+            .home-hero .subtitle {
+                font-size: 19px;
 
-margin-bottom:12px;
+                line-height: 1.8;
+            }
 
-}
 
-.home-hero .subtitle{
+            .hero-buttons {
+                gap: 12px;
 
-font-size:19px;
+                margin: 24px 0;
+            }
 
-line-height:1.8;
 
-}
+            .hero-btn {
+                font-size: 18px;
 
-.hero-buttons{
+                padding: 12px 23px;
+            }
 
-gap:12px;
 
-margin:24px 0;
+            .hero-quote {
+                font-size: 19px;
 
-}
+                margin-top: 12px;
+            }
 
-.hero-btn{
 
-font-size:18px;
+            .home-section {
+                padding: 42px 16px;
+            }
 
-padding:12px 23px;
 
-}
+            .section-title {
+                font-size: 29px;
 
-.hero-quote{
+                margin-bottom: 18px;
+            }
 
-font-size:19px;
 
-margin-top:12px;
+            .intro-card {
+                padding: 28px 18px;
 
-}
+                border-radius: 22px;
+            }
 
-.home-section{
 
-padding:42px 16px;
+            .intro-card p {
+                font-size: 18px;
 
-}
+                line-height: 2;
+            }
 
-.section-title{
 
-font-size:29px;
+            .work-grid {
+                grid-template-columns: 1fr;
 
-margin-bottom:18px;
+                gap: 18px;
+            }
 
-}
 
-.intro-card{
+            .work-card {
+                padding: 27px 20px;
+            }
 
-padding:28px 18px;
 
-border-radius:22px;
+            .work-card h3 {
+                font-size: 25px;
+            }
 
-}
 
-.intro-card p{
+            .work-card p {
+                font-size: 18px;
+            }
 
-font-size:18px;
 
-line-height:2;
+            .work-icon {
+                font-size: 35px;
+            }
 
-}
 
-.work-grid{
+            .novel-preview {
+                padding: 38px 18px;
+            }
 
-grid-template-columns:1fr;
 
-gap:18px;
+            .novel-preview h2 {
+                font-size: 29px;
+            }
 
-}
 
-.work-card{
+            .novel-preview p {
+                font-size: 18px;
+            }
 
-padding:27px 20px;
 
-}
+            .coming-soon {
+                font-size: 18px;
 
-.work-card h3{
+                padding: 9px 20px;
+            }
 
-font-size:25px;
 
-}
+            .home-quote {
+                margin: 10px auto 40px;
 
-.work-card p{
+                padding: 30px 18px;
+            }
 
-font-size:18px;
 
-}
+            .home-quote p {
+                font-size: 23px;
+            }
 
-.work-icon{
+        }
 
-font-size:35px;
 
-}
+        /* ========================================
+           شاشات صغيرة جدًا
+        ======================================== */
 
-.novel-preview{
+        @media (max-width: 400px) {
 
-padding:38px 18px;
+            .home-hero {
+                min-height: 55vh;
 
-}
+                padding: 50px 15px 30px;
+            }
 
-.novel-preview h2{
 
-font-size:29px;
+            .home-hero h1 {
+                font-size: 40px;
+            }
 
-}
 
-.novel-preview p{
+            .home-hero .subtitle {
+                font-size: 18px;
+            }
 
-font-size:18px;
 
-}
+            .hero-buttons {
+                width: 100%;
+            }
 
-.coming-soon{
 
-font-size:18px;
+            .hero-btn {
+                width: 85%;
 
-padding:9px 20px;
+                font-size: 17px;
+            }
 
-}
 
-.home-quote{
+            .section-title {
+                font-size: 27px;
+            }
 
-margin:10px auto 40px;
+        }
 
-padding:30px 18px;
 
-}
+        /* ========================================
+           تقليل الحركة
+        ======================================== */
 
-.home-quote p{
+        @media (prefers-reduced-motion: reduce) {
 
-font-size:23px;
+            .home-hero,
+            .hero-btn,
+            .work-card {
+                animation: none !important;
 
-}
+                transition: none !important;
+            }
 
-}
+        }
 
+    </style>
+</head>
 
-/* =========================
-   شاشات صغيرة جدًا
-========================= */
 
-@media(max-width:400px){
+<body>
 
-.home-hero{
+    <!-- شاشة التحميل -->
 
-min-height:55vh;
+    <div id="loader">
+        <h1>بدير وسيم</h1>
+        <p>Writer • Poet</p>
+    </div>
 
-padding-top:50px;
 
-}
+    <!-- شريط التقدم -->
 
-.home-hero h1{
+    <div id="progressBar"></div>
 
-font-size:40px;
 
-}
+    <!-- زر العودة للأعلى -->
 
-.home-hero .subtitle{
+    <button id="topBtn">↑</button>
 
-font-size:18px;
 
-}
+    <!-- القائمة -->
 
-.hero-btn{
+    <nav>
 
-width:85%;
+        <a class="active" href="index.html">
+            الرئيسية
+        </a>
 
-font-size:17px;
+        <a href="about.html">
+            من أنا
+        </a>
 
-}
+        <a href="contact.html">
+            تواصل معي
+        </a>
 
-.section-title{
+    </nav>
 
-font-size:27px;
 
-}
+    <main>
 
-}
+        <!-- ========================================
+             الواجهة الرئيسية
+        ======================================== -->
 
+        <header class="home-hero">
 
-/* =========================
-   تحسين الحركة
-========================= */
+            <h1>
+                بدير وسيم
+            </h1>
 
-@media(prefers-reduced-motion:reduce){
 
-.home-hero,
-.hero-btn,
-.work-card{
+            <p class="subtitle">
 
-animation:none !important;
+                كاتبٌ وشاعرٌ جزائري،
 
-transition:none !important;
+                <br>
 
-}
+                أؤمن أن الكلمة الصادقة تبقى حين يرحل أصحابها.
 
-}
+            </p>
 
-</style></head><body><!-- شاشة التحميل --><div id="loader"><h1>بدير وسيم</h1><p>Writer • Poet</p></div><!-- شريط التقدم --><div id="progressBar"></div><!-- زر العودة للأعلى --><button id="topBtn">↑</button>
 
-<!-- القائمة --><nav><a class="active" href="index.html">الرئيسية</a>
+            <div class="hero-buttons">
 
-<a href="about.html">من أنا</a>
+                <a href="poems.html" class="hero-btn primary">
+                    📜 اكتشف قصائدي
+                </a>
 
-<a href="contact.html">تواصل معي</a>
 
-</nav><main><!-- الواجهة الرئيسية --><header class="home-hero"><h1>بدير وسيم</h1><p class="subtitle">كاتبٌ وشاعرٌ جزائري،
+                <a href="about.html" class="hero-btn secondary">
+                    ✍️ تعرّف إليّ
+                </a>
 
-<br>أؤمن أن الكلمة الصادقة تبقى حين يرحل أصحابها.
+            </div>
 
-</p><div class="hero-buttons"><a href="poems.html" class="hero-btn primary">📜 اكتشف قصائدي
 
-</a><a href="about.html" class="hero-btn secondary">✍️ تعرّف إليّ
+            <p class="hero-quote">
+                "الكلمات لا تموت، بل تبحث دائمًا عن قارئ جديد."
+            </p>
 
-</a></div><p class="hero-quote">"الكلمات لا تموت، بل تبحث دائمًا عن قارئ جديد."
+        </header>
 
-</p></header><!-- النبذة --><section class="home-section"><div class="intro-card"><h2 class="section-title">مرحبًا بك في عالمي الأدبي
 
-</h2><p>هنا لا تجد كلماتٍ مرصوفةً على صفحاتٍ فحسب، بل تجد شيئًا من الرحلة، وشيئًا من الشعور، وأفكارًا ولدت من لحظاتٍ لم تجد طريقها إلا إلى الكتابة.
+        <!-- ========================================
+             النبذة
+        ======================================== -->
 
-<br><br>
+        <section class="home-section">
 
-هذا هو عالمي الأدبي؛ حيث تتحول المشاعر إلى قصائد، والأفكار إلى حكايات.
+            <div class="intro-card">
 
-</p></div></section><!-- آخر الأعمال --><section class="home-section"><h2 class="section-title">آخر الأعمال
+                <h2 class="section-title">
+                    مرحبًا بك في عالمي الأدبي
+                </h2>
 
-</h2><div class="work-grid"><div class="work-card"><div class="work-icon">📜</div><h3>آخر قصيدة</h3><p>ألا يا سائلي عن ذاكَ مَن هُجِيَا
 
-<br>قصيدة هجائية بأسلوب فصيح وحاد.
+                <p>
 
-</p><a href="poem5.html">اقرأ القصيدة
+                    هنا لا تجد كلماتٍ مرصوفةً على صفحاتٍ فحسب،
+                    بل تجد شيئًا من الرحلة، وشيئًا من الشعور،
+                    وأفكارًا ولدت من لحظاتٍ لم تجد طريقها إلا إلى الكتابة.
 
-</a></div><div class="work-card"><div class="work-icon">📚</div><h3>رواية قادمة</h3><p>رماد الورد
+                    <br><br>
 
-<br>حكاية عن الحب، الألم، والنجاة.
+                    هذا هو عالمي الأدبي؛ حيث تتحول المشاعر إلى قصائد،
+                    والأفكار إلى حكايات.
 
-</p><a href="novels.html">اكتشف الرواية
+                </p>
 
-</a></div></div></section><!-- قسم الرواية --><section class="novel-preview"><h2>📖 من عالم الرواية
+            </div>
 
-</h2><p>بعض الحكايات لا تنتهي حين تُغلق صفحاتها...
+        </section>
 
-<br>بل تبدأ حين يبدأ القارئ في التفكير فيها.
 
-</p><span class="coming-soon">✨ رواية «رماد الورد» قريبًا
+        <!-- ========================================
+             آخر الأعمال
+        ======================================== -->
 
-</span></section><!-- الاقتباس --><section class="home-quote"><p>"الأدب لا يغير العالم، لكنه يغير الإنسان الذي سيغير العالم."
+        <section class="home-section">
 
-</p></section></main><!-- Footer --><footer><div class="footer-line"></div><h3>بدير وسيم</h3><p class="footer-role">Writer • Poet</p><p>كاتب وشاعر جزائري</p><div class="footer-links"><a href="poems.html">قصائدي</a>
+            <h2 class="section-title">
+                آخر الأعمال
+            </h2>
 
-<span>•</span>
 
-<a href="novels.html">رواياتي</a>
+            <div class="work-grid">
 
-<span>•</span>
 
-<a href="contact.html">تواصل معي</a>
+                <!-- آخر قصيدة -->
 
-</div><p class="copyright">© 2026 بدير وسيم — جميع الحقوق محفوظة
+                <div class="work-card">
 
-</p></footer><script src="script.js"></script></body></html>
+                    <div class="work-icon">
+                        📜
+                    </div>
+
+
+                    <h3>
+                        آخر قصيدة
+                    </h3>
+
+
+                    <p>
+
+                        ألا يا سائلي عن ذاكَ مَن هُجِيَا
+
+                        <br>
+
+                        قصيدة هجائية بأسلوب فصيح وحاد.
+
+                    </p>
+
+
+                    <a href="poem5.html">
+                        اقرأ القصيدة
+                    </a>
+
+                </div>
+
+
+                <!-- الرواية -->
+
+                <div class="work-card">
+
+                    <div class="work-icon">
+                        📚
+                    </div>
+
+
+                    <h3>
+                        رواية قادمة
+                    </h3>
+
+
+                    <p>
+
+                        رماد الورد
+
+                        <br>
+
+                        حكاية عن الحب، الألم، والنجاة.
+
+                    </p>
+
+
+                    <a href="novels.html">
+                        اكتشف الرواية
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ========================================
+             قسم الرواية
+        ======================================== -->
+
+        <section class="novel-preview">
+
+            <h2>
+                📖 من عالم الرواية
+            </h2>
+
+
+            <p>
+
+                بعض الحكايات لا تنتهي حين تُغلق صفحاتها...
+
+                <br>
+
+                بل تبدأ حين يبدأ القارئ في التفكير فيها.
+
+            </p>
+
+
+            <span class="coming-soon">
+                ✨ رواية «رماد الورد» قريبًا
+            </span>
+
+        </section>
+
+
+        <!-- ========================================
+             الاقتباس
+        ======================================== -->
+
+        <section class="home-quote">
+
+            <p>
+                "الأدب لا يغير العالم، لكنه يغير الإنسان الذي سيغير العالم."
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================================
+         Footer
+    ======================================== -->
+
+    <footer>
+
+        <div class="footer-line"></div>
+
+
+        <h3>
+            بدير وسيم
+        </h3>
+
+
+        <p class="footer-role">
+            Writer • Poet
+        </p>
+
+
+        <p>
+            كاتب وشاعر جزائري
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="poems.html">
+                قصائدي
+            </a>
+
+
+            <span>•</span>
+
+
+            <a href="novels.html">
+                رواياتي
+            </a>
+
+
+            <span>•</span>
+
+
+            <a href="contact.html">
+                تواصل معي
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 بدير وسيم — جميع الحقوق محفوظة
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
