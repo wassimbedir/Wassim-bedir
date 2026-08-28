@@ -1181,3 +1181,169 @@ font-size:16px !important;
 }
 
 }
+
+/* =========================================
+   FINAL FIX - INDEX PAGE
+========================================= */
+
+/* نخلي المحتوى ما يدخلش تحت القائمة الثابتة */
+
+main {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* القائمة تبقى فوق الواجهة فقط */
+
+nav {
+    z-index: 9999;
+}
+
+
+/* الواجهة الرئيسية تبدأ تحت القائمة */
+
+.home-hero {
+    position: relative;
+    z-index: 1;
+    padding-top: 180px;
+}
+
+
+/* الفوتر فوق أي عنصر خلفي */
+
+footer {
+    position: relative;
+    z-index: 10;
+    clear: both;
+}
+
+
+/* روابط الفوتر تكون ظاهرة دائمًا */
+
+.footer-links {
+    position: relative;
+    z-index: 20;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin: 25px 0;
+}
+
+
+/* روابط رواياتي وغيرها */
+
+.footer-links a {
+    position: relative;
+    z-index: 21;
+
+    display: inline-block;
+
+    color: #aaa !important;
+    text-decoration: none;
+
+    font-size: 18px;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+/* رواياتي بالذات */
+
+.footer-links a[href="novels.html"] {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+/* =========================
+   الهاتف
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        top: 10px;
+
+        width: 92%;
+
+        min-height: 48px;
+
+        z-index: 9999;
+    }
+
+
+    .home-hero {
+        padding-top: 115px;
+    }
+
+
+    footer {
+        padding: 55px 16px 45px;
+
+        margin-top: 70px;
+    }
+
+
+    .footer-links {
+        width: 100%;
+
+        gap: 9px;
+
+        margin: 22px 0;
+    }
+
+
+    .footer-links a {
+        font-size: 17px !important;
+
+        padding: 5px 3px;
+    }
+
+}
+
+
+/* =========================
+   هاتف صغير جدًا
+========================= */
+
+@media (max-width: 400px) {
+
+    nav {
+        width: 94%;
+
+        padding: 8px 6px;
+
+        gap: 4px;
+    }
+
+
+    nav a {
+        font-size: 14px;
+
+        padding: 7px 10px;
+    }
+
+
+    .home-hero {
+        padding-top: 105px;
+    }
+
+
+    .footer-links {
+        gap: 7px;
+    }
+
+
+    .footer-links a {
+        font-size: 16px !important;
+    }
+
+}
