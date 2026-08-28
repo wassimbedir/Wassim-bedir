@@ -756,7 +756,6 @@ font-size:27px;
 
 <script>
 
-function filterPoems(category,button){
 function filterPoems(category){
 
 const poems = document.querySelectorAll('.poem');
@@ -775,22 +774,18 @@ poem.style.display = 'none';
 
 });
 
-  }
+}
+
 
 function randomPoem(){
 
 const poems = [
 
 "poem1.html",
-
 "poem2.html",
-
 "poem3.html",
-
 "poem4.html",
-
 "poem5.html",
-  
 "poem6.html"
 
 ];
@@ -800,7 +795,6 @@ const random = poems[Math.floor(Math.random() * poems.length)];
 window.location.href = random;
 
 }
-
 </script>
 
 </body>
