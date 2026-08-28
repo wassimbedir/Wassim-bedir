@@ -1091,3 +1091,93 @@ background:#e5c65b;
 box-shadow:0 0 25px rgba(212,175,55,.6);
 
 }
+
+/* =========================
+   الهوية الأدبية - Footer
+========================= */
+
+.footer-role{
+
+font-family:'Cinzel',serif;
+
+font-size:18px !important;
+
+letter-spacing:2px;
+
+color:#d4af37 !important;
+
+margin-top:-5px !important;
+
+}
+
+.footer-links{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:14px;
+
+margin:25px 0;
+
+}
+
+.footer-links a{
+
+color:#aaa;
+
+text-decoration:none;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+color:#d4af37;
+
+}
+
+.footer-links span{
+
+color:#d4af37;
+
+opacity:.6;
+
+}
+
+.copyright{
+
+font-size:16px !important;
+
+color:#777 !important;
+
+margin-top:20px !important;
+
+}
+
+@media(max-width:768px){
+
+.footer-links{
+
+gap:10px;
+
+}
+
+.footer-links a{
+
+font-size:16px;
+
+}
+
+.footer-role{
+
+font-size:16px !important;
+
+}
+
+}
