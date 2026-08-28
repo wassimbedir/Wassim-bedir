@@ -757,14 +757,9 @@ font-size:27px;
 <script>
 
 function filterPoems(category,button){
+function filterPoems(category){
 
 const poems = document.querySelectorAll('.poem');
-
-const buttons = document.querySelectorAll('.categories button');
-
-buttons.forEach(btn => btn.classList.remove('active'));
-
-button.classList.add('active');
 
 poems.forEach(poem => {
 
@@ -780,7 +775,7 @@ poem.style.display = 'none';
 
 });
 
-}
+  }
 
 function randomPoem(){
 
