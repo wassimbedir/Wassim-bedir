@@ -1360,3 +1360,62 @@ footer {
     }
 
 }
+/* =================================
+   إضاءة متحركة للواجهة الرئيسية فقط
+================================= */
+
+.home-hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.home-hero::before{
+    content:"";
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:radial-gradient(
+        circle,
+        rgba(212,175,55,.16) 0%,
+        rgba(212,175,55,.07) 35%,
+        transparent 70%
+    );
+
+    filter:blur(8px);
+
+    pointer-events:none;
+
+    z-index:0;
+
+    animation:heroLight 10s ease-in-out infinite alternate;
+}
+
+.home-hero > *{
+    position:relative;
+    z-index:1;
+}
+
+@keyframes heroLight{
+
+    0%{
+        transform:translate(-75%,-50%) scale(.9);
+        opacity:.55;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translate(-25%,-50%) scale(1.15);
+        opacity:.65;
+    }
+
+}
