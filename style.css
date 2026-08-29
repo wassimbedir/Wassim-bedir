@@ -1,1376 +1,237 @@
-/* ===========================
-   إعدادات عامة
-=========================== */
+/* =====================================================
+   بدير وسيم | STYLE.CSS
+   Black & Soft Gold
+===================================================== */
+
+
+/* =====================================================
+   1. RESET
+===================================================== */
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    width:100%;
+    overflow-x:hidden;
 }
 
 body{
-font-family:'Amiri',serif;
-background:
-radial-gradient(circle at top,#3d2b09 0%,transparent 35%),
-linear-gradient(180deg,#050505,#0d1117,#171717);
-color:#fff;
-overflow-x:hidden;
+    width:100%;
+    min-height:100vh;
+    font-family:'Amiri', serif;
+    color:#fff;
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(212,175,55,.13),
+            transparent 32%
+        ),
+        linear-gradient(
+            180deg,
+            #050505 0%,
+            #0b0d10 50%,
+            #121212 100%
+        );
+    overflow-x:hidden;
 }
+
+
+/* =====================================================
+   2. BACKGROUND STARS
+===================================================== */
 
 body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:
-radial-gradient(white 1px,transparent 1px);
-background-size:100px 100px;
-opacity:.08;
-pointer-events:none;
-z-index:-1;
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background-image:
+        radial-gradient(
+            rgba(255,255,255,.7) 1px,
+            transparent 1px
+        );
+
+    background-size:110px 110px;
+    opacity:.045;
+
+    pointer-events:none;
+    z-index:-1;
 }
 
-/* ===========================
-   شريط التقدم
-=========================== */
+
+/* =====================================================
+   3. SELECTION
+===================================================== */
+
+::selection{
+    background:#d4af37;
+    color:#111;
+}
+
+
+/* =====================================================
+   4. SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+    width:9px;
+}
+
+::-webkit-scrollbar-track{
+    background:#090909;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#b9962e;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#d4af37;
+}
+
+
+/* =====================================================
+   5. PROGRESS BAR
+===================================================== */
 
 #progressBar{
-position:fixed;
-top:0;
-left:0;
-width:0%;
-height:4px;
-background:#d4af37;
-z-index:9999;
-box-shadow:0 0 12px #d4af37;
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:0%;
+    height:3px;
+
+    background:#d4af37;
+
+    box-shadow:
+        0 0 10px rgba(212,175,55,.7);
+
+    z-index:10000;
 }
 
-/* ===========================
-   القائمة
-=========================== */
+
+/* =====================================================
+   6. NAVIGATION
+===================================================== */
 
 nav{
-position:fixed;
-top:15px;
-left:50%;
-transform:translateX(-50%);
-display:flex;
-justify-content:center;
-align-items:center;
-gap:18px;
-padding:12px 24px;
-background:rgba(20,20,20,.55);
-backdrop-filter:blur(12px);
--webkit-backdrop-filter:blur(12px);
-border:1px solid rgba(212,175,55,.25);
-border-radius:50px;
-box-shadow:0 8px 25px rgba(0,0,0,.35);
-z-index:999;
+    position:fixed;
+
+    top:15px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:max-content;
+    max-width:94%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    padding:9px 12px;
+
+    background:rgba(15,15,15,.72);
+
+    border:1px solid rgba(212,175,55,.22);
+
+    border-radius:50px;
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35);
+
+    z-index:9999;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-font-size:16px;
-font-weight:bold;
-padding:10px 18px;
-border-radius:30px;
-transition:.35s;
+    display:inline-block;
+
+    padding:9px 15px;
+
+    color:#eee;
+
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:bold;
+
+    white-space:nowrap;
+
+    border-radius:30px;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
 }
 
 nav a:hover,
 nav a.active{
-background:#d4af37;
-color:#111;
-box-shadow:0 0 18px rgba(212,175,55,.45);
-}
-
-/* ===========================
-   الواجهة الرئيسية
-=========================== */
-
-.header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-position:relative;
-overflow:hidden;
-}
-
-.header::before{
-content:"";
-position:absolute;
-width:450px;
-height:450px;
-border-radius:50%;
-background:radial-gradient(circle,
-rgba(212,175,55,.25),
-transparent 70%);
-animation:glow 6s infinite alternate;
-z-index:-1;
-}
-
-.header h1{
-font-family:'Cinzel',serif;
-font-size:82px;
-color:#d4af37;
-letter-spacing:3px;
-text-shadow:
-0 0 12px rgba(212,175,55,.7),
-0 0 35px rgba(212,175,55,.45);
-animation:fadeUp 1s;
-}
-
-.header p{
-font-size:28px;
-line-height:1.9;
-max-width:760px;
-margin-top:25px;
-color:#ddd;
-animation:fadeUp 1.5s;
-}
-
-/* ===========================
-   الأزرار الرئيسية
-=========================== */
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:40px;
-animation:fadeUp 2s;
-}
-
-.btn{
-display:inline-block;
-padding:15px 32px;
-background:#d4af37;
-color:#111;
-text-decoration:none;
-font-size:20px;
-font-weight:bold;
-border-radius:50px;
-transition:.35s;
-box-shadow:0 0 18px rgba(212,175,55,.35);
-}
-
-.btn:hover{
-transform:translateY(-6px) scale(1.05);
-background:#e4c45d;
-box-shadow:0 0 30px rgba(212,175,55,.65);
-}
-
-/* ===========================
-   الاقتباس
-=========================== */
-
-.quote{
-margin-top:45px;
-font-size:25px;
-font-style:italic;
-color:#d9d9d9;
-max-width:700px;
-line-height:1.9;
-padding:0 20px;
-animation:fadeUp 2.5s;
-}
-/* ===========================
-   قسم النبذة
-=========================== */
-
-.about-preview{
-max-width:900px;
-margin:100px auto;
-padding:45px;
-background:rgba(255,255,255,.04);
-border:1px solid rgba(212,175,55,.25);
-border-radius:22px;
-backdrop-filter:blur(10px);
-box-shadow:0 0 25px rgba(212,175,55,.10);
-text-align:center;
-transition:.35s;
-}
-
-.about-preview:hover{
-transform:translateY(-8px);
-box-shadow:0 0 35px rgba(212,175,55,.25);
-}
-
-.about-preview h2{
-font-size:42px;
-color:#d4af37;
-margin-bottom:25px;
-font-family:'Cinzel',serif;
-}
-
-.about-preview p{
-font-size:24px;
-line-height:2;
-color:#ddd;
-}
-
-/* ===========================
-   آخر الأعمال
-=========================== */
-
-.latest{
-max-width:1200px;
-margin:100px auto;
-padding:20px;
-text-align:center;
-}
-
-.latest h2{
-font-size:46px;
-color:#d4af37;
-margin-bottom:45px;
-font-family:'Cinzel',serif;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.card{
-background:rgba(255,255,255,.04);
-border:1px solid rgba(212,175,55,.25);
-border-radius:20px;
-padding:35px 25px;
-backdrop-filter:blur(10px);
-transition:.35s;
-box-shadow:0 0 20px rgba(212,175,55,.08);
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 35px rgba(212,175,55,.30);
-}
-
-.card h3{
-font-size:30px;
-color:#d4af37;
-margin-bottom:20px;
-}
-
-.card p{
-font-size:22px;
-line-height:1.9;
-color:#e5e5e5;
-margin-bottom:25px;
-}
-
-.card a{
-display:inline-block;
-padding:12px 28px;
-background:#d4af37;
-color:#111;
-text-decoration:none;
-font-weight:bold;
-border-radius:35px;
-transition:.3s;
-}
-
-.card a:hover{
-background:#e7c95e;
-transform:scale(1.05);
-}
-
-/* ===========================
-   صندوق الاقتباس
-=========================== */
-
-.quote-section{
-max-width:900px;
-margin:90px auto;
-padding:45px;
-text-align:center;
-}
-
-.quote-section p{
-font-size:30px;
-font-style:italic;
-color:#d4af37;
-line-height:2;
-text-shadow:0 0 12px rgba(212,175,55,.25);
-}
-
-/* ===========================
-   Footer
-=========================== */
-
-footer{
-margin-top:100px;
-padding:60px 20px;
-text-align:center;
-background:rgba(255,255,255,.03);
-border-top:1px solid rgba(212,175,55,.25);
-}
-
-.footer-line{
-width:120px;
-height:3px;
-background:#d4af37;
-margin:0 auto 30px;
-border-radius:30px;
-}
-
-footer h3{
-font-family:'Cinzel',serif;
-font-size:34px;
-color:#d4af37;
-margin-bottom:15px;
-}
-
-footer p{
-font-size:20px;
-color:#ccc;
-margin:10px 0;
-}
-
-/* ===========================
-   الهاتف
-=========================== */
-
-@media(max-width:768px){
-
-nav{
-width:92%;
-gap:6px;
-padding:12px;
-}
-
-nav a{
-font-size:14px;
-padding:8px 12px;
-}
-
-.header h1{
-font-size:52px;
-}
-
-.header p{
-font-size:22px;
-}
-
-.quote{
-font-size:20px;
-}
-
-.hero-buttons{
-flex-direction:column;
-align-items:center;
-}
-
-.btn{
-width:220px;
-text-align:center;
-}
-
-.about-preview h2,
-.latest h2{
-font-size:34px;
-}
-
-.about-preview p,
-.card p{
-font-size:20px;
-}
-
-.quote-section p{
-font-size:22px;
-}
-
-footer h3{
-font-size:28px;
-}
-
-footer p{
-font-size:18px;
-}
-
-  }
-/* ===========================
-   شاشة التحميل
-=========================== */
-
-#loader{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:#050505;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-z-index:99999;
-transition:opacity .8s,visibility .8s;
-}
-
-#loader.hide{
-opacity:0;
-visibility:hidden;
-}
-
-#loader h1{
-font-family:'Cinzel',serif;
-font-size:60px;
-color:#d4af37;
-letter-spacing:3px;
-margin-bottom:15px;
-text-shadow:0 0 20px rgba(212,175,55,.5);
-}
-
-#loader p{
-font-size:22px;
-color:#ccc;
-}
-
-/* ===========================
-   زر العودة للأعلى
-=========================== */
-
-#topBtn{
-position:fixed;
-bottom:25px;
-left:25px;
-width:55px;
-height:55px;
-border:none;
-border-radius:50%;
-background:#d4af37;
-color:#111;
-font-size:24px;
-font-weight:bold;
-cursor:pointer;
-display:none;
-transition:.3s;
-box-shadow:0 0 18px rgba(212,175,55,.35);
-z-index:9999;
-}
-
-#topBtn:hover{
-transform:translateY(-5px) scale(1.08);
-box-shadow:0 0 28px rgba(212,175,55,.6);
-}
-
-/* ===========================
-   الحركات
-=========================== */
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-@keyframes glow{
-
-from{
-transform:translate(-50%,-50%) scale(1);
-opacity:.7;
-}
-
-to{
-transform:translate(-50%,-50%) scale(1.15);
-opacity:1;
-}
-
-}
-
-@keyframes pulse{
-
-0%{
-box-shadow:0 0 15px rgba(212,175,55,.25);
-}
-
-50%{
-box-shadow:0 0 35px rgba(212,175,55,.55);
-}
-
-100%{
-box-shadow:0 0 15px rgba(212,175,55,.25);
-}
-
-}
-
-/* ===========================
-   ظهور العناصر
-=========================== */
-
-.header,
-.about-preview,
-.latest,
-.quote-section,
-.card,
-footer{
-animation:fadeUp 1s ease;
-}
-
-/* ===========================
-   تحديد النص
-=========================== */
-
-::selection{
-background:#d4af37;
-color:#111;
-}
-
-/* ===========================
-   شريط التمرير
-=========================== */
-
-::-webkit-scrollbar{
-width:10px;
-}
-
-::-webkit-scrollbar-track{
-background:#111;
-}
-
-::-webkit-scrollbar-thumb{
-background:#d4af37;
-border-radius:10px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-background:#e5c65b;
-}
-
-/* ===========================
-   نهاية الملف
-=========================== */
-
-
-/* =======================
-   Contact Page
-======================= */
-
-.contact-box{
-
-max-width:650px;
-margin:40px auto;
-padding:35px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(212,175,55,.25);
-
-border-radius:18px;
-
-text-align:center;
-
-transition:.35s;
-
-box-shadow:0 0 20px rgba(212,175,55,.08);
-
-}
-
-.contact-box:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 0 35px rgba(212,175,55,.25);
-
-}
-
-.contact-box h3{
-
-font-size:30px;
-
-color:#d4af37;
-
-margin-bottom:20px;
-
-}
-
-.contact-box a{
-
-font-size:24px;
-
-color:white;
-
-text-decoration:none;
-
-word-break:break-word;
-
-transition:.3s;
-
-}
-
-.contact-box a:hover{
-
-color:#d4af37;
-
-}
-.contact-note{
-
-max-width:800px;
-margin:50px auto;
-text-align:center;
-
-font-size:22px;
-line-height:2.2;
-
-color:#d7d7d7;
-
-padding:0 20px;
-
-}
-
-.contact-note span{
-
-color:#d4af37;
-font-weight:bold;
-
-}
-
-.socials{
-
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-
-margin-top:45px;
-
-}
-
-.social{
-
-width:70px;
-height:70px;
-
-border-radius:50%;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-font-size:32px;
-
-background:rgba(255,255,255,.05);
-
-border:1px solid rgba(212,175,55,.25);
-
-transition:.35s;
-
-text-decoration:none;
-
-}
-
-.social:hover{
-
-transform:translateY(-8px);
-
-background:#d4af37;
-
-box-shadow:0 0 25px rgba(212,175,55,.5);
-
-}
-
-.intro{
-max-width:850px;
-margin:40px auto;
-padding:25px 30px;
-background:rgba(255,255,255,.04);
-border:1px solid rgba(212,175,55,.25);
-border-radius:18px;
-text-align:center;
-font-size:24px;
-line-height:2;
-color:#ddd;
-font-style:italic;
-box-shadow:0 0 20px rgba(212,175,55,.08);
-}
-
-.latest{
-max-width:1000px;
-margin:100px auto;
-padding:20px;
-text-align:center;
-}
-
-.latest h2{
-font-size:45px;
-color:#d4af37;
-margin-bottom:40px;
-}
-
-.latest-card{
-background:rgba(255,255,255,.04);
-border:1px solid rgba(212,175,55,.25);
-border-radius:25px;
-padding:40px;
-box-shadow:0 0 30px rgba(212,175,55,.08);
-transition:.35s;
-}
-
-.latest-card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 35px rgba(212,175,55,.25);
-}
-
-.latest-card h3{
-font-size:34px;
-color:#d4af37;
-margin-bottom:20px;
-}
-
-.latest-card p{
-font-size:24px;
-line-height:2;
-color:#ddd;
-margin-bottom:30px;
-}
-
-.latest-btn{
-display:inline-block;
-padding:14px 28px;
-background:#d4af37;
-color:#111;
-text-decoration:none;
-font-size:20px;
-font-weight:bold;
-border-radius:50px;
-transition:.3s;
-}
-
-.latest-btn:hover{
-background:#e5c65b;
-transform:translateY(-5px);
-box-shadow:0 0 25px rgba(212,175,55,.6);
-   }
-
-footer p{
-color:#aaa !important;
-}
-
-footer h3{
-color:#d4af37 !important;
-}
-
-/* ظهور العناصر عند فتح الصفحة */
-
-.header,
-.about-preview,
-.latest,
-.quote-section,
-footer{
-animation:fadeUp 1.2s ease forwards;
-}
-
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(40px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-
-
-/* حركة البطاقات */
-
-.card{
-
-transition:.4s ease;
-
-}
-
-
-.card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 0 25px rgba(212,175,55,.35);
-
-}
-
+    color:#111;
+    background:#d4af37;
 
+    box-shadow:
+        0 0 18px rgba(212,175,55,.28);
 
-/* لمعان خفيف للعناوين الذهبية */
-
-h1,h2{
-
-animation:goldGlow 3s infinite alternate;
-
-}
-
-
-@keyframes goldGlow{
-
-from{
-
-text-shadow:0 0 10px rgba(212,175,55,.3);
-
-}
-
-to{
-
-text-shadow:0 0 25px rgba(212,175,55,.8);
-
-}
-
-}
-
-
-
-/* حركة الأزرار */
-
-.btn,
-.back,
-.card a{
-
-transition:.3s ease;
-
-}
-
-
-.btn:hover,
-.back:hover,
-.card a:hover{
-
-transform:scale(1.08);
-
-}
-
-
-
-/* ظهور القصائد */
-
-.verse{
-
-animation:verseShow 1s ease forwards;
-
-}
-
-
-@keyframes verseShow{
-
-from{
-
-opacity:0;
-transform:translateX(40px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateX(0);
-
-}
-
-}
-
-/* تحسين عرض الهاتف */
-
-@media (max-width:768px){
-
-body{
-overflow-x:hidden;
-}
-
-
-/* القائمة */
-
-nav{
-flex-wrap:wrap;
-gap:8px;
-padding:10px;
-}
-
-nav a{
-font-size:16px;
-padding:8px 12px;
-}
-
-
-
-/* العنوان الرئيسي */
-
-.header h1,
-header h1{
-font-size:42px;
-}
-
-
-.header p,
-header p{
-font-size:20px;
-}
-
-
-/* الأزرار */
-
-.hero-buttons{
-flex-direction:column;
-align-items:center;
-gap:15px;
-}
-
-
-.btn{
-width:80%;
-text-align:center;
-}
-
-
-
-/* الأقسام */
-
-.about-preview,
-.latest,
-.quote-section{
-padding:25px 15px;
-}
-
-
-
-/* البطاقات */
-
-.cards{
-
-flex-direction:column;
-
-align-items:center;
-
-}
-
-
-.card{
-
-width:90%;
-
-max-width:350px;
-
-}
-
-
-
-/* القصائد */
-
-.poem{
-
-width:92%;
-
-padding:25px;
-
-}
-
-
-.sadr{
-
-font-size:27px;
-
-}
-
-
-.ajz{
-
-font-size:25px;
-
-}
-
-
-
-/* العناوين */
-
-h2{
-
-font-size:34px;
-
-}
-
-
-}
-header h1{
-color:#d4af37 !important;
-}
-
-/* قصيدة عشوائية */
-
-.random-poem{
-
-max-width:700px;
-
-margin:40px auto;
-
-padding:30px;
-
-text-align:center;
-
-background:rgba(255,255,255,.04);
-
-border:1px solid rgba(212,175,55,.25);
-
-border-radius:25px;
-
-box-shadow:0 0 30px rgba(212,175,55,.08);
-
-}
-
-.random-poem h2{
-
-color:#d4af37;
-
-font-size:32px;
-
-margin-bottom:10px;
-
-}
-
-.random-poem p{
-
-color:#ddd;
-
-font-size:20px;
-
-margin-bottom:20px;
-
-}
-
-.random-poem button{
-
-padding:14px 28px;
-
-background:#d4af37;
-
-color:#111;
-
-border:none;
-
-border-radius:50px;
-
-font-family:'Amiri',serif;
-
-font-size:20px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-transition:.3s;
-
-}
-
-.random-poem button:hover{
-
-transform:translateY(-5px);
-
-background:#e5c65b;
-
-box-shadow:0 0 25px rgba(212,175,55,.6);
-
-}
-
-/* =========================
-   الهوية الأدبية - Footer
-========================= */
-
-.footer-role{
-
-font-family:'Cinzel',serif;
-
-font-size:18px !important;
-
-letter-spacing:2px;
-
-color:#d4af37 !important;
-
-margin-top:-5px !important;
-
-}
-
-.footer-links{
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-gap:14px;
-
-margin:25px 0;
-
-}
-
-.footer-links a{
-
-color:#aaa;
-
-text-decoration:none;
-
-font-size:18px;
-
-transition:.3s;
-
-}
-
-.footer-links a:hover{
-
-color:#d4af37;
-
-}
-
-.footer-links span{
-
-color:#d4af37;
-
-opacity:.6;
-
-}
-
-.copyright{
-
-font-size:16px !important;
-
-color:#777 !important;
-
-margin-top:20px !important;
-
-}
-
-@media(max-width:768px){
-
-.footer-links{
-
-gap:10px;
-
-}
-
-.footer-links a{
-
-font-size:16px;
-
-}
-
-.footer-role{
-
-font-size:16px !important;
-
-}
-
-}
-
-/* =========================================
-   FINAL FIX - INDEX PAGE
-========================================= */
-
-/* نخلي المحتوى ما يدخلش تحت القائمة الثابتة */
-
-main {
-    position: relative;
-    z-index: 1;
-}
-
-
-/* القائمة تبقى فوق الواجهة فقط */
-
-nav {
-    z-index: 9999;
-}
-
-
-/* الواجهة الرئيسية تبدأ تحت القائمة */
-
-.home-hero {
-    position: relative;
-    z-index: 1;
-    padding-top: 180px;
-}
-
-
-/* الفوتر فوق أي عنصر خلفي */
-
-footer {
-    position: relative;
-    z-index: 10;
-    clear: both;
-}
-
-
-/* روابط الفوتر تكون ظاهرة دائمًا */
-
-.footer-links {
-    position: relative;
-    z-index: 20;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    gap: 14px;
-
-    margin: 25px 0;
+    transform:translateY(-1px);
 }
-
-
-/* روابط رواياتي وغيرها */
-
-.footer-links a {
-    position: relative;
-    z-index: 21;
-
-    display: inline-block;
-
-    color: #aaa !important;
-    text-decoration: none;
-
-    font-size: 18px;
-
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-
-/* رواياتي بالذات */
-
-.footer-links a[href="novels.html"] {
-    display: inline-block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-
-/* =========================
-   الهاتف
-========================= */
-
-@media (max-width: 768px) {
-
-    nav {
-        top: 10px;
 
-        width: 92%;
 
-        min-height: 48px;
+/* =====================================================
+   7. MAIN
+===================================================== */
 
-        z-index: 9999;
-  
-       .footer-links{
+main{
     position:relative;
-    z-index:100;
-}
-
-.footer-links a{
-    display:inline-block !important;
-    visibility:visible !important;
-    opacity:1 !important;
-}
-    
-    }
-
-
-
-    .home-hero {
-        padding-top: 115px;
-    }
-
-
-    footer {
-        padding: 55px 16px 45px;
-
-        margin-top: 70px;
-    }
-
-
-    .footer-links {
-        width: 100%;
-
-        gap: 9px;
-
-        margin: 22px 0;
-    }
-
-
-    .footer-links a {
-        font-size: 17px !important;
-
-        padding: 5px 3px;
-    }
-
+    z-index:1;
 }
 
 
-/* =========================
-   هاتف صغير جدًا
-========================= */
+/* =====================================================
+   8. HOME HERO
+===================================================== */
 
-@media (max-width: 400px) {
-
-    nav {
-        width: 94%;
-
-        padding: 8px 6px;
-
-        gap: 4px;
-    }
-
-
-    nav a {
-        font-size: 14px;
-
-        padding: 7px 10px;
-    }
-
-
-    .home-hero {
-        padding-top: 105px;
-    }
-
-
-    .footer-links {
-        gap: 7px;
-    }
-
-
-    .footer-links a {
-        font-size: 16px !important;
-    }
-
-}
-/* =================================
-   إضاءة متحركة للواجهة الرئيسية فقط
-================================= */
-
+.header,
 .home-hero{
     position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:130px 20px 70px;
+
     overflow:hidden;
 }
 
-.home-hero::before{
+
+/* الإضاءة الخلفية */
+
+.home-hero::before,
+.header::before{
     content:"";
+
     position:absolute;
 
     width:520px;
@@ -1381,12 +242,13 @@ footer {
 
     transform:translate(-50%,-50%);
 
-    background:radial-gradient(
-        circle,
-        rgba(212,175,55,.16) 0%,
-        rgba(212,175,55,.07) 35%,
-        transparent 70%
-    );
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,.13) 0%,
+            rgba(212,175,55,.06) 35%,
+            transparent 70%
+        );
 
     filter:blur(8px);
 
@@ -1394,173 +256,1180 @@ footer {
 
     z-index:0;
 
-    animation:heroLight 10s ease-in-out infinite alternate;
+    animation:heroGlow 9s ease-in-out infinite alternate;
 }
 
+
+/* محتوى الواجهة فوق الإضاءة */
+
+.header > *,
 .home-hero > *{
     position:relative;
     z-index:1;
 }
 
-@keyframes heroLight{
+
+/* =====================================================
+   9. MAIN TITLE
+===================================================== */
+
+.header h1,
+.home-hero h1,
+header h1{
+    font-family:'Cinzel', serif;
+
+    font-size:clamp(48px,7vw,82px);
+
+    line-height:1.25;
+
+    color:#d4af37 !important;
+
+    letter-spacing:2px;
+
+    text-shadow:
+        0 0 12px rgba(212,175,55,.35),
+        0 0 35px rgba(212,175,55,.18);
+
+    animation:titleGlow 4s ease-in-out infinite alternate;
+}
+
+
+/* =====================================================
+   10. HERO TEXT
+===================================================== */
+
+.header p,
+.home-hero p{
+    max-width:760px;
+
+    margin-top:22px;
+
+    color:#d8d8d8;
+
+    font-size:clamp(19px,2.3vw,28px);
+
+    line-height:1.9;
+}
+
+
+/* =====================================================
+   11. HERO BUTTONS
+===================================================== */
+
+.hero-buttons{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:14px 30px;
+
+    background:#d4af37;
+    color:#111;
+
+    text-decoration:none;
+
+    font-family:'Amiri',serif;
+
+    font-size:19px;
+    font-weight:bold;
+
+    border-radius:50px;
+
+    box-shadow:
+        0 0 18px rgba(212,175,55,.22);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
+}
+
+.btn:hover{
+    background:#e3c35b;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 28px rgba(212,175,55,.42);
+}
+
+
+/* =====================================================
+   12. QUOTE
+===================================================== */
+
+.quote{
+    max-width:700px;
+
+    margin-top:38px;
+
+    padding:0 15px;
+
+    color:#cfcfcf;
+
+    font-size:24px;
+
+    font-style:italic;
+
+    line-height:1.9;
+}
+
+
+/* =====================================================
+   13. ABOUT PREVIEW
+===================================================== */
+
+.about-preview{
+    width:92%;
+    max-width:900px;
+
+    margin:90px auto;
+
+    padding:42px 38px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(212,175,55,.2);
+
+    border-radius:24px;
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 0 30px rgba(212,175,55,.06);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.about-preview:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 0 35px rgba(212,175,55,.16);
+}
+
+.about-preview h2{
+    margin-bottom:22px;
+
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+
+    color:#d4af37;
+}
+
+.about-preview p{
+    color:#ddd;
+
+    font-size:23px;
+
+    line-height:2;
+}
+
+
+/* =====================================================
+   14. LATEST WORKS
+===================================================== */
+
+.latest{
+    width:92%;
+    max-width:1100px;
+
+    margin:90px auto;
+
+    padding:20px;
+
+    text-align:center;
+}
+
+.latest h2{
+    margin-bottom:40px;
+
+    font-family:'Cinzel',serif;
+
+    font-size:44px;
+
+    color:#d4af37;
+}
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(270px,1fr));
+
+    gap:25px;
+}
+
+
+/* =====================================================
+   15. CARDS
+===================================================== */
+
+.card,
+.latest-card{
+    padding:32px 25px;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(212,175,55,.2);
+
+    border-radius:22px;
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.055);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.card:hover,
+.latest-card:hover{
+    transform:translateY(-8px);
+
+    border-color:rgba(212,175,55,.4);
+
+    box-shadow:
+        0 0 35px rgba(212,175,55,.16);
+}
+
+.card h3,
+.latest-card h3{
+    margin-bottom:18px;
+
+    color:#d4af37;
+
+    font-size:30px;
+}
+
+.card p,
+.latest-card p{
+    margin-bottom:25px;
+
+    color:#ddd;
+
+    font-size:21px;
+
+    line-height:1.9;
+}
+
+.card a,
+.latest-btn{
+    display:inline-block;
+
+    padding:11px 25px;
+
+    background:#d4af37;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-size:18px;
+    font-weight:bold;
+
+    border-radius:40px;
+
+    transition:.3s ease;
+}
+
+.card a:hover,
+.latest-btn:hover{
+    background:#e5c65b;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 0 22px rgba(212,175,55,.35);
+}
+
+
+/* =====================================================
+   16. QUOTE SECTION
+===================================================== */
+
+.quote-section{
+    width:92%;
+    max-width:900px;
+
+    margin:80px auto;
+
+    padding:35px 20px;
+
+    text-align:center;
+}
+
+.quote-section p{
+    color:#d4af37;
+
+    font-size:29px;
+
+    font-style:italic;
+
+    line-height:2;
+
+    text-shadow:
+        0 0 15px rgba(212,175,55,.18);
+}
+
+
+/* =====================================================
+   17. RANDOM POEM
+===================================================== */
+
+.random-poem{
+    width:92%;
+    max-width:700px;
+
+    margin:40px auto;
+
+    padding:30px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(212,175,55,.2);
+
+    border-radius:24px;
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.06);
+}
+
+.random-poem h2{
+    margin-bottom:10px;
+
+    color:#d4af37;
+
+    font-size:32px;
+}
+
+.random-poem p{
+    margin-bottom:20px;
+
+    color:#ddd;
+
+    font-size:20px;
+}
+
+.random-poem button{
+    padding:12px 27px;
+
+    background:#d4af37;
+
+    color:#111;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-family:'Amiri',serif;
+
+    font-size:19px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.random-poem button:hover{
+    background:#e5c65b;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.4);
+}
+
+
+/* =====================================================
+   18. CONTACT
+===================================================== */
+
+.contact-box{
+    width:92%;
+    max-width:650px;
+
+    margin:40px auto;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(212,175,55,.2);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.06);
+
+    transition:.35s ease;
+}
+
+.contact-box:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 0 35px rgba(212,175,55,.15);
+}
+
+.contact-box h3{
+    margin-bottom:18px;
+
+    color:#d4af37;
+
+    font-size:30px;
+}
+
+.contact-box a{
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:23px;
+
+    word-break:break-word;
+
+    transition:.3s ease;
+}
+
+.contact-box a:hover{
+    color:#d4af37;
+}
+
+.contact-note{
+    width:92%;
+    max-width:800px;
+
+    margin:45px auto;
+
+    padding:0 15px;
+
+    text-align:center;
+
+    color:#d2d2d2;
+
+    font-size:21px;
+
+    line-height:2.1;
+}
+
+.contact-note span{
+    color:#d4af37;
+    font-weight:bold;
+}
+
+
+/* =====================================================
+   19. SOCIALS
+===================================================== */
+
+.socials{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+    margin-top:40px;
+}
+
+.social{
+    width:65px;
+    height:65px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(212,175,55,.2);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:29px;
+
+    transition:.35s ease;
+}
+
+.social:hover{
+    color:#111;
+
+    background:#d4af37;
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.35);
+}
+
+
+/* =====================================================
+   20. INTRO
+===================================================== */
+
+.intro{
+    width:92%;
+    max-width:850px;
+
+    margin:40px auto;
+
+    padding:25px 30px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(212,175,55,.2);
+
+    border-radius:20px;
+
+    color:#ddd;
+
+    font-size:23px;
+
+    line-height:2;
+
+    font-style:italic;
+}
+
+
+/* =====================================================
+   21. POEMS
+===================================================== */
+
+.poem{
+    width:92%;
+    max-width:850px;
+
+    margin:35px auto;
+
+    padding:35px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(212,175,55,.18);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,.05);
+}
+
+.sadr{
+    color:#d4af37;
+
+    font-size:29px;
+
+    line-height:1.9;
+}
+
+.ajz{
+    color:#ddd;
+
+    font-size:27px;
+
+    line-height:1.9;
+}
+
+.verse{
+    animation:verseShow .8s ease forwards;
+}
+
+
+/* =====================================================
+   22. LOADER
+===================================================== */
+
+#loader{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#050505;
+
+    z-index:99999;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+}
+
+#loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+#loader h1{
+    font-family:'Cinzel',serif;
+
+    font-size:58px;
+
+    color:#d4af37;
+
+    letter-spacing:3px;
+
+    margin-bottom:12px;
+
+    text-shadow:
+        0 0 20px rgba(212,175,55,.4);
+}
+
+#loader p{
+    color:#aaa;
+
+    font-size:20px;
+}
+
+
+/* =====================================================
+   23. BACK TO TOP
+===================================================== */
+
+#topBtn{
+    position:fixed;
+
+    left:22px;
+    bottom:22px;
+
+    width:52px;
+    height:52px;
+
+    display:none;
+
+    border:none;
+    border-radius:50%;
+
+    background:#d4af37;
+
+    color:#111;
+
+    font-size:23px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    z-index:9998;
+
+    box-shadow:
+        0 0 18px rgba(212,175,55,.25);
+
+    transition:.3s ease;
+}
+
+#topBtn:hover{
+    transform:translateY(-5px);
+
+    background:#e5c65b;
+
+    box-shadow:
+        0 0 27px rgba(212,175,55,.45);
+}
+
+
+/* =====================================================
+   24. FOOTER
+===================================================== */
+
+footer{
+    position:relative;
+
+    width:100%;
+
+    margin-top:90px;
+
+    padding:55px 20px 45px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.025);
+
+    border-top:1px solid rgba(212,175,55,.18);
+
+    clear:both;
+
+    z-index:10;
+}
+
+.footer-line{
+    width:110px;
+    height:2px;
+
+    margin:0 auto 25px;
+
+    background:#d4af37;
+
+    border-radius:20px;
+}
+
+footer h3{
+    margin-bottom:10px;
+
+    font-family:'Cinzel',serif;
+
+    font-size:32px;
+
+    color:#d4af37 !important;
+}
+
+footer p{
+    margin:8px 0;
+
+    color:#aaa !important;
+
+    font-size:19px;
+}
+
+.footer-role{
+    margin-top:-3px !important;
+
+    font-family:'Cinzel',serif;
+
+    font-size:17px !important;
+
+    letter-spacing:2px;
+
+    color:#d4af37 !important;
+}
+
+.footer-links{
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:13px;
+
+    margin:23px 0;
+
+    z-index:20;
+}
+
+.footer-links a{
+    display:inline-block;
+
+    color:#aaa !important;
+
+    text-decoration:none;
+
+    font-size:17px;
+
+    opacity:1 !important;
+    visibility:visible !important;
+
+    transition:.3s ease;
+}
+
+.footer-links a:hover{
+    color:#d4af37 !important;
+}
+
+.footer-links span{
+    color:#d4af37;
+
+    opacity:.5;
+}
+
+.copyright{
+    margin-top:18px !important;
+
+    color:#666 !important;
+
+    font-size:15px !important;
+}
+
+
+/* =====================================================
+   25. ANIMATIONS
+===================================================== */
+
+@keyframes heroGlow{
 
     0%{
-        transform:translate(-75%,-50%) scale(.9);
-        opacity:.55;
+        transform:translate(-60%,-50%) scale(.9);
+        opacity:.5;
     }
 
     50%{
-        opacity:1;
+        opacity:.8;
     }
 
     100%{
-        transform:translate(-25%,-50%) scale(1.15);
-        opacity:.65;
+        transform:translate(-40%,-50%) scale(1.12);
+        opacity:.6;
+    }
+}
+
+@keyframes titleGlow{
+
+    from{
+        text-shadow:
+            0 0 10px rgba(212,175,55,.22),
+            0 0 25px rgba(212,175,55,.08);
     }
 
+    to{
+        text-shadow:
+            0 0 16px rgba(212,175,55,.4),
+            0 0 35px rgba(212,175,55,.16);
+    }
 }
-/* =================================
-   📱 تحسين الهاتف - نسخة آمنة
-================================= */
 
-@media (max-width: 768px){
+@keyframes verseShow{
 
-    html,
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* =====================================================
+   26. TABLET
+===================================================== */
+
+@media(max-width:900px){
+
+    nav{
+        gap:5px;
+        padding:8px 10px;
+    }
+
+    nav a{
+        font-size:15px;
+        padding:8px 11px;
+    }
+
+    .header,
+    .home-hero{
+        padding-top:125px;
+    }
+
+    .about-preview{
+        margin:70px auto;
+    }
+
+    .latest{
+        margin:70px auto;
+    }
+}
+
+
+/* =====================================================
+   27. MOBILE
+===================================================== */
+
+@media(max-width:768px){
+
+    /* الصفحة */
+
     body{
-        width:100%;
-        max-width:100%;
         overflow-x:hidden;
     }
 
-    /* المساحات العامة */
-    .header{
-        width:100%;
-        min-height:auto;
-        padding:90px 18px 45px;
-    }
-
-    /* العنوان الرئيسي */
-    .header h1{
-        font-size:clamp(38px,11vw,52px);
-        line-height:1.35;
-        margin-bottom:12px;
-        word-break:keep-all;
-    }
-
-    .header p{
-        font-size:19px;
-        line-height:1.9;
-        max-width:95%;
-    }
 
     /* القائمة */
+
     nav{
+        top:9px;
+
         width:94%;
         max-width:500px;
-        gap:5px;
-        padding:8px;
-        top:10px;
+
+        padding:7px;
+
+        gap:3px;
+
+        border-radius:25px;
     }
 
     nav a{
         flex:1;
+
         text-align:center;
-        white-space:nowrap;
+
         font-size:14px;
-        padding:9px 8px;
+
+        padding:8px 5px;
     }
 
+
+    /* الواجهة */
+
+    .header,
+    .home-hero{
+        min-height:auto;
+
+        padding:
+            105px
+            18px
+            55px;
+    }
+
+    .header h1,
+    .home-hero h1,
+    header h1{
+        font-size:clamp(37px,11vw,52px);
+
+        line-height:1.4;
+
+        letter-spacing:1px;
+    }
+
+    .header p,
+    .home-hero p{
+        max-width:95%;
+
+        font-size:19px;
+
+        line-height:1.9;
+    }
+
+
     /* الأزرار */
+
     .hero-buttons{
         width:100%;
+
+        flex-direction:column;
+
         gap:12px;
-        margin-top:28px;
+
+        margin-top:27px;
     }
 
     .btn{
-        width:min(90%,280px);
-        padding:13px 20px;
+        width:min(88%,280px);
+
+        padding:12px 20px;
+
         font-size:18px;
+
+        text-align:center;
     }
+
 
     /* الاقتباس */
+
     .quote{
+        margin-top:28px;
+
         font-size:19px;
+
         line-height:1.9;
-        margin-top:30px;
-        padding:0 10px;
     }
 
+
     /* النبذة */
+
     .about-preview{
         width:92%;
+
         margin:55px auto;
+
         padding:28px 18px;
+
         border-radius:20px;
     }
 
     .about-preview h2{
         font-size:30px;
+
         line-height:1.5;
     }
 
     .about-preview p{
         font-size:18px;
+
         line-height:2;
     }
 
-    /* آخر الأعمال */
+
+    /* الأعمال */
+
     .latest{
         width:100%;
+
         margin:55px auto;
+
         padding:15px;
     }
 
     .latest h2{
         font-size:31px;
+
         line-height:1.5;
+
         margin-bottom:28px;
     }
 
     .cards{
-        display:grid;
         grid-template-columns:1fr;
+
         gap:18px;
     }
 
-    .card{
+    .card,
+    .latest-card{
         width:100%;
-        max-width:390px;
-        margin:auto;
-        padding:27px 20px;
+
+        padding:27px 19px;
+
         border-radius:20px;
     }
 
-    .card h3{
+    .card h3,
+    .latest-card h3{
         font-size:26px;
     }
 
-    .card p{
+    .card p,
+    .latest-card p{
         font-size:18px;
+
         line-height:1.9;
     }
 
-    /* صندوق الاقتباس */
+
+    /* الاقتباس الكبير */
+
     .quote-section{
         width:92%;
+
         margin:55px auto;
-        padding:25px 12px;
+
+        padding:25px 10px;
     }
 
     .quote-section p{
         font-size:21px;
+
         line-height:1.9;
     }
 
+
+    /* القصائد */
+
+    .poem{
+        width:92%;
+
+        padding:25px 17px;
+    }
+
+    .sadr{
+        font-size:25px;
+    }
+
+    .ajz{
+        font-size:22px;
+    }
+
+/* التواصل */
+
+    .contact-box{
+        width:92%;
+
+        padding:28px 18px;
+    }
+
+    .contact-box h3{
+        font-size:27px;
+    }
+
+    .contact-box a{
+        font-size:20px;
+    }
+
+    .contact-note{
+        font-size:18px;
+
+        line-height:2;
+    }
+
+    .socials{
+        gap:12px;
+    }
+
+    .social{
+        width:58px;
+        height:58px;
+
+        font-size:26px;
+    }
+
+
+    /* الاقتباس / intro */
+
+    .intro{
+        width:92%;
+
+        padding:22px 17px;
+
+        font-size:19px;
+
+        line-height:2;
+    }
+
+
     /* الفوتر */
+
     footer{
-        padding:45px 15px;
         margin-top:60px;
+
+        padding:45px 15px;
     }
 
     footer h3{
@@ -1569,53 +1438,69 @@ footer {
 
     footer p{
         font-size:17px;
-        line-height:1.8;
+    }
+
+    .footer-role{
+        font-size:15px !important;
     }
 
     .footer-links{
-        flex-wrap:wrap;
-        gap:9px;
+        gap:8px;
+
+        margin:20px 0;
     }
 
     .footer-links a{
         font-size:16px;
     }
 
-    /* زر العودة للأعلى */
-    #topBtn{
-        width:48px;
-        height:48px;
-        bottom:18px;
-        left:16px;
-        font-size:21px;
+    .footer-links span{
+        font-size:14px;
     }
 
+    .copyright{
+        font-size:14px !important;
+    }
+
+
+    /* زر العودة */
+
+    #topBtn{
+        width:47px;
+        height:47px;
+
+        left:15px;
+        bottom:17px;
+
+        font-size:20px;
+    }
 }
 
 
-/* ==================================================
-   26. الهواتف الصغيرة جدًا
-================================================== */
+/* =====================================================
+   28. VERY SMALL PHONES
+===================================================== */
 
 @media(max-width:400px){
 
     nav{
         width:96%;
 
-        gap:2px;
+        padding:6px 4px;
 
-        padding:7px 5px;
+        gap:2px;
     }
 
     nav a{
         font-size:13px;
 
-        padding:7px 5px;
+        padding:7px 4px;
     }
+
 
     .header,
     .home-hero{
-        padding-top:115px;
+        padding-top:100px;
     }
 
     .header h1,
@@ -1629,7 +1514,7 @@ footer {
     }
 
     .btn{
-        width:88%;
+        width:90%;
 
         font-size:17px;
     }
@@ -1646,17 +1531,29 @@ footer {
         font-size:28px;
     }
 
+    .card,
+    .latest-card{
+        padding:24px 16px;
+    }
+
     .sadr{
         font-size:23px;
     }
 
     .ajz{
-        font-size:21px;
+        font-size:20px;
     }
 
+    .footer-links{
+        gap:6px;
+    }
+
+    .footer-links a{
+        font-size:15px;
+    }
 }
 
 
-/* ==================================================
-   النهاية
-================================================== */
+/* =====================================================
+   END
+===================================================== */
