@@ -2,19 +2,17 @@
 // شاشة التحميل
 // ==========================
 
-window.addEventListener("load", () => {
+window.addEventListener("load", function () {
 
     const loader = document.getElementById("loader");
 
-    if (loader) {
+    if (!loader) return;
 
-        setTimeout(() => {
+    setTimeout(function () {
 
-            loader.classList.add("hide");
+        loader.classList.add("hide");
 
-        }, 800);
-
-    }
+    }, 800);
 
 });
 
