@@ -170,3 +170,34 @@ if (window.innerWidth >= 769) {
     });
 
 }
+
+/* 🖱️ Custom Cursor */
+
+if (window.matchMedia("(min-width: 769px)").matches) {
+
+    const cursor = document.createElement("div");
+
+    cursor.id = "custom-cursor";
+
+    document.body.appendChild(cursor);
+
+    document.addEventListener("mousemove", function(e){
+
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+
+    });
+
+    document.querySelectorAll("a, button").forEach(function(element){
+
+        element.addEventListener("mouseenter", function(){
+            cursor.classList.add("active");
+        });
+
+        element.addEventListener("mouseleave", function(){
+            cursor.classList.remove("active");
+        });
+
+    });
+
+}
