@@ -1,42 +1,31 @@
 {
-  "name": "وَسْم",
-  "short_name": "وَسْم",
-  "description": "الموقع الرسمي للكاتب بدير وسيم",
-  "start_url": "./",
+  "background_color": "#ffffff",
+  "description": "الموقع الرسمي للكاتب والشاعر الجزائري بدير وسيم",
+  "dir": "ltr",
   "display": "standalone",
-  "background_color": "#050505",
+  "name": "وَسْم",
+  "orientation": "portrait",
+  "scope": "./",
+  "short_name": "وَسْم",
+  "start_url": "./",
   "theme_color": "#d4af37",
-  "dir": "rtl",
+  "icons": [
+    {
+      "src": "https://wassimbedir.github.io/Wassim-bedir/file_000000008f9c81f48ae7888c9a8393cb.png",
+      "type": "image/png",
+      "sizes": "1254x1254",
+      "isSquare": true,
+      "isPng": true,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 1254,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    }
+  ],
   "lang": "ar",
-"icons": [
-  {
-    "src": "./launchericon-48x48.png",
-    "sizes": "48x48",
-    "type": "image/png"
-  },
-  {
-    "src": "./launchericon-72x72.png",
-    "sizes": "72x72",
-    "type": "image/png"
-  },
-  {
-    "src": "./launchericon-96x96.png",
-    "sizes": "96x96",
-    "type": "image/png"
-  },
-  {
-    "src": "./launchericon-144x144.png",
-    "sizes": "144x144",
-    "type": "image/png"
-  },
-  {
-    "src": "./launchericon-192x192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  },
-  {
-    "src": "./launchericon-512x512.png",
-    "sizes": "512x512",
-    "type": "image/png"
-  }
-]
+  "categories": [
+    "books"
+  ]
+}
