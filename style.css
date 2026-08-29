@@ -117,65 +117,90 @@ body::before{
 }
 
 
-/* =====================================================
-   6. NAVIGATION
-===================================================== */
+/* =========================
+   NAVIGATION - تحسين بسيط
+========================= */
 
 nav{
     position:fixed;
-
     top:15px;
     left:50%;
-
     transform:translateX(-50%);
 
-    width:max-content;
-    max-width:94%;
-
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
-    gap:8px;
+    gap:7px;
 
-    padding:9px 12px;
+    padding:8px 10px;
 
-    background:rgba(15,15,15,.72);
+    background:rgba(12,12,12,.72);
 
     border:1px solid rgba(212,175,55,.22);
 
     border-radius:50px;
 
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
 
     box-shadow:
-        0 10px 35px rgba(0,0,0,.35);
+        0 8px 30px rgba(0,0,0,.35),
+        inset 0 0 20px rgba(255,255,255,.015);
 
     z-index:9999;
+
+    transition:.35s ease;
 }
 
 nav a{
-    display:inline-block;
+    position:relative;
 
-    padding:9px 15px;
-
-    color:#eee;
+    color:#e8e8e8;
 
     text-decoration:none;
 
     font-size:16px;
     font-weight:bold;
 
-    white-space:nowrap;
+    padding:9px 16px;
 
     border-radius:30px;
 
     transition:
-        background .3s ease,
         color .3s ease,
-        transform .3s ease,
-        box-shadow .3s ease;
+        background .3s ease,
+        box-shadow .3s ease,
+        transform .3s ease;
+}
+
+nav a:hover{
+    color:#d4af37;
+
+    background:rgba(212,175,55,.08);
+
+    box-shadow:
+        0 0 18px rgba(212,175,55,.10);
+
+    transform:translateY(-1px);
+}
+
+nav a.active{
+    color:#111;
+
+    background:#d4af37;
+
+    box-shadow:
+        0 0 16px rgba(212,175,55,.25);
+}
+
+nav a.active:hover{
+    color:#111;
+
+    background:#dfbd4c;
+
+    box-shadow:
+        0 0 22px rgba(212,175,55,.35);
 }
 
 nav a:hover,
