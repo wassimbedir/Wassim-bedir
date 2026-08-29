@@ -1,0 +1,11 @@
+{
+  "name": "بدير وسيم",
+  "short_name": "وسيم",
+  "description": "الموقع الرسمي للكاتب بدير وسيم",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#d4af37",
+  "dir": "rtl",
+  "lang": "ar"
+}
