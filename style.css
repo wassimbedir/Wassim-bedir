@@ -1593,36 +1593,44 @@ footer {
 }
 
 
-/* =================================
-   📱 هواتف صغيرة جدًا
-================================= */
+/* ==================================================
+   26. الهواتف الصغيرة جدًا
+================================================== */
 
-@media (max-width:400px){
+@media(max-width:400px){
 
     nav{
         width:96%;
+
         gap:2px;
+
+        padding:7px 5px;
     }
 
     nav a{
         font-size:13px;
-        padding:8px 5px;
+
+        padding:7px 5px;
     }
 
-    .header{
-        padding-top:88px;
+    .header,
+    .home-hero{
+        padding-top:115px;
     }
 
-    .header h1{
-        font-size:38px;
+    .header h1,
+    .home-hero h1{
+        font-size:37px;
     }
 
-    .header p{
+    .header p,
+    .home-hero p{
         font-size:18px;
     }
 
     .btn{
         width:88%;
+
         font-size:17px;
     }
 
@@ -1638,107 +1646,17 @@ footer {
         font-size:28px;
     }
 
-}
-/* =================================
-   🖱️ مؤشر الفأرة الذهبي
-================================= */
-
-@media (min-width:769px){
-
-    body{
-        cursor:none;
+    .sadr{
+        font-size:23px;
     }
 
-    a,
-    button{
-        cursor:none;
-    }
-
-    .cursor-dot{
-        position:fixed;
-        width:7px;
-        height:7px;
-        background:#d4af37;
-        border-radius:50%;
-        pointer-events:none;
-        z-index:100000;
-        transform:translate(-50%,-50%);
-        box-shadow:
-            0 0 8px rgba(212,175,55,.8),
-            0 0 18px rgba(212,175,55,.35);
-    }
-
-    .cursor-ring{
-        position:fixed;
-        width:34px;
-        height:34px;
-        border:1px solid rgba(212,175,55,.65);
-        border-radius:50%;
-        pointer-events:none;
-        z-index:99999;
-        transform:translate(-50%,-50%);
-        transition:
-            width .25s ease,
-            height .25s ease,
-            border-color .25s ease,
-            background .25s ease;
-    }
-
-    /* عند المرور فوق رابط أو زر */
-    .cursor-ring.hover{
-        width:50px;
-        height:50px;
-        border-color:#d4af37;
-        background:rgba(212,175,55,.08);
-        box-shadow:0 0 20px rgba(212,175,55,.25);
-    }
-
-}
-/* 🖱️ مؤشر ذهبي */
-
-@media (min-width:769px){
-
-    body,
-    a,
-    button{
-        cursor:none !important;
-    }
-
-    #custom-cursor{
-        position:fixed;
-        width:32px;
-        height:32px;
-        border:1px solid #d4af37;
-        border-radius:50%;
-        pointer-events:none;
-        z-index:999999;
-        transform:translate(-50%,-50%);
-        transition:
-            width .2s ease,
-            height .2s ease,
-            background .2s ease,
-            box-shadow .2s ease;
-    }
-
-    #custom-cursor::after{
-        content:"";
-        position:absolute;
-        top:50%;
-        left:50%;
-        width:6px;
-        height:6px;
-        background:#d4af37;
-        border-radius:50%;
-        transform:translate(-50%,-50%);
-        box-shadow:0 0 10px #d4af37;
-    }
-
-    #custom-cursor.active{
-        width:48px;
-        height:48px;
-        background:rgba(212,175,55,.08);
-        box-shadow:0 0 25px rgba(212,175,55,.3);
+    .ajz{
+        font-size:21px;
     }
 
 }
 
+
+/* ==================================================
+   النهاية
+================================================== */
