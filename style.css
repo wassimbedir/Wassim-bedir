@@ -1694,3 +1694,51 @@ footer {
     }
 
 }
+/* 🖱️ مؤشر ذهبي */
+
+@media (min-width:769px){
+
+    body,
+    a,
+    button{
+        cursor:none !important;
+    }
+
+    #custom-cursor{
+        position:fixed;
+        width:32px;
+        height:32px;
+        border:1px solid #d4af37;
+        border-radius:50%;
+        pointer-events:none;
+        z-index:999999;
+        transform:translate(-50%,-50%);
+        transition:
+            width .2s ease,
+            height .2s ease,
+            background .2s ease,
+            box-shadow .2s ease;
+    }
+
+    #custom-cursor::after{
+        content:"";
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:6px;
+        height:6px;
+        background:#d4af37;
+        border-radius:50%;
+        transform:translate(-50%,-50%);
+        box-shadow:0 0 10px #d4af37;
+    }
+
+    #custom-cursor.active{
+        width:48px;
+        height:48px;
+        background:rgba(212,175,55,.08);
+        box-shadow:0 0 25px rgba(212,175,55,.3);
+    }
+
+}
+
