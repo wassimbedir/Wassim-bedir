@@ -1639,3 +1639,58 @@ footer {
     }
 
 }
+/* =================================
+   🖱️ مؤشر الفأرة الذهبي
+================================= */
+
+@media (min-width:769px){
+
+    body{
+        cursor:none;
+    }
+
+    a,
+    button{
+        cursor:none;
+    }
+
+    .cursor-dot{
+        position:fixed;
+        width:7px;
+        height:7px;
+        background:#d4af37;
+        border-radius:50%;
+        pointer-events:none;
+        z-index:100000;
+        transform:translate(-50%,-50%);
+        box-shadow:
+            0 0 8px rgba(212,175,55,.8),
+            0 0 18px rgba(212,175,55,.35);
+    }
+
+    .cursor-ring{
+        position:fixed;
+        width:34px;
+        height:34px;
+        border:1px solid rgba(212,175,55,.65);
+        border-radius:50%;
+        pointer-events:none;
+        z-index:99999;
+        transform:translate(-50%,-50%);
+        transition:
+            width .25s ease,
+            height .25s ease,
+            border-color .25s ease,
+            background .25s ease;
+    }
+
+    /* عند المرور فوق رابط أو زر */
+    .cursor-ring.hover{
+        width:50px;
+        height:50px;
+        border-color:#d4af37;
+        background:rgba(212,175,55,.08);
+        box-shadow:0 0 20px rgba(212,175,55,.25);
+    }
+
+}
