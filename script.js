@@ -16,24 +16,6 @@ window.addEventListener("load", function(){
 
 });
 
-// ==========================
-// شاشة التحميل
-// ==========================
-
-window.addEventListener("load", function () {
-
-    const loader = document.getElementById("loader");
-
-    if (!loader) return;
-
-    setTimeout(function () {
-
-        loader.classList.add("hide");
-
-    }, 800);
-
-});
-
 
 // ==========================
 // زر العودة للأعلى
