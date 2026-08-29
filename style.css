@@ -1419,3 +1419,223 @@ footer {
     }
 
 }
+/* =================================
+   📱 تحسين الهاتف - نسخة آمنة
+================================= */
+
+@media (max-width: 768px){
+
+    html,
+    body{
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+    }
+
+    /* المساحات العامة */
+    .header{
+        width:100%;
+        min-height:auto;
+        padding:90px 18px 45px;
+    }
+
+    /* العنوان الرئيسي */
+    .header h1{
+        font-size:clamp(38px,11vw,52px);
+        line-height:1.35;
+        margin-bottom:12px;
+        word-break:keep-all;
+    }
+
+    .header p{
+        font-size:19px;
+        line-height:1.9;
+        max-width:95%;
+    }
+
+    /* القائمة */
+    nav{
+        width:94%;
+        max-width:500px;
+        gap:5px;
+        padding:8px;
+        top:10px;
+    }
+
+    nav a{
+        flex:1;
+        text-align:center;
+        white-space:nowrap;
+        font-size:14px;
+        padding:9px 8px;
+    }
+
+    /* الأزرار */
+    .hero-buttons{
+        width:100%;
+        gap:12px;
+        margin-top:28px;
+    }
+
+    .btn{
+        width:min(90%,280px);
+        padding:13px 20px;
+        font-size:18px;
+    }
+
+    /* الاقتباس */
+    .quote{
+        font-size:19px;
+        line-height:1.9;
+        margin-top:30px;
+        padding:0 10px;
+    }
+
+    /* النبذة */
+    .about-preview{
+        width:92%;
+        margin:55px auto;
+        padding:28px 18px;
+        border-radius:20px;
+    }
+
+    .about-preview h2{
+        font-size:30px;
+        line-height:1.5;
+    }
+
+    .about-preview p{
+        font-size:18px;
+        line-height:2;
+    }
+
+    /* آخر الأعمال */
+    .latest{
+        width:100%;
+        margin:55px auto;
+        padding:15px;
+    }
+
+    .latest h2{
+        font-size:31px;
+        line-height:1.5;
+        margin-bottom:28px;
+    }
+
+    .cards{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .card{
+        width:100%;
+        max-width:390px;
+        margin:auto;
+        padding:27px 20px;
+        border-radius:20px;
+    }
+
+    .card h3{
+        font-size:26px;
+    }
+
+    .card p{
+        font-size:18px;
+        line-height:1.9;
+    }
+
+    /* صندوق الاقتباس */
+    .quote-section{
+        width:92%;
+        margin:55px auto;
+        padding:25px 12px;
+    }
+
+    .quote-section p{
+        font-size:21px;
+        line-height:1.9;
+    }
+
+    /* الفوتر */
+    footer{
+        padding:45px 15px;
+        margin-top:60px;
+    }
+
+    footer h3{
+        font-size:27px;
+    }
+
+    footer p{
+        font-size:17px;
+        line-height:1.8;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+        gap:9px;
+    }
+
+    .footer-links a{
+        font-size:16px;
+    }
+
+    /* زر العودة للأعلى */
+    #topBtn{
+        width:48px;
+        height:48px;
+        bottom:18px;
+        left:16px;
+        font-size:21px;
+    }
+
+}
+
+
+/* =================================
+   📱 هواتف صغيرة جدًا
+================================= */
+
+@media (max-width:400px){
+
+    nav{
+        width:96%;
+        gap:2px;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:8px 5px;
+    }
+
+    .header{
+        padding-top:88px;
+    }
+
+    .header h1{
+        font-size:38px;
+    }
+
+    .header p{
+        font-size:18px;
+    }
+
+    .btn{
+        width:88%;
+        font-size:17px;
+    }
+
+    .about-preview{
+        width:94%;
+    }
+
+    .about-preview h2{
+        font-size:27px;
+    }
+
+    .latest h2{
+        font-size:28px;
+    }
+
+}
