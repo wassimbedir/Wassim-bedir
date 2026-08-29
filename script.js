@@ -140,15 +140,8 @@ function randomPoem() {
 
     ];
 
-    const randomIndex =
-        Math.floor(Math.random() * poems.length);
-
-    window.location.href = poems[randomIndex];
-
-}
-
-// ==========================
-// انتقال الصفحات مع اقتباس
+    // ==========================
+// انتقال الصفحات + الاقتباسات
 // ==========================
 
 const transitionQuotes = [
@@ -166,7 +159,7 @@ const transitionQuotes = [
     "بعض الذكريات لا تشيخ، مهما مرّت عليها السنوات.",
     "لعل أجمل الحكايات هي تلك التي لم نخطط لكتابتها.",
     "ما دام في القلب شيء يُقال، فالقلم لم ينتهِ بعد.",
-    "وفي كل انتقال، بدايةٌ صغيرة لحكايةٍ جديدة."
+    "وفي كل انتقال، بداية صغيرة لحكاية جديدة."
 ];
 
 const pageTransition = document.getElementById("pageTransition");
@@ -174,54 +167,46 @@ const transitionQuote = document.getElementById("transitionQuote");
 
 if (pageTransition && transitionQuote) {
 
-    document.querySelectorAll("a").forEach(link => {
+    document.querySelectorAll("a").forEach(function(link) {
 
         link.addEventListener("click", function(event) {
 
-            const href = this.getAttribute("href");
+            const href = link.getAttribute("href");
 
-            // لا نتدخل في الروابط الفارغة
+            // إذا ماكانش رابط
             if (!href) return;
 
-            // الروابط داخل نفس الصفحة
+            // روابط داخل نفس الصفحة
             if (href.startsWith("#")) return;
 
-            // الروابط الخارجية
-            if (
-                this.target === "_blank" ||
-                href.startsWith("http") && !href.includes(window.location.hostname)
-            ) {
-                return;
-            }
+            // روابط خارجية
+            if (link.target === "_blank") return;
 
-            // ==========================
-            // الرئيسية — مباشرة
-            // ==========================
-
+            // الرئيسية: خليها تخدم عادي
             if (
                 href === "index.html" ||
-                href === "./index.html" ||
-                href === "/" ||
-                href === window.location.pathname
+                href === "./index.html"
             ) {
                 return;
             }
 
+            // منع الانتقال المباشر
             event.preventDefault();
 
             // اختيار اقتباس عشوائي
-            const randomQuote =
+            const quote =
                 transitionQuotes[
                     Math.floor(Math.random() * transitionQuotes.length)
                 ];
 
-            transitionQuote.textContent = randomQuote;
+            // وضع الاقتباس
+            transitionQuote.textContent = quote;
 
             // إظهار شاشة الانتقال
             pageTransition.classList.add("show");
 
             // الانتقال بعد 4 ثواني
-            setTimeout(() => {
+            setTimeout(function() {
 
                 window.location.href = href;
 
@@ -231,30 +216,4 @@ if (pageTransition && transitionQuote) {
 
     });
 
-}
-            url === window.location.href.split("#")[0]
-        ) {
-            return;
-        }
-
-        event.preventDefault();
-
-        const randomQuote =
-            transitionQuotes[
-                Math.floor(Math.random() * transitionQuotes.length)
-            ];
-
-        transitionQuote.textContent = randomQuote;
-
-        pageTransition.classList.add("show");
-
-        /*
-         * الاقتباس يبقى ظاهر مدة أطول
-         */
-        setTimeout(() => {
-            window.location.href = url;
-        }, 2800);
-
-    });
-
-});
+                }
