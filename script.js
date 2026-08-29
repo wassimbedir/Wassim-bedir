@@ -176,10 +176,26 @@ document.querySelectorAll("a").forEach(link => {
 
         if (
             !url ||
-            url.startsWith("javascript:") ||
             this.target === "_blank" ||
-            url.includes("#") ||
-            url === window.location.href
+            url.startsWith("javascript:")
+        ) {
+            return;
+        }
+
+        /*
+         * الروابط داخل نفس الصفحة مثل #about
+         * نخليها تخدم عادي بدون شاشة الانتقال
+         */
+        if (this.getAttribute("href")?.startsWith("#")) {
+            return;
+        }
+
+        /*
+         * إذا الرابط هو نفس الصفحة
+         */
+        if (
+            url === window.location.href ||
+            url === window.location.href.split("#")[0]
         ) {
             return;
         }
@@ -195,9 +211,12 @@ document.querySelectorAll("a").forEach(link => {
 
         pageTransition.classList.add("show");
 
+        /*
+         * الاقتباس يبقى ظاهر مدة أطول
+         */
         setTimeout(() => {
             window.location.href = url;
-        }, 1100);
+        }, 2800);
 
     });
 
