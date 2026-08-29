@@ -126,7 +126,6 @@ if ("IntersectionObserver" in window) {
 function randomPoem() {
 
     const poems = [
-
         "poem1.html",
         "poem2.html",
         "poem3.html",
@@ -135,6 +134,9 @@ function randomPoem() {
         "poem6.html",
         "poem7.html",
         "poem8.html"
-
     ];
 
+    const randomIndex = Math.floor(Math.random() * poems.length);
+
+    window.location.href = poems[randomIndex];
+}
