@@ -147,6 +147,10 @@ function randomPoem() {
 
 }
 
+// ==========================
+// انتقال الصفحات مع اقتباس
+// ==========================
+
 const transitionQuotes = [
     "بعض الطرق لا نعرف إلى أين تقودنا، لكنها تستحق أن نسلكها.",
     "نكتب لأن في داخلنا أشياء لا تعرف طريقًا آخر للخروج.",
@@ -168,33 +172,66 @@ const transitionQuotes = [
 const pageTransition = document.getElementById("pageTransition");
 const transitionQuote = document.getElementById("transitionQuote");
 
-document.querySelectorAll("a").forEach(link => {
+if (pageTransition && transitionQuote) {
 
-    link.addEventListener("click", function(event) {
+    document.querySelectorAll("a").forEach(link => {
 
-        const url = this.href;
+        link.addEventListener("click", function(event) {
 
-        if (
-            !url ||
-            this.target === "_blank" ||
-            url.startsWith("javascript:")
-        ) {
-            return;
-        }
+            const href = this.getAttribute("href");
 
-        /*
-         * الروابط داخل نفس الصفحة مثل #about
-         * نخليها تخدم عادي بدون شاشة الانتقال
-         */
-        if (this.getAttribute("href")?.startsWith("#")) {
-            return;
-        }
+            // لا نتدخل في الروابط الفارغة
+            if (!href) return;
 
-        /*
-         * إذا الرابط هو نفس الصفحة
-         */
-        if (
-            url === window.location.href ||
+            // الروابط داخل نفس الصفحة
+            if (href.startsWith("#")) return;
+
+            // الروابط الخارجية
+            if (
+                this.target === "_blank" ||
+                href.startsWith("http") && !href.includes(window.location.hostname)
+            ) {
+                return;
+            }
+
+            // ==========================
+            // الرئيسية — مباشرة
+            // ==========================
+
+            if (
+                href === "index.html" ||
+                href === "./index.html" ||
+                href === "/" ||
+                href === window.location.pathname
+            ) {
+                return;
+            }
+
+            event.preventDefault();
+
+            // اختيار اقتباس عشوائي
+            const randomQuote =
+                transitionQuotes[
+                    Math.floor(Math.random() * transitionQuotes.length)
+                ];
+
+            transitionQuote.textContent = randomQuote;
+
+            // إظهار شاشة الانتقال
+            pageTransition.classList.add("show");
+
+            // الانتقال بعد 4 ثواني
+            setTimeout(() => {
+
+                window.location.href = href;
+
+            }, 4000);
+
+        });
+
+    });
+
+}
             url === window.location.href.split("#")[0]
         ) {
             return;
