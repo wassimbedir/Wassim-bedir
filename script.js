@@ -2,17 +2,20 @@
 // شاشة الدخول
 // ==========================
 
-window.addEventListener("load", function(){
+function hideLoader(){
 
-    setTimeout(function(){
+    const loader = document.getElementById("loader");
 
-        const loader = document.getElementById("loader");
+    if(loader){
+        loader.classList.add("hide");
+    }
 
-        if(loader){
-            loader.classList.add("hide");
-        }
+}
 
-    }, 1500);
+// يبدأ بعد فتح الصفحة مباشرة
+document.addEventListener("DOMContentLoaded", function(){
+
+    setTimeout(hideLoader, 1500);
 
 });
 
