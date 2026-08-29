@@ -12,7 +12,6 @@ function hideLoader(){
 
 }
 
-// يبدأ بعد فتح الصفحة مباشرة
 document.addEventListener("DOMContentLoaded", function(){
 
     setTimeout(hideLoader, 1500);
