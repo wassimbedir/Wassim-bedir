@@ -1738,3 +1738,42 @@ footer p{
     color:#ddd;
     letter-spacing:1px;
 }
+/* ==========================
+   📱 شاشة الدخول - الهاتف
+========================== */
+
+@media (max-width: 768px){
+
+    #loader{
+        position:fixed;
+        inset:0;
+
+        width:100%;
+        height:100dvh;
+        min-height:100dvh;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        padding:0;
+        margin:0;
+
+        transform:none !important;
+
+        overflow:hidden;
+    }
+
+    #loader h1{
+        font-size:42px;
+        margin-bottom:8px;
+        line-height:1.4;
+        text-align:center;
+    }
+
+    #loader p{
+        font-size:17px;
+        text-align:center;
+    }
+
+}
