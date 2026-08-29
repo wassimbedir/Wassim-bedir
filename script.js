@@ -1,4 +1,22 @@
 // ==========================
+// شاشة الدخول
+// ==========================
+
+window.addEventListener("load", function(){
+
+    setTimeout(function(){
+
+        const loader = document.getElementById("loader");
+
+        if(loader){
+            loader.classList.add("hide");
+        }
+
+    }, 1500);
+
+});
+
+// ==========================
 // شاشة التحميل
 // ==========================
 
