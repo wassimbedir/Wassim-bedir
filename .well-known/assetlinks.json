@@ -1,8 +1,14 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "com.wassimbedir.wasm",
-        "sha256_cert_fingerprints": ["77:0F:03:11:D5:1A:45:A2:98:6F:75:9C:00:CD:1D:AF:E6:2C:8A:DE:3B:26:41:79:9F:A9:B7:C2:C5:90:3F:2B"]
-      }
-    }]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.wassimbedir.twa",
+      "sha256_cert_fingerprints": [
+        "74:CA:A3:45:74:DC:6B:32:FF:87:C2:03:F5:95:2E:F5:63:D4:84:CA:6A:FD:62:C4:64:F1:74:04:15:73:2D:00"
+      ]
+    }
+  }
+]
